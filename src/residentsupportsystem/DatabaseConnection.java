@@ -20,7 +20,7 @@ public class DatabaseConnection {
         
         databaseConnection = null;
         try {
-            
+            //EVERYONE SHOULD KEEP THEIR FILEPATH TO THE DATABASE HERE
             
             String database = "jdbc:sqlite:"+"//Users//robbieoneill//Documents//GitHub//residentSupportSystem//rssDB.db";
             databaseConnection = DriverManager.getConnection(database);
