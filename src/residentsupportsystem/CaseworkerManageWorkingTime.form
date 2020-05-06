@@ -1,0 +1,1135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="66" red="66" type="rgb"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                  <Component id="jPanel5" max="32767" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jPanel3" min="-2" pref="427" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="52" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                      <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel2">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <Component id="jLabel18" min="-2" pref="389" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel18">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Lucida Grande" size="18" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Manage Working Hours - Caseworker: "/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel3">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
+                              <Component id="savejButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="setHourHeadingjLabel" min="-2" pref="412" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                      <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <Component id="setHourHeadingjLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="savejButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel4">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="tuesdayjCheckBox" max="32767" attributes="0"/>
+                              <Component id="mondayjCheckBox" alignment="0" max="32767" attributes="0"/>
+                              <Component id="wednesdayjCheckBox" alignment="0" max="32767" attributes="0"/>
+                              <Component id="thursdayjCheckBox" alignment="0" max="32767" attributes="0"/>
+                              <Component id="fridayjCheckBox" alignment="0" max="32767" attributes="0"/>
+                              <Component id="saturdayjCheckBox" alignment="0" max="32767" attributes="0"/>
+                              <Component id="sundayjCheckBox" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="mondayFromjLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="mondayStartjComboBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="mondayTojLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="mondayEndjComboBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="tuesdayFromjLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="tuesdayStartjComboBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="tuesdayTojLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="tuesdayEndjComboBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="wednesdayFromjLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="wednesdayStartjComboBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="wednesdayTojLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="wednesdayEndjComboBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="thursdayFromjLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="thursdayStartjComboBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="thursdayTojLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="thursdayEndjComboBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="fridayFromjLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="fridayStartjComboBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="fridayTojLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="fridayEndjComboBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="saturdayFromjLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="saturdayStartjComboBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="saturdayTojLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="saturdayEndjComboBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="sundayFromjLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="sundayStartjComboBox" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="sundayTojLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="sundayEndjComboBox" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="mondayjCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="mondayFromjLabel" alignment="3" max="32767" attributes="0"/>
+                              <Component id="mondayStartjComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="mondayTojLabel" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                              <Component id="mondayEndjComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="tuesdayStartjComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tuesdayTojLabel" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="tuesdayEndjComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="tuesdayjCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tuesdayFromjLabel" alignment="3" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="wednesdayStartjComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="wednesdayTojLabel" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="wednesdayEndjComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="wednesdayjCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="wednesdayFromjLabel" alignment="3" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="thursdayStartjComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="thursdayTojLabel" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="thursdayEndjComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="thursdayjCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="thursdayFromjLabel" alignment="3" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="fridayStartjComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fridayTojLabel" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="fridayEndjComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="fridayjCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="fridayFromjLabel" alignment="3" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="saturdayStartjComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="saturdayTojLabel" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="saturdayEndjComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="saturdayjCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="saturdayFromjLabel" alignment="3" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="sundayStartjComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="sundayTojLabel" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="sundayEndjComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="sundayjCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="sundayFromjLabel" alignment="3" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JCheckBox" name="mondayjCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Monday"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mondayjCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="tuesdayjCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Tuesday"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tuesdayjCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="thursdayjCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Thursday"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="thursdayjCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="wednesdayjCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Wednesday"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="wednesdayjCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="saturdayjCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Saturday"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="saturdayjCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="sundayjCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Sunday"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sundayjCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="fridayjCheckBox">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Friday"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fridayjCheckBoxActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JLabel" name="mondayFromjLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="From"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="tuesdayFromjLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="From"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="wednesdayFromjLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="From"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="thursdayFromjLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="From"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="fridayFromjLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="From"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="saturdayFromjLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="From"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="sundayFromjLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="From"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="mondayStartjComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="26">
+                        <StringItem index="0" value="Start"/>
+                        <StringItem index="1" value="00:00"/>
+                        <StringItem index="2" value="01:00"/>
+                        <StringItem index="3" value="02:00"/>
+                        <StringItem index="4" value="03:00"/>
+                        <StringItem index="5" value="04:00"/>
+                        <StringItem index="6" value="05:00"/>
+                        <StringItem index="7" value="06:00"/>
+                        <StringItem index="8" value="07:00"/>
+                        <StringItem index="9" value="08:00"/>
+                        <StringItem index="10" value="09:00"/>
+                        <StringItem index="11" value="10:00"/>
+                        <StringItem index="12" value="11:00"/>
+                        <StringItem index="13" value="12:00"/>
+                        <StringItem index="14" value="13:00"/>
+                        <StringItem index="15" value="14:00"/>
+                        <StringItem index="16" value="15:00"/>
+                        <StringItem index="17" value="16:00"/>
+                        <StringItem index="18" value="17:00"/>
+                        <StringItem index="19" value="18:00"/>
+                        <StringItem index="20" value="19:00"/>
+                        <StringItem index="21" value="20:00"/>
+                        <StringItem index="22" value="21:00"/>
+                        <StringItem index="23" value="22:00"/>
+                        <StringItem index="24" value="23:00"/>
+                        <StringItem index="25" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="mondayTojLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="To"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="mondayEndjComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="26">
+                        <StringItem index="0" value="End"/>
+                        <StringItem index="1" value="00:00"/>
+                        <StringItem index="2" value="01:00"/>
+                        <StringItem index="3" value="02:00"/>
+                        <StringItem index="4" value="03:00"/>
+                        <StringItem index="5" value="04:00"/>
+                        <StringItem index="6" value="05:00"/>
+                        <StringItem index="7" value="06:00"/>
+                        <StringItem index="8" value="07:00"/>
+                        <StringItem index="9" value="08:00"/>
+                        <StringItem index="10" value="09:00"/>
+                        <StringItem index="11" value="10:00"/>
+                        <StringItem index="12" value="11:00"/>
+                        <StringItem index="13" value="12:00"/>
+                        <StringItem index="14" value="13:00"/>
+                        <StringItem index="15" value="14:00"/>
+                        <StringItem index="16" value="15:00"/>
+                        <StringItem index="17" value="16:00"/>
+                        <StringItem index="18" value="17:00"/>
+                        <StringItem index="19" value="18:00"/>
+                        <StringItem index="20" value="19:00"/>
+                        <StringItem index="21" value="20:00"/>
+                        <StringItem index="22" value="21:00"/>
+                        <StringItem index="23" value="22:00"/>
+                        <StringItem index="24" value="23:00"/>
+                        <StringItem index="25" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="tuesdayStartjComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="26">
+                        <StringItem index="0" value="Start"/>
+                        <StringItem index="1" value="00:00"/>
+                        <StringItem index="2" value="01:00"/>
+                        <StringItem index="3" value="02:00"/>
+                        <StringItem index="4" value="03:00"/>
+                        <StringItem index="5" value="04:00"/>
+                        <StringItem index="6" value="05:00"/>
+                        <StringItem index="7" value="06:00"/>
+                        <StringItem index="8" value="07:00"/>
+                        <StringItem index="9" value="08:00"/>
+                        <StringItem index="10" value="09:00"/>
+                        <StringItem index="11" value="10:00"/>
+                        <StringItem index="12" value="11:00"/>
+                        <StringItem index="13" value="12:00"/>
+                        <StringItem index="14" value="13:00"/>
+                        <StringItem index="15" value="14:00"/>
+                        <StringItem index="16" value="15:00"/>
+                        <StringItem index="17" value="16:00"/>
+                        <StringItem index="18" value="17:00"/>
+                        <StringItem index="19" value="18:00"/>
+                        <StringItem index="20" value="19:00"/>
+                        <StringItem index="21" value="20:00"/>
+                        <StringItem index="22" value="21:00"/>
+                        <StringItem index="23" value="22:00"/>
+                        <StringItem index="24" value="23:00"/>
+                        <StringItem index="25" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="tuesdayTojLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="To"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="tuesdayEndjComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="26">
+                        <StringItem index="0" value="End"/>
+                        <StringItem index="1" value="00:00"/>
+                        <StringItem index="2" value="01:00"/>
+                        <StringItem index="3" value="02:00"/>
+                        <StringItem index="4" value="03:00"/>
+                        <StringItem index="5" value="04:00"/>
+                        <StringItem index="6" value="05:00"/>
+                        <StringItem index="7" value="06:00"/>
+                        <StringItem index="8" value="07:00"/>
+                        <StringItem index="9" value="08:00"/>
+                        <StringItem index="10" value="09:00"/>
+                        <StringItem index="11" value="10:00"/>
+                        <StringItem index="12" value="11:00"/>
+                        <StringItem index="13" value="12:00"/>
+                        <StringItem index="14" value="13:00"/>
+                        <StringItem index="15" value="14:00"/>
+                        <StringItem index="16" value="15:00"/>
+                        <StringItem index="17" value="16:00"/>
+                        <StringItem index="18" value="17:00"/>
+                        <StringItem index="19" value="18:00"/>
+                        <StringItem index="20" value="19:00"/>
+                        <StringItem index="21" value="20:00"/>
+                        <StringItem index="22" value="21:00"/>
+                        <StringItem index="23" value="22:00"/>
+                        <StringItem index="24" value="23:00"/>
+                        <StringItem index="25" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="wednesdayStartjComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="26">
+                        <StringItem index="0" value="Start"/>
+                        <StringItem index="1" value="00:00"/>
+                        <StringItem index="2" value="01:00"/>
+                        <StringItem index="3" value="02:00"/>
+                        <StringItem index="4" value="03:00"/>
+                        <StringItem index="5" value="04:00"/>
+                        <StringItem index="6" value="05:00"/>
+                        <StringItem index="7" value="06:00"/>
+                        <StringItem index="8" value="07:00"/>
+                        <StringItem index="9" value="08:00"/>
+                        <StringItem index="10" value="09:00"/>
+                        <StringItem index="11" value="10:00"/>
+                        <StringItem index="12" value="11:00"/>
+                        <StringItem index="13" value="12:00"/>
+                        <StringItem index="14" value="13:00"/>
+                        <StringItem index="15" value="14:00"/>
+                        <StringItem index="16" value="15:00"/>
+                        <StringItem index="17" value="16:00"/>
+                        <StringItem index="18" value="17:00"/>
+                        <StringItem index="19" value="18:00"/>
+                        <StringItem index="20" value="19:00"/>
+                        <StringItem index="21" value="20:00"/>
+                        <StringItem index="22" value="21:00"/>
+                        <StringItem index="23" value="22:00"/>
+                        <StringItem index="24" value="23:00"/>
+                        <StringItem index="25" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="wednesdayTojLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="To"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="wednesdayEndjComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="26">
+                        <StringItem index="0" value="End"/>
+                        <StringItem index="1" value="00:00"/>
+                        <StringItem index="2" value="01:00"/>
+                        <StringItem index="3" value="02:00"/>
+                        <StringItem index="4" value="03:00"/>
+                        <StringItem index="5" value="04:00"/>
+                        <StringItem index="6" value="05:00"/>
+                        <StringItem index="7" value="06:00"/>
+                        <StringItem index="8" value="07:00"/>
+                        <StringItem index="9" value="08:00"/>
+                        <StringItem index="10" value="09:00"/>
+                        <StringItem index="11" value="10:00"/>
+                        <StringItem index="12" value="11:00"/>
+                        <StringItem index="13" value="12:00"/>
+                        <StringItem index="14" value="13:00"/>
+                        <StringItem index="15" value="14:00"/>
+                        <StringItem index="16" value="15:00"/>
+                        <StringItem index="17" value="16:00"/>
+                        <StringItem index="18" value="17:00"/>
+                        <StringItem index="19" value="18:00"/>
+                        <StringItem index="20" value="19:00"/>
+                        <StringItem index="21" value="20:00"/>
+                        <StringItem index="22" value="21:00"/>
+                        <StringItem index="23" value="22:00"/>
+                        <StringItem index="24" value="23:00"/>
+                        <StringItem index="25" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="thursdayStartjComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="26">
+                        <StringItem index="0" value="Start"/>
+                        <StringItem index="1" value="00:00"/>
+                        <StringItem index="2" value="01:00"/>
+                        <StringItem index="3" value="02:00"/>
+                        <StringItem index="4" value="03:00"/>
+                        <StringItem index="5" value="04:00"/>
+                        <StringItem index="6" value="05:00"/>
+                        <StringItem index="7" value="06:00"/>
+                        <StringItem index="8" value="07:00"/>
+                        <StringItem index="9" value="08:00"/>
+                        <StringItem index="10" value="09:00"/>
+                        <StringItem index="11" value="10:00"/>
+                        <StringItem index="12" value="11:00"/>
+                        <StringItem index="13" value="12:00"/>
+                        <StringItem index="14" value="13:00"/>
+                        <StringItem index="15" value="14:00"/>
+                        <StringItem index="16" value="15:00"/>
+                        <StringItem index="17" value="16:00"/>
+                        <StringItem index="18" value="17:00"/>
+                        <StringItem index="19" value="18:00"/>
+                        <StringItem index="20" value="19:00"/>
+                        <StringItem index="21" value="20:00"/>
+                        <StringItem index="22" value="21:00"/>
+                        <StringItem index="23" value="22:00"/>
+                        <StringItem index="24" value="23:00"/>
+                        <StringItem index="25" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="thursdayTojLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="To"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="thursdayEndjComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="26">
+                        <StringItem index="0" value="End"/>
+                        <StringItem index="1" value="00:00"/>
+                        <StringItem index="2" value="01:00"/>
+                        <StringItem index="3" value="02:00"/>
+                        <StringItem index="4" value="03:00"/>
+                        <StringItem index="5" value="04:00"/>
+                        <StringItem index="6" value="05:00"/>
+                        <StringItem index="7" value="06:00"/>
+                        <StringItem index="8" value="07:00"/>
+                        <StringItem index="9" value="08:00"/>
+                        <StringItem index="10" value="09:00"/>
+                        <StringItem index="11" value="10:00"/>
+                        <StringItem index="12" value="11:00"/>
+                        <StringItem index="13" value="12:00"/>
+                        <StringItem index="14" value="13:00"/>
+                        <StringItem index="15" value="14:00"/>
+                        <StringItem index="16" value="15:00"/>
+                        <StringItem index="17" value="16:00"/>
+                        <StringItem index="18" value="17:00"/>
+                        <StringItem index="19" value="18:00"/>
+                        <StringItem index="20" value="19:00"/>
+                        <StringItem index="21" value="20:00"/>
+                        <StringItem index="22" value="21:00"/>
+                        <StringItem index="23" value="22:00"/>
+                        <StringItem index="24" value="23:00"/>
+                        <StringItem index="25" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="fridayStartjComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="26">
+                        <StringItem index="0" value="Start"/>
+                        <StringItem index="1" value="00:00"/>
+                        <StringItem index="2" value="01:00"/>
+                        <StringItem index="3" value="02:00"/>
+                        <StringItem index="4" value="03:00"/>
+                        <StringItem index="5" value="04:00"/>
+                        <StringItem index="6" value="05:00"/>
+                        <StringItem index="7" value="06:00"/>
+                        <StringItem index="8" value="07:00"/>
+                        <StringItem index="9" value="08:00"/>
+                        <StringItem index="10" value="09:00"/>
+                        <StringItem index="11" value="10:00"/>
+                        <StringItem index="12" value="11:00"/>
+                        <StringItem index="13" value="12:00"/>
+                        <StringItem index="14" value="13:00"/>
+                        <StringItem index="15" value="14:00"/>
+                        <StringItem index="16" value="15:00"/>
+                        <StringItem index="17" value="16:00"/>
+                        <StringItem index="18" value="17:00"/>
+                        <StringItem index="19" value="18:00"/>
+                        <StringItem index="20" value="19:00"/>
+                        <StringItem index="21" value="20:00"/>
+                        <StringItem index="22" value="21:00"/>
+                        <StringItem index="23" value="22:00"/>
+                        <StringItem index="24" value="23:00"/>
+                        <StringItem index="25" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="fridayTojLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="To"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="fridayEndjComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="26">
+                        <StringItem index="0" value="End"/>
+                        <StringItem index="1" value="00:00"/>
+                        <StringItem index="2" value="01:00"/>
+                        <StringItem index="3" value="02:00"/>
+                        <StringItem index="4" value="03:00"/>
+                        <StringItem index="5" value="04:00"/>
+                        <StringItem index="6" value="05:00"/>
+                        <StringItem index="7" value="06:00"/>
+                        <StringItem index="8" value="07:00"/>
+                        <StringItem index="9" value="08:00"/>
+                        <StringItem index="10" value="09:00"/>
+                        <StringItem index="11" value="10:00"/>
+                        <StringItem index="12" value="11:00"/>
+                        <StringItem index="13" value="12:00"/>
+                        <StringItem index="14" value="13:00"/>
+                        <StringItem index="15" value="14:00"/>
+                        <StringItem index="16" value="15:00"/>
+                        <StringItem index="17" value="16:00"/>
+                        <StringItem index="18" value="17:00"/>
+                        <StringItem index="19" value="18:00"/>
+                        <StringItem index="20" value="19:00"/>
+                        <StringItem index="21" value="20:00"/>
+                        <StringItem index="22" value="21:00"/>
+                        <StringItem index="23" value="22:00"/>
+                        <StringItem index="24" value="23:00"/>
+                        <StringItem index="25" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="saturdayStartjComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="26">
+                        <StringItem index="0" value="Start"/>
+                        <StringItem index="1" value="00:00"/>
+                        <StringItem index="2" value="01:00"/>
+                        <StringItem index="3" value="02:00"/>
+                        <StringItem index="4" value="03:00"/>
+                        <StringItem index="5" value="04:00"/>
+                        <StringItem index="6" value="05:00"/>
+                        <StringItem index="7" value="06:00"/>
+                        <StringItem index="8" value="07:00"/>
+                        <StringItem index="9" value="08:00"/>
+                        <StringItem index="10" value="09:00"/>
+                        <StringItem index="11" value="10:00"/>
+                        <StringItem index="12" value="11:00"/>
+                        <StringItem index="13" value="12:00"/>
+                        <StringItem index="14" value="13:00"/>
+                        <StringItem index="15" value="14:00"/>
+                        <StringItem index="16" value="15:00"/>
+                        <StringItem index="17" value="16:00"/>
+                        <StringItem index="18" value="17:00"/>
+                        <StringItem index="19" value="18:00"/>
+                        <StringItem index="20" value="19:00"/>
+                        <StringItem index="21" value="20:00"/>
+                        <StringItem index="22" value="21:00"/>
+                        <StringItem index="23" value="22:00"/>
+                        <StringItem index="24" value="23:00"/>
+                        <StringItem index="25" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="saturdayTojLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="To"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="saturdayEndjComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="26">
+                        <StringItem index="0" value="End"/>
+                        <StringItem index="1" value="00:00"/>
+                        <StringItem index="2" value="01:00"/>
+                        <StringItem index="3" value="02:00"/>
+                        <StringItem index="4" value="03:00"/>
+                        <StringItem index="5" value="04:00"/>
+                        <StringItem index="6" value="05:00"/>
+                        <StringItem index="7" value="06:00"/>
+                        <StringItem index="8" value="07:00"/>
+                        <StringItem index="9" value="08:00"/>
+                        <StringItem index="10" value="09:00"/>
+                        <StringItem index="11" value="10:00"/>
+                        <StringItem index="12" value="11:00"/>
+                        <StringItem index="13" value="12:00"/>
+                        <StringItem index="14" value="13:00"/>
+                        <StringItem index="15" value="14:00"/>
+                        <StringItem index="16" value="15:00"/>
+                        <StringItem index="17" value="16:00"/>
+                        <StringItem index="18" value="17:00"/>
+                        <StringItem index="19" value="18:00"/>
+                        <StringItem index="20" value="19:00"/>
+                        <StringItem index="21" value="20:00"/>
+                        <StringItem index="22" value="21:00"/>
+                        <StringItem index="23" value="22:00"/>
+                        <StringItem index="24" value="23:00"/>
+                        <StringItem index="25" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="sundayStartjComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="26">
+                        <StringItem index="0" value="Start"/>
+                        <StringItem index="1" value="00:00"/>
+                        <StringItem index="2" value="01:00"/>
+                        <StringItem index="3" value="02:00"/>
+                        <StringItem index="4" value="03:00"/>
+                        <StringItem index="5" value="04:00"/>
+                        <StringItem index="6" value="05:00"/>
+                        <StringItem index="7" value="06:00"/>
+                        <StringItem index="8" value="07:00"/>
+                        <StringItem index="9" value="08:00"/>
+                        <StringItem index="10" value="09:00"/>
+                        <StringItem index="11" value="10:00"/>
+                        <StringItem index="12" value="11:00"/>
+                        <StringItem index="13" value="12:00"/>
+                        <StringItem index="14" value="13:00"/>
+                        <StringItem index="15" value="14:00"/>
+                        <StringItem index="16" value="15:00"/>
+                        <StringItem index="17" value="16:00"/>
+                        <StringItem index="18" value="17:00"/>
+                        <StringItem index="19" value="18:00"/>
+                        <StringItem index="20" value="19:00"/>
+                        <StringItem index="21" value="20:00"/>
+                        <StringItem index="22" value="21:00"/>
+                        <StringItem index="23" value="22:00"/>
+                        <StringItem index="24" value="23:00"/>
+                        <StringItem index="25" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="sundayTojLabel">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="To"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="sundayEndjComboBox">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="26">
+                        <StringItem index="0" value="End"/>
+                        <StringItem index="1" value="00:00"/>
+                        <StringItem index="2" value="01:00"/>
+                        <StringItem index="3" value="02:00"/>
+                        <StringItem index="4" value="03:00"/>
+                        <StringItem index="5" value="04:00"/>
+                        <StringItem index="6" value="05:00"/>
+                        <StringItem index="7" value="06:00"/>
+                        <StringItem index="8" value="07:00"/>
+                        <StringItem index="9" value="08:00"/>
+                        <StringItem index="10" value="09:00"/>
+                        <StringItem index="11" value="10:00"/>
+                        <StringItem index="12" value="11:00"/>
+                        <StringItem index="13" value="12:00"/>
+                        <StringItem index="14" value="13:00"/>
+                        <StringItem index="15" value="14:00"/>
+                        <StringItem index="16" value="15:00"/>
+                        <StringItem index="17" value="16:00"/>
+                        <StringItem index="18" value="17:00"/>
+                        <StringItem index="19" value="18:00"/>
+                        <StringItem index="20" value="19:00"/>
+                        <StringItem index="21" value="20:00"/>
+                        <StringItem index="22" value="21:00"/>
+                        <StringItem index="23" value="22:00"/>
+                        <StringItem index="24" value="23:00"/>
+                        <StringItem index="25" value=" "/>
+                      </StringArray>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                  </AuxValues>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JLabel" name="setHourHeadingjLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Set Workinng Hours for Week Comencing:"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="savejButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Save"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="savejButtonActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel5">
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" pref="491" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="weekSearchjLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="weekSearchjTextField" min="-2" pref="199" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="searchjButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="viewAlljButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jScrollPane1" min="-2" pref="686" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="14" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="321" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="searchjButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="weekSearchjTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="weekSearchjLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="viewAlljButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="View your past work hours"/>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTable" name="workHistoryjTable">
+                  <Properties>
+                    <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                      <Table columnCount="8" rowCount="4">
+                        <Column editable="true" title="Week" type="java.lang.Object"/>
+                        <Column editable="true" title="Monday" type="java.lang.Object"/>
+                        <Column editable="true" title="Tuesday" type="java.lang.Object"/>
+                        <Column editable="true" title="Wednesday" type="java.lang.Object"/>
+                        <Column editable="true" title="Thursday" type="java.lang.Object"/>
+                        <Column editable="true" title="Friday" type="java.lang.Object"/>
+                        <Column editable="true" title="Saturday" type="java.lang.Object"/>
+                        <Column editable="true" title="Sunday" type="java.lang.Object"/>
+                      </Table>
+                    </Property>
+                    <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                      <TableColumnModel selectionModel="0">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
+                      </TableColumnModel>
+                    </Property>
+                    <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                      <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                    </Property>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JButton" name="searchjButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Search"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="weekSearchjTextField">
+            </Component>
+            <Component class="javax.swing.JLabel" name="weekSearchjLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Week Start Date: "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="viewAlljButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="View All"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
