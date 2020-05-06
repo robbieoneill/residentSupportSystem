@@ -20,7 +20,9 @@ public class DatabaseConnection {
         
         databaseConnection = null;
         try {
-            String database = "jdbc:sqlite:"+"//Users//robbieoneill//Desktop//residentSupportSystem//rssDB.db";
+            
+            
+            String database = "jdbc:sqlite:"+"//Users//robbieoneill//Documents//GitHub//residentSupportSystem//rssDB.db";
             databaseConnection = DriverManager.getConnection(database);
             System.out.println("CONNECTION TO "+database+" HAS BEEN ESTABLISHED.");
             
