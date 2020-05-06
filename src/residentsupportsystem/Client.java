@@ -71,9 +71,15 @@ public class Client {
             preparedStatement.setString(13,clientNotes);
             
             if(preparedStatement.executeUpdate()>0){
+                 //resultSet.close();
+                preparedStatement.close();
+                databaseInstance.closeConnection();
                 return true;
             }
             else{
+                //resultSet.close();
+                preparedStatement.close();
+                databaseInstance.closeConnection();
                 return false;
             }
             
@@ -120,6 +126,9 @@ public class Client {
                
                clientTableModel.addRow(row);
             }
+                resultSet.close();
+                preparedStatement.close();
+                databaseInstance.closeConnection();
             
         } catch (SQLException ex) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
@@ -140,6 +149,9 @@ public class Client {
             resultSet = preparedStatement.executeQuery();
             clientCountQueryResult = resultSet.getInt("clientCount");
             System.out.println("CLIENT COUNT: "+clientCountQueryResult);
+            resultSet.close();
+            preparedStatement.close();
+            databaseInstance.closeConnection();
             return clientCountQueryResult;
             
         } catch (SQLException ex) {
@@ -185,7 +197,10 @@ public class Client {
                     returnResultSet.add("Null");
                  } 
                  else {returnResultSet.add(resultSet.getString("clientNotes"));
-                 }                
+                 }
+                resultSet.close();
+                preparedStatement.close();
+                databaseInstance.closeConnection();
                 return returnResultSet;
             }    
         
@@ -219,6 +234,9 @@ public class Client {
                row [2] = resultSet.getString(3);
                clientTableModel.addRow(row);
            }
+           resultSet.close();
+           preparedStatement.close();
+           databaseInstance.closeConnection();
             
         }catch(SQLException a){
             Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, a);
@@ -238,7 +256,9 @@ public class Client {
             System.out.println ("PREVIOUS CLIENT ID = "+ resultSet.getInt("clientID"));
             System.out.println ("NEXT CLIENT ID = "+ resultSet.getInt("clientID")+1);
             sequentialUserIDResult = resultSet.getInt("clientID")+1;
-            
+            resultSet.close();
+            preparedStatement.close();
+            databaseInstance.closeConnection();
             return sequentialUserIDResult;
         } catch (SQLException ex) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
@@ -254,6 +274,9 @@ public class Client {
            preparedStatement = databaseInstance.createConnection().prepareStatement(deleteSql);
            preparedStatement.setString(1, clientID);
            preparedStatement.execute();
+           //resultSet.close();
+            preparedStatement.close();
+            databaseInstance.closeConnection();
            return true;
        } catch(SQLException e){
            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, e);

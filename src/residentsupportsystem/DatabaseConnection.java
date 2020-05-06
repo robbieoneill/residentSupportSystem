@@ -12,46 +12,37 @@ import java.util.logging.Logger;
  *
  * @author robbieoneill
  */
+//EVERYONE SHOULD KEEP THEIR FILEPATH TO THE DATABASE HERE
+//Sohaib -
+//Robbie - //Users//robbieoneill//Documents//GitHub//residentSupportSystem//rssDB.db
+//Luke -  
+//Rajan - 
+
 public class DatabaseConnection {
-    
     private Connection databaseConnection;
     
-    public Connection createConnection(){
-        
+    public Connection createConnection() {
         databaseConnection = null;
         try {
-            //EVERYONE SHOULD KEEP THEIR FILEPATH TO THE DATABASE HERE
-            //Sohaib -
-            //Robbie - 
-            //Luke - 
-            //Rajan - 
-            
-            
-            String database = "jdbc:sqlite:"+"//Users//robbieoneill//Documents//GitHub//residentSupportSystem//rssDB.db";
+            String database = "jdbc:sqlite:" + "//Users//robbieoneill//Documents//GitHub//residentSupportSystem//rssDB.db";
             databaseConnection = DriverManager.getConnection(database);
-            System.out.println("CONNECTION TO "+database+" HAS BEEN ESTABLISHED.");
-            
+        
         } catch (SQLException ex) {
-            System.out.println("FAILED TO CONNECT");        	
+            System.out.println("FAILED TO CONNECT");
             System.out.println(ex.getMessage());
             Logger.getLogger(DatabaseConnection.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         return databaseConnection;
     }
     
-     /**
-     * Method will close the database connection
-     *
-     */
-    public void close() {
+    //Method will close the database connection
+     public void closeConnection() {
         try {
             databaseConnection.close();
         } // end try
-        catch (SQLException sqlException) {
-            sqlException.printStackTrace();
-        } // end catch
-    } // end method close
-      
+        catch (SQLException ex) {
+            System.out.println("FAILED TO CLOSE");
+            System.out.println(ex.getMessage());
+        }
+     }
 }
-
-

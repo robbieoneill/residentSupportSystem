@@ -73,12 +73,13 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="manageAppointmentsjButton" max="32767" attributes="0"/>
                   <Component id="manageCasesjButton" max="32767" attributes="0"/>
                   <Component id="logOutjButton" alignment="1" max="32767" attributes="0"/>
                   <Component id="manageProfilejButton" alignment="0" max="32767" attributes="0"/>
                   <Component id="contactAdministratorjButton" alignment="0" pref="289" max="32767" attributes="0"/>
                   <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+                  <Component id="manageWorkingHoursjButton" alignment="1" max="32767" attributes="0"/>
+                  <Component id="manageAppointmentsjButton1" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -86,15 +87,17 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="30" max="32767" attributes="0"/>
                       <Component id="manageCasesjButton" min="-2" pref="66" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="manageAppointmentsjButton" min="-2" pref="61" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="manageAppointmentsjButton1" min="-2" pref="61" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="manageWorkingHoursjButton" min="-2" pref="61" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="manageProfilejButton" min="-2" pref="59" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="contactAdministratorjButton" min="-2" pref="59" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="235" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="209" max="-2" attributes="0"/>
                       <Component id="logOutjButton" min="-2" pref="50" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   </Group>
@@ -102,17 +105,17 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="manageAppointmentsjButton">
+            <Component class="javax.swing.JButton" name="manageWorkingHoursjButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Your Appointments"/>
+                <Property name="text" type="java.lang.String" value="Manage Work Hours"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageAppointmentsjButtonActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageWorkingHoursjButtonActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JButton" name="manageCasesjButton">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Cases"/>
+                <Property name="text" type="java.lang.String" value="Manage Cases"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageCasesjButtonActionPerformed"/>
@@ -181,6 +184,14 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="javax.swing.JButton" name="manageAppointmentsjButton1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Your Appointments"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageAppointmentsjButton1ActionPerformed"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel3">

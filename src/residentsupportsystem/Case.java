@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Case {
 
-    DatabaseConnection caseConnectionInstance = new DatabaseConnection();
+    DatabaseConnection databaseInstance = new DatabaseConnection();
 
     public void setCaseTable(JTable caseTable, String caseIDEntered) {
         System.out.println("CASE ID ENTERED: " + caseIDEntered);
@@ -29,7 +29,7 @@ public class Case {
             String selectCaseDetailsQuery = ("SELECT tbl_case.caseID, tbl_client.clientFirstname, tbl_client.clientLastname, tbl_case.caseStatus FROM tbl_case JOIN tbl_client ON tbl_case.caseClientID = tbl_client.clientID");
             System.out.println(selectCaseDetailsQuery);
             try {
-                preparedStatement = caseConnectionInstance.createConnection().prepareStatement(selectCaseDetailsQuery);
+                preparedStatement = databaseInstance.createConnection().prepareStatement(selectCaseDetailsQuery);
                 resultSet = preparedStatement.executeQuery();
                 ((DefaultTableModel) caseTable.getModel()).setNumRows(0); // RESET TABLE TO ALLOW REFRESH
                 DefaultTableModel userTableModel = (DefaultTableModel) caseTable.getModel();
@@ -43,6 +43,9 @@ public class Case {
                     row[3] = resultSet.getString(4);
                     userTableModel.addRow(row);
                 }
+                resultSet.close();
+                preparedStatement.close();
+                databaseInstance.closeConnection();
             } catch (SQLException ex) {
                 Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -52,7 +55,7 @@ public class Case {
             String selectCaseDetailsQuery = ("SELECT tbl_case.caseID, tbl_client.clientFirstname, tbl_client.clientLastname, tbl_case.caseStatus FROM tbl_case JOIN tbl_client ON tbl_case.caseClientID = tbl_client.clientID WHERE caseID = ?");
             System.out.println(selectCaseDetailsQuery);
             try {
-                preparedStatement = caseConnectionInstance.createConnection().prepareStatement(selectCaseDetailsQuery);
+                preparedStatement = databaseInstance.createConnection().prepareStatement(selectCaseDetailsQuery);
                 preparedStatement.setString(1, caseIDEntered);
                 resultSet = preparedStatement.executeQuery();
                 ((DefaultTableModel) caseTable.getModel()).setNumRows(0); // RESET TABLE TO ALLOW REFRESH
@@ -67,6 +70,9 @@ public class Case {
                     row[3] = resultSet.getString(4);
                     userTableModel.addRow(row);
                 }
+                resultSet.close();
+                preparedStatement.close();
+                databaseInstance.closeConnection();
             } catch (SQLException ex) {
                 Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
             }

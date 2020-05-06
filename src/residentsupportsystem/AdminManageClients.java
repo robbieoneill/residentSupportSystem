@@ -98,28 +98,46 @@ public class AdminManageClients extends javax.swing.JFrame {
                 .addContainerGap(63, Short.MAX_VALUE))
         );
 
+        clientDetailsjPanel.setBackground(new java.awt.Color(113, 128, 147));
+
         clientDetailsjLabel.setText("Client Details");
 
         clientFirstnamejLabel.setText("Firstname");
 
+        clientFirstnamejTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         clientMiddlenamejLabel.setText("Middlename");
+
+        clientMiddlenamejTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         clientLastnamejLabel.setText("Lastname");
 
+        clientLastnamejTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         clientGenderjLabel.setText("Gender");
 
+        clientGenderjComboBox.setBackground(new java.awt.Color(220, 221, 225));
         clientGenderjComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Client Gender:", "Male", "Female", "Other" }));
 
         clientDOBjLabel.setText("DOB");
 
+        clientDOBjTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         clientEmailjLabel.setText("Email");
+
+        clientEmailjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         clientTeljLabel.setText("Telephone");
 
+        clientTeljTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         clientMobjLabel.setText("Mobile");
+
+        clientMobjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         clientAddr1jLabel.setText("Addr 1");
 
+        clientAddr1jTextField.setBackground(new java.awt.Color(220, 221, 225));
         clientAddr1jTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clientAddr1jTextFieldActionPerformed(evt);
@@ -128,8 +146,11 @@ public class AdminManageClients extends javax.swing.JFrame {
 
         clientAddr2jLabel.setText("Addr 2");
 
+        clientAddr2jTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         clientPostcodejLabel.setText("Postcode");
 
+        clientPostcodejTextField.setBackground(new java.awt.Color(220, 221, 225));
         clientPostcodejTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clientPostcodejTextFieldActionPerformed(evt);
@@ -138,11 +159,14 @@ public class AdminManageClients extends javax.swing.JFrame {
 
         clientNotesjLabel.setText("Notes");
 
+        clientNotesjTextArea.setEditable(false);
+        clientNotesjTextArea.setBackground(new java.awt.Color(220, 221, 225));
         clientNotesjTextArea.setColumns(20);
         clientNotesjTextArea.setRows(5);
         clientNotesjScrollPanel.setViewportView(clientNotesjTextArea);
 
         addClientjButton.setBackground(new java.awt.Color(102, 102, 102));
+        addClientjButton.setForeground(new java.awt.Color(25, 42, 86));
         addClientjButton.setText("Add");
         addClientjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,6 +175,7 @@ public class AdminManageClients extends javax.swing.JFrame {
         });
 
         saveClientjButton.setBackground(new java.awt.Color(102, 102, 102));
+        saveClientjButton.setForeground(new java.awt.Color(25, 42, 86));
         saveClientjButton.setText("Save");
         saveClientjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,7 +183,8 @@ public class AdminManageClients extends javax.swing.JFrame {
             }
         });
 
-        deleteClientjButton.setBackground(new java.awt.Color(255, 0, 0));
+        deleteClientjButton.setBackground(new java.awt.Color(102, 102, 102));
+        deleteClientjButton.setForeground(new java.awt.Color(194, 54, 22));
         deleteClientjButton.setText("Delete");
         deleteClientjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,6 +194,7 @@ public class AdminManageClients extends javax.swing.JFrame {
 
         jLabel1.setText("Client ID");
 
+        clientIDjTextField.setBackground(new java.awt.Color(220, 221, 225));
         clientIDjTextField.setEnabled(false);
         clientIDjTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -175,6 +202,7 @@ public class AdminManageClients extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setForeground(new java.awt.Color(25, 42, 86));
         jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -339,7 +367,7 @@ public class AdminManageClients extends javax.swing.JFrame {
             .addGroup(windowjPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(clientDetailsjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(clientTablejScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 859, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );

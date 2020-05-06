@@ -36,13 +36,14 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
 
         windowjPanel = new javax.swing.JPanel();
         navigationjPanel = new javax.swing.JPanel();
-        manageAppointmentsjButton = new javax.swing.JButton();
+        manageWorkingHoursjButton = new javax.swing.JButton();
         manageCasesjButton = new javax.swing.JButton();
         logOutjButton = new javax.swing.JButton();
         manageProfilejButton = new javax.swing.JButton();
         contactAdministratorjButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        manageAppointmentsjButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         clientCountjPanel = new javax.swing.JPanel();
         clientCountHeaderjLabel = new javax.swing.JLabel();
@@ -63,14 +64,14 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
 
         navigationjPanel.setBackground(new java.awt.Color(153, 153, 153));
 
-        manageAppointmentsjButton.setText("Your Appointments");
-        manageAppointmentsjButton.addActionListener(new java.awt.event.ActionListener() {
+        manageWorkingHoursjButton.setText("Manage Work Hours");
+        manageWorkingHoursjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageAppointmentsjButtonActionPerformed(evt);
+                manageWorkingHoursjButtonActionPerformed(evt);
             }
         });
 
-        manageCasesjButton.setText("Cases");
+        manageCasesjButton.setText("Manage Cases");
         manageCasesjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageCasesjButtonActionPerformed(evt);
@@ -120,31 +121,41 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        manageAppointmentsjButton1.setText("Your Appointments");
+        manageAppointmentsjButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manageAppointmentsjButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout navigationjPanelLayout = new javax.swing.GroupLayout(navigationjPanel);
         navigationjPanel.setLayout(navigationjPanelLayout);
         navigationjPanelLayout.setHorizontalGroup(
             navigationjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(manageAppointmentsjButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(manageCasesjButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(logOutjButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(manageProfilejButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(contactAdministratorjButton, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(manageWorkingHoursjButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(manageAppointmentsjButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         navigationjPanelLayout.setVerticalGroup(
             navigationjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navigationjPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addComponent(manageCasesjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(manageAppointmentsjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(manageAppointmentsjButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(manageWorkingHoursjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(manageProfilejButton, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(contactAdministratorjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(235, 235, 235)
+                .addGap(209, 209, 209)
                 .addComponent(logOutjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23))
         );
@@ -333,12 +344,14 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_logOutjButtonActionPerformed
 
     private void manageProfilejButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageProfilejButtonActionPerformed
-        // TODO add your handling code here:
+        new AllUsersManageDetails(userLoggedIn).setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_manageProfilejButtonActionPerformed
 
-    private void manageAppointmentsjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageAppointmentsjButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_manageAppointmentsjButtonActionPerformed
+    private void manageWorkingHoursjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageWorkingHoursjButtonActionPerformed
+        new CaseworkerManageWorkingTime(userLoggedIn).setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_manageWorkingHoursjButtonActionPerformed
 
     private void contactAdministratorjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactAdministratorjButtonActionPerformed
         // TODO add your handling code here:
@@ -348,6 +361,10 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
         new CaseworkerDashboard(userLoggedIn).setVisible(true);
         this.dispose();          // TODO add your handling code here:
     }//GEN-LAST:event_manageCasesjButtonActionPerformed
+
+    private void manageAppointmentsjButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageAppointmentsjButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_manageAppointmentsjButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -372,9 +389,10 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JButton logOutjButton;
-    private javax.swing.JButton manageAppointmentsjButton;
+    private javax.swing.JButton manageAppointmentsjButton1;
     private javax.swing.JButton manageCasesjButton;
     private javax.swing.JButton manageProfilejButton;
+    private javax.swing.JButton manageWorkingHoursjButton;
     private javax.swing.JPanel navigationjPanel;
     private javax.swing.JPanel windowjPanel;
     // End of variables declaration//GEN-END:variables

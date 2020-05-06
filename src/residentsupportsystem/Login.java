@@ -147,7 +147,7 @@ public class Login extends javax.swing.JFrame {
     private void loginjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginjButtonActionPerformed
         // TODO add your handling code here:
         
-        PreparedStatement preparedQuery;
+        PreparedStatement preparedStatement;
         ResultSet queryResult;
         String usernameEntered = usernamejTextField.getText();
         String passwordEntered = String.valueOf(passwordjPasswordField.getPassword());
@@ -162,23 +162,27 @@ public class Login extends javax.swing.JFrame {
         }
         
         else{
-            DatabaseConnection loginConnectionInstance = new DatabaseConnection();
+            DatabaseConnection databaseInstance = new DatabaseConnection();
         String query = "SELECT * FROM tbl_user WHERE userUsername =? AND userPassword =?";
         try {
-                preparedQuery = loginConnectionInstance.createConnection().prepareStatement(query);
-                preparedQuery.setString(1, usernameEntered);
-                preparedQuery.setString(2, passwordEntered);
+                preparedStatement = databaseInstance.createConnection().prepareStatement(query);
+                preparedStatement.setString(1, usernameEntered);
+                preparedStatement.setString(2, passwordEntered);
                 System.out.println(usernameEntered);
                 System.out.println(passwordEntered);
-                System.out.println(preparedQuery);
+                System.out.println(preparedStatement);
                 
-                queryResult = preparedQuery.executeQuery();
+                queryResult = preparedStatement.executeQuery();
                 if(queryResult.next()){
                     String userType = queryResult.getString("userType");
                     String userFirstname = queryResult.getString("userFirstname");
                     int userID = queryResult.getInt("userID");
+                    //resultSet.close();
+                    preparedStatement.close();
+                    databaseInstance.closeConnection();
                     System.out.println(userType);
                     if(userType.equals("Admin")){
+                        
                         JOptionPane.showMessageDialog(rootPane,"Admin Access Rights Granted; Welcome, "+userFirstname,"Info", 2);
                         new AdminDashboard(userID).setVisible(true);
                         this.dispose();

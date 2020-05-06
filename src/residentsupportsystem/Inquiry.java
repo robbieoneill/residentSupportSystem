@@ -45,6 +45,9 @@ public class Inquiry {
 				row[3] = resultSet.getString(4);
 
 				enquiryTableModel.addRow(row);
+                                resultSet.close();
+                                preparedStatement.close();
+                                databaseInstance.closeConnection();
 			}
 		}
 		catch(SQLException ex) {
@@ -78,9 +81,15 @@ public class Inquiry {
                 preparedStatement.setString(7, enquiryDate);
                 
                 if (preparedStatement.executeUpdate()>0){
+                    //resultSet.close();
+                    preparedStatement.close();
+                    databaseInstance.closeConnection();
                     return true;
                 }
                 else {
+                    //resultSet.close();
+                    preparedStatement.close();
+                    databaseInstance.closeConnection();
                     return false;
                 }
             } catch (SQLException ex) {
@@ -121,6 +130,9 @@ public class Inquiry {
 				row[3] = resultSet.getString(4);
 
 				enquiryTableModel.addRow(row);
+                                resultSet.close();
+                                preparedStatement.close();
+                                databaseInstance.closeConnection();
 			}
 		}
 		catch(SQLException ex) {
@@ -148,7 +160,9 @@ public class Inquiry {
                returnResultSet.add(resultSet.getString("clientLastname")); 
                returnResultSet.add(resultSet.getString("enquiryNotes"));
                returnResultSet.add(resultSet.getString("enquiryDate"));
-              
+               resultSet.close();
+                preparedStatement.close();
+                databaseInstance.closeConnection();
                 return returnResultSet;
             }    
         
