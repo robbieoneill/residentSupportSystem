@@ -188,41 +188,46 @@ public class Appointment {
     
     
     
-    public List setAppointmentDetails(int appointmentID) {
+    
+    
+    
+    
+    public List setAppointmentDetails(int appointmentID){
+        System.out.println("APPOINTMENT ID: "+appointmentID);
+        String getEnquiryDataQuery = ("﻿SELECT tbl_appointment.appointmentID, tbl_appointment.appointmentStartTime, tbl_appointment.appointmentEndTime, tbl_appointment.appointmentNotes, tbl_user.userFirstname, tbl_user.userLastname FROM tbl_appointment JOIN tbl_user ON tbl_appointment.appointmentCaseworkerID = tbl_user.userID WHERE appointmentID =?");
         List returnResultSet = new LinkedList();
         PreparedStatement preparedStatement;
         ResultSet resultSet;
-        String getUserDataQuery = ("﻿SELECT appointmentID, appointmentStartTime, appointmentEndTime, appointmentNotes, userFirstname, userLastname FROM tbl_appointment JOIN tbl_user ON appointmentCaseworkerID = userID WHERE appointmentID =?");
+        
+        //String getEnquiryDataQuery = ("﻿SELECT tbl_appointment.appointmentID, tbl_appointment.appointmentStartTime, tbl_appointment.appointmentEndTime, tbl_appointment.appointmentNotes, tbl_user.userFirstname, tbl_user.userLastname FROM tbl_appointment JOIN tbl_user ON tbl_appointment.appointmentCaseworkerID = tbl_user.userID WHERE appointmentID =?");
+        System.out.println(getEnquiryDataQuery);
         try {
-            preparedStatement = databaseInstance.createConnection().prepareStatement(getUserDataQuery);
-            preparedStatement.setInt(1, appointmentID);
-            System.out.println(preparedStatement.toString());
+            preparedStatement = databaseInstance.createConnection().prepareStatement (getEnquiryDataQuery);
+            preparedStatement.setInt(1,appointmentID);
             resultSet = preparedStatement.executeQuery();
-
-            while (resultSet.next()) {
-               
-                returnResultSet.add(resultSet.getString("appointmentID"));
-                returnResultSet.add(resultSet.getString("appointmentStartTime"));
-                returnResultSet.add(resultSet.getString("appointmentEndTime"));
-                if (resultSet.getString("appointmentNotes") == null) {
-                    returnResultSet.add("");
-                } else {
-                   returnResultSet.add(resultSet.getString("appointmentNotes"));
-                }
-                returnResultSet.add(resultSet.getString("userFirstname"));
-                returnResultSet.add(resultSet.getString("userLastname"));
-                resultSet.close();
+            
+            while(resultSet.next()){
+               returnResultSet.add(resultSet.getInt("enquiryID"));
+               returnResultSet.add(resultSet.getInt("clientID"));
+               returnResultSet.add(resultSet.getString("enquiryArea"));
+               returnResultSet.add(resultSet.getString("clientFirstname"));
+               returnResultSet.add(resultSet.getString("clientLastname")); 
+               returnResultSet.add(resultSet.getString("enquiryNotes"));
+               returnResultSet.add(resultSet.getString("enquiryDate"));
+               resultSet.close();
                 preparedStatement.close();
                 databaseInstance.closeConnection();
                 return returnResultSet;
-            }
+            }    
+        
         } catch (SQLException ex) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
         }
-
-        System.out.println(getUserDataQuery);
+            
+        
+        System.out.println(getEnquiryDataQuery);
         return returnResultSet;
-
+        
     }
 
 

@@ -816,6 +816,8 @@ public class AdminManageInquirys extends javax.swing.JFrame {
     }//GEN-LAST:event_deletejButtonActionPerformed
 
     private void appointmentTablejTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_appointmentTablejTableMouseClicked
+        appointment.testSQL();
+        
         DefaultTableModel userTable = (DefaultTableModel)appointmentTablejTable.getModel();
         int selectedRow = appointmentTablejTable.getSelectedRow();
         String selectedAppointmentPointer = (userTable.getValueAt(selectedRow, 0).toString());
