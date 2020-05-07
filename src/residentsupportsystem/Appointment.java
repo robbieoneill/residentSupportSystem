@@ -9,6 +9,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JTable;
@@ -25,7 +27,7 @@ public class Appointment {
     public void setAppointmentTable(JTable appointmentTable, int caseSelected) {
         PreparedStatement preparedStatement;
         ResultSet resultSet;
-        String selectCaseDetailsQuery = ("SELECT appointmentID, appointmentDate, appointmentStartTime, appointmentEndTime, appointmentStatus FROM tbl_appointment WHERE appointmentCaseID = ?");
+        String selectCaseDetailsQuery = ("SELECT appointmentID, appointmentDate, appointmentStartTime, appointmentEndTime, appointmentStatus FROM tbl_appointment WHERE appointmentEnquiryID = ?");
         System.out.println(selectCaseDetailsQuery);
         try {
             preparedStatement = databaseInstance.createConnection().prepareStatement(selectCaseDetailsQuery);
@@ -181,6 +183,45 @@ public class Appointment {
             Logger.getLogger(Appointment.class.getName()).log(Level.SEVERE, null, ex);
         }
 
+
+    }
+    
+    
+    
+    public List setAppointmentDetails(int appointmentID) {
+        List returnResultSet = new LinkedList();
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String getUserDataQuery = ("﻿SELECT appointmentID, appointmentStartTime, appointmentEndTime, appointmentNotes, userFirstname, userLastname FROM tbl_appointment JOIN tbl_user ON appointmentCaseworkerID = userID WHERE appointmentID =?");
+        try {
+            preparedStatement = databaseInstance.createConnection().prepareStatement(getUserDataQuery);
+            preparedStatement.setInt(1, appointmentID);
+            System.out.println(preparedStatement.toString());
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+               
+                returnResultSet.add(resultSet.getString("appointmentID"));
+                returnResultSet.add(resultSet.getString("appointmentStartTime"));
+                returnResultSet.add(resultSet.getString("appointmentEndTime"));
+                if (resultSet.getString("appointmentNotes") == null) {
+                    returnResultSet.add("");
+                } else {
+                   returnResultSet.add(resultSet.getString("appointmentNotes"));
+                }
+                returnResultSet.add(resultSet.getString("userFirstname"));
+                returnResultSet.add(resultSet.getString("userLastname"));
+                resultSet.close();
+                preparedStatement.close();
+                databaseInstance.closeConnection();
+                return returnResultSet;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        System.out.println(getUserDataQuery);
+        return returnResultSet;
 
     }
 

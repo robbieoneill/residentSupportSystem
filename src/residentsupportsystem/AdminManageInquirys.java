@@ -8,6 +8,7 @@ package residentsupportsystem;
 import java.util.List;
 import java.time.format.DateTimeFormatter;  
 import java.time.LocalDateTime;
+import javax.swing.table.DefaultTableModel;
 
 
 /**
@@ -18,15 +19,15 @@ public class AdminManageInquirys extends javax.swing.JFrame {
 
     int userLoggedIn;
     Inquiry inquiry = new Inquiry();
-    Client manageEnquiryClientInstance = new Client();
-    Appointment manageEnquiryAppointmentInstance = new Appointment();
+    Client client = new Client();
+    Appointment appointment = new Appointment();
     
     public AdminManageInquirys(int userID) {
         userLoggedIn = userID;
         initComponents();
         inquiry.setEnquiryTable(enquiryTablejTable);
-        manageEnquiryClientInstance.setClientTable(clientTablejTable);
-        manageEnquiryAppointmentInstance.setAvailableAppointmentTable(appointmentTablejTable);
+        client.setClientTable(clientTablejTable);
+        appointment.setAvailableAppointmentTable(appointmentTablejTable);
          
         
     }
@@ -83,6 +84,20 @@ public class AdminManageInquirys extends javax.swing.JFrame {
         appointmentTablejScrollPane = new javax.swing.JScrollPane();
         appointmentTablejTable = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
+        appointmentIDjLabel = new javax.swing.JLabel();
+        appointmentDatejLabel = new javax.swing.JLabel();
+        appointmentFromjLabel = new javax.swing.JLabel();
+        appointmentTojLabel = new javax.swing.JLabel();
+        appointmentCaseworkerjLabel = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        appointmentNotesjTextArea = new javax.swing.JTextArea();
+        assignAppointmentjButton = new javax.swing.JButton();
+        appointmentNotesjLabel = new javax.swing.JLabel();
+        appointmentIDjTextField = new javax.swing.JTextField();
+        appointmentDatejTextField = new javax.swing.JTextField();
+        appointmentStartjTextField = new javax.swing.JTextField();
+        appointmentEndjTextField = new javax.swing.JTextField();
+        appointmentCaseworkerjTextField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -243,8 +258,8 @@ public class AdminManageInquirys extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabelNotes, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextEnquiryNotes, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(106, 106, 106))
+                .addComponent(jTextEnquiryNotes, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         backjButton.setText("Back");
@@ -292,7 +307,7 @@ public class AdminManageInquirys extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTextFieldDate_Time, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         dateAndTimejPanelLayout.setVerticalGroup(
             dateAndTimejPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -388,6 +403,8 @@ public class AdminManageInquirys extends javax.swing.JFrame {
                         .addGap(284, 284, 284)
                         .addComponent(enquiryIDjPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(dateAndTimejPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dateAndTimejPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(notesjPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(enquiryDetailsjPanelLayout.createSequentialGroup()
                         .addComponent(backjButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -396,9 +413,7 @@ public class AdminManageInquirys extends javax.swing.JFrame {
                         .addComponent(deletejButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(savejButton)
-                        .addGap(0, 10, Short.MAX_VALUE))
-                    .addComponent(dateAndTimejPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(notesjPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         enquiryDetailsjPanelLayout.setVerticalGroup(
@@ -415,14 +430,14 @@ public class AdminManageInquirys extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(dateAndTimejPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(notesjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(notesjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(enquiryDetailsjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backjButton)
+                    .addComponent(savejButton)
                     .addComponent(deletejButton)
                     .addComponent(newjButton)
-                    .addComponent(savejButton))
-                .addGap(225, 225, 225)
+                    .addComponent(backjButton))
+                .addGap(146, 146, 146)
                 .addComponent(enquiryIDjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -509,17 +524,101 @@ public class AdminManageInquirys extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        appointmentTablejTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                appointmentTablejTableMouseClicked(evt);
+            }
+        });
         appointmentTablejScrollPane.setViewportView(appointmentTablejTable);
+
+        appointmentIDjLabel.setText("Appointment ID");
+
+        appointmentDatejLabel.setText("Appointment Date");
+
+        appointmentFromjLabel.setText("From");
+
+        appointmentTojLabel.setText("To");
+
+        appointmentCaseworkerjLabel.setText("Caseworker");
+
+        appointmentNotesjTextArea.setColumns(20);
+        appointmentNotesjTextArea.setRows(5);
+        jScrollPane1.setViewportView(appointmentNotesjTextArea);
+
+        assignAppointmentjButton.setText("Assign Appointment");
+
+        appointmentNotesjLabel.setText("Notes");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(appointmentFromjLabel)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(appointmentStartjTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(appointmentTojLabel)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(appointmentEndjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addComponent(appointmentCaseworkerjLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(appointmentIDjLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(appointmentDatejLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(appointmentIDjTextField)
+                                            .addComponent(appointmentDatejTextField)
+                                            .addComponent(appointmentCaseworkerjTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE))))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(95, 95, 95)
+                                .addComponent(assignAppointmentjButton))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(appointmentNotesjLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(appointmentIDjLabel)
+                    .addComponent(appointmentIDjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(appointmentDatejLabel)
+                    .addComponent(appointmentDatejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(appointmentFromjLabel)
+                    .addComponent(appointmentTojLabel)
+                    .addComponent(appointmentStartjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(appointmentEndjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(appointmentCaseworkerjLabel)
+                    .addComponent(appointmentCaseworkerjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(appointmentNotesjLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(assignAppointmentjButton)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout windowjPanelLayout = new javax.swing.GroupLayout(windowjPanel);
@@ -549,13 +648,12 @@ public class AdminManageInquirys extends javax.swing.JFrame {
                 .addGroup(windowjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(enquiryTablejScrollPane, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(windowjPanelLayout.createSequentialGroup()
-                        .addComponent(clientTablejScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(appointmentTablejScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(6, 6, 6))
-                    .addComponent(enquiryDetailsjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 603, Short.MAX_VALUE))
+                        .addComponent(clientTablejScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(appointmentTablejScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(enquiryDetailsjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 645, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -637,12 +735,12 @@ public class AdminManageInquirys extends javax.swing.JFrame {
     }//GEN-LAST:event_savejButtonActionPerformed
 
     private void jButtonSearchAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchAllActionPerformed
-       manageEnquiryClientInstance.setClientTable(clientTablejTable);
+       client.setClientTable(clientTablejTable);
     }//GEN-LAST:event_jButtonSearchAllActionPerformed
 
     private void jButtonSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSearchActionPerformed
        String clientIDEntered = jTextFieldClientID.getText();
-       manageEnquiryClientInstance.setSearchedClientTable(clientTablejTable, clientIDEntered);
+       client.setSearchedClientTable(clientTablejTable, clientIDEntered);
     }//GEN-LAST:event_jButtonSearchActionPerformed
 
     private void clientTablejTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clientTablejTableMouseClicked
@@ -717,6 +815,22 @@ public class AdminManageInquirys extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_deletejButtonActionPerformed
 
+    private void appointmentTablejTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_appointmentTablejTableMouseClicked
+        DefaultTableModel userTable = (DefaultTableModel)appointmentTablejTable.getModel();
+        int selectedRow = appointmentTablejTable.getSelectedRow();
+        String selectedAppointmentPointer = (userTable.getValueAt(selectedRow, 0).toString());
+        int selectedAppointmentID = Integer.parseInt(selectedAppointmentPointer);			
+        List resultSetArrayList = appointment.setAppointmentDetails(selectedAppointmentID);
+        
+        appointmentIDjTextField.setText(resultSetArrayList.get(0).toString());
+        appointmentStartjTextField.setText(resultSetArrayList.get(1).toString());
+        appointmentEndjTextField.setText(resultSetArrayList.get(2).toString());
+        appointmentNotesjTextArea.setText(resultSetArrayList.get(3).toString());
+        appointmentCaseworkerjTextField.setText(resultSetArrayList.get(4).toString()+" "+resultSetArrayList.get(5).toString());
+        
+        
+    }//GEN-LAST:event_appointmentTablejTableMouseClicked
+
     public void resetCheckboxes (){
          
          jCheckBoxDomestic.setSelected(false);
@@ -733,8 +847,21 @@ public class AdminManageInquirys extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel appointmentCaseworkerjLabel;
+    private javax.swing.JTextField appointmentCaseworkerjTextField;
+    private javax.swing.JLabel appointmentDatejLabel;
+    private javax.swing.JTextField appointmentDatejTextField;
+    private javax.swing.JTextField appointmentEndjTextField;
+    private javax.swing.JLabel appointmentFromjLabel;
+    private javax.swing.JLabel appointmentIDjLabel;
+    private javax.swing.JTextField appointmentIDjTextField;
+    private javax.swing.JLabel appointmentNotesjLabel;
+    private javax.swing.JTextArea appointmentNotesjTextArea;
+    private javax.swing.JTextField appointmentStartjTextField;
     private javax.swing.JScrollPane appointmentTablejScrollPane;
     private javax.swing.JTable appointmentTablejTable;
+    private javax.swing.JLabel appointmentTojLabel;
+    private javax.swing.JButton assignAppointmentjButton;
     private javax.swing.JButton backjButton;
     private javax.swing.JScrollPane clientTablejScrollPane;
     private javax.swing.JTable clientTablejTable;
@@ -767,6 +894,7 @@ public class AdminManageInquirys extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelClientName;
     private javax.swing.JLabel jLabelNotes;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextEnquiryNotes;
     private javax.swing.JTextField jTextFieldClientID;
     private javax.swing.JTextField jTextFieldClientName;

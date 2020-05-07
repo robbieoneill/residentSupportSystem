@@ -96,7 +96,6 @@ public class Client {
     public void setClientTable(JTable clientTable){
         PreparedStatement preparedStatement;
         ResultSet resultSet;
-        
         String selectClientDetailsQuery = ("SELECT "
                 + "clientID, "
                 + "clientFirstname, "
@@ -176,7 +175,7 @@ public class Client {
                 returnResultSet.add(resultSet.getInt("clientID"));
                 returnResultSet.add(resultSet.getString("clientFirstname"));
                 if (resultSet.getString("clientMiddlename") == null){
-                    returnResultSet.add("Null");
+                    returnResultSet.add("");
                 }
                 else {returnResultSet.add(resultSet.getString("clientMiddlename"));
                 }
@@ -188,13 +187,13 @@ public class Client {
                 returnResultSet.add(resultSet.getString("clientMobNumber"));
                 returnResultSet.add(resultSet.getString("clientAddr1"));     
                 if (resultSet.getString("clientAddr2") == null){
-                    returnResultSet.add("Null");
+                    returnResultSet.add("");
                 } 
                 else {returnResultSet.add(resultSet.getString("clientAddr2"));
                 }          
                 returnResultSet.add(resultSet.getString("clientPostcode"));
                  if (resultSet.getString("clientNotes") == null){
-                    returnResultSet.add("Null");
+                    returnResultSet.add("");
                  } 
                  else {returnResultSet.add(resultSet.getString("clientNotes"));
                  }

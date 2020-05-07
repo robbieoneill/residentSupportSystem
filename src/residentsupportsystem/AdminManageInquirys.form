@@ -71,14 +71,13 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="enquiryTablejScrollPane" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="clientTablejScrollPane" min="-2" pref="211" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="appointmentTablejScrollPane" min="-2" pref="274" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="clientTablejScrollPane" min="-2" pref="175" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="appointmentTablejScrollPane" min="-2" pref="174" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jPanel1" max="32767" attributes="0"/>
-                          <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="enquiryDetailsjPanel" pref="603" max="32767" attributes="0"/>
+                      <Component id="enquiryDetailsjPanel" pref="645" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -107,7 +106,9 @@
                               <Component id="enquiryIDjPanel" max="32767" attributes="0"/>
                           </Group>
                           <Component id="dateAndTimejPanel2" alignment="1" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Component id="dateAndTimejPanel3" alignment="1" max="32767" attributes="0"/>
+                          <Component id="notesjPanel" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
                               <Component id="backjButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="newjButton" min="-2" max="-2" attributes="0"/>
@@ -115,10 +116,8 @@
                               <Component id="deletejButton" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="savejButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="dateAndTimejPanel3" alignment="1" max="32767" attributes="0"/>
-                          <Component id="notesjPanel" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -138,15 +137,15 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="dateAndTimejPanel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="notesjPanel" min="-2" pref="163" max="-2" attributes="0"/>
+                      <Component id="notesjPanel" min="-2" pref="251" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="backjButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="savejButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="deletejButton" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="newjButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="savejButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="backjButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="146" max="-2" attributes="0"/>
                       <Component id="enquiryIDjPanel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -366,8 +365,8 @@
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="jLabelNotes" min="-2" pref="24" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jTextEnquiryNotes" min="-2" pref="114" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
+                          <Component id="jTextEnquiryNotes" min="-2" pref="214" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -427,7 +426,7 @@
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jTextFieldDate_Time" min="-2" pref="238" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="29" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -754,6 +753,9 @@
                   <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="appointmentTablejTableMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -762,15 +764,157 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="appointmentFromjLabel" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="appointmentStartjTextField" pref="121" max="32767" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="appointmentTojLabel" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="appointmentEndjTextField" min="-2" pref="127" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                                  <Component id="appointmentCaseworkerjLabel" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="appointmentIDjLabel" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="appointmentDatejLabel" alignment="0" max="32767" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="appointmentIDjTextField" max="32767" attributes="0"/>
+                                                  <Component id="appointmentDatejTextField" max="32767" attributes="0"/>
+                                                  <Component id="appointmentCaseworkerjTextField" pref="211" max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="assignAppointmentjButton" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="appointmentNotesjLabel" min="-2" pref="115" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="appointmentIDjLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="appointmentIDjTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="appointmentDatejLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="appointmentDatejTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="appointmentFromjLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="appointmentTojLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="appointmentStartjTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="appointmentEndjTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="appointmentCaseworkerjLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="appointmentCaseworkerjTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="appointmentNotesjLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="assignAppointmentjButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="appointmentIDjLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Appointment ID"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="appointmentDatejLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Appointment Date"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="appointmentFromjLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="From"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="appointmentTojLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="To"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="appointmentCaseworkerjLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Caseworker"/>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="appointmentNotesjTextArea">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JButton" name="assignAppointmentjButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Assign Appointment"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="appointmentNotesjLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Notes"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="appointmentIDjTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="appointmentDatejTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="appointmentStartjTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="appointmentEndjTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="appointmentCaseworkerjTextField">
+            </Component>
+          </SubComponents>
         </Container>
       </SubComponents>
     </Container>
