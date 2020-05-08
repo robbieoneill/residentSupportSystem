@@ -293,6 +293,11 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="userFirstnamejTextField">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="userMiddlenamejLabel">
               <Properties>
@@ -300,6 +305,11 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="userMiddlenamejTextField">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="userLastnamejLabel">
               <Properties>
@@ -307,6 +317,11 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="userLastnamejTextField">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="userGenderjLabel">
               <Properties>
@@ -334,6 +349,11 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="userDOBjTextField">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="userTypejLabel">
               <Properties>
@@ -360,6 +380,11 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="userUsernamejTextField">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                </Property>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userUsernamejTextFieldActionPerformed"/>
               </Events>
@@ -370,6 +395,11 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="userPasswordjTextField">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="userEmailjLabel">
               <Properties>
@@ -377,6 +407,11 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="userEmailjTextField">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="userTeljLabel">
               <Properties>
@@ -384,6 +419,11 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="userTeljTextField">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="userMobjLabel">
               <Properties>
@@ -391,6 +431,11 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="userMobjTextField">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="userWorkTeljLabel">
               <Properties>
@@ -398,6 +443,11 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="userWorkTeljTextField">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="userAddr1jLabel">
               <Properties>
@@ -405,6 +455,11 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="userAddr1jTextField">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                </Property>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userAddr1jTextFieldActionPerformed"/>
               </Events>
@@ -415,6 +470,11 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="userAddr2jTextField">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="userPostcodejLabel">
               <Properties>
@@ -422,6 +482,11 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="userPostcodejTextField">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                </Property>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userPostcodejTextFieldActionPerformed"/>
               </Events>
@@ -471,6 +536,11 @@
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="userIDjTextField">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                </Property>
+              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userIDjTextFieldActionPerformed"/>
               </Events>

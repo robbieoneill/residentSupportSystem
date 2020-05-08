@@ -92,29 +92,35 @@ public class CaseworkerManageWorkingTime extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(47, 54, 64));
 
-        jLabel18.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel18.setText("Manage Working Hours - Caseworker: ");
+        jPanel2.setBackground(new java.awt.Color(47, 54, 64));
+
+        jLabel18.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(238, 238, 238));
+        jLabel18.setText("Manage Working Hours ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 472, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addContainerGap()
                 .addComponent(jLabel18)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
-        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel3.setBackground(new java.awt.Color(113, 128, 147));
+
+        jPanel4.setBackground(new java.awt.Color(220, 221, 225));
+        jPanel4.setForeground(new java.awt.Color(220, 221, 225));
 
         mondayjCheckBox.setText("Monday");
         mondayjCheckBox.addActionListener(new java.awt.event.ActionListener() {
@@ -399,6 +405,8 @@ public class CaseworkerManageWorkingTime extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel5.setBackground(new java.awt.Color(113, 128, 147));
+
         jLabel2.setText("View your past work hours");
 
         workHistoryjTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -415,6 +423,8 @@ public class CaseworkerManageWorkingTime extends javax.swing.JFrame {
         jScrollPane1.setViewportView(workHistoryjTable);
 
         searchjButton.setText("Search");
+
+        weekSearchjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         weekSearchjLabel.setText("Week Start Date: ");
 
@@ -487,12 +497,12 @@ public class CaseworkerManageWorkingTime extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(backjButton)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

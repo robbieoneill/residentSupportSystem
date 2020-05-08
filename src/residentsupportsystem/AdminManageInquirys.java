@@ -101,9 +101,11 @@ public class AdminManageInquirys extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        windowjPanel.setBackground(new java.awt.Color(33, 33, 33));
+        windowjPanel.setBackground(new java.awt.Color(47, 54, 64));
 
-        enquiryDetailsjPanel.setBackground(new java.awt.Color(153, 153, 153));
+        enquiryDetailsjPanel.setBackground(new java.awt.Color(47, 54, 64));
+
+        enquiryTypejPanel.setBackground(new java.awt.Color(113, 128, 147));
 
         jLabel1.setText("Nature of Enquiry");
 
@@ -176,9 +178,15 @@ public class AdminManageInquirys extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        searchjPanel.setBackground(new java.awt.Color(113, 128, 147));
+
         jLabelClientName.setText("Client Name:");
 
         jLabelClientID.setText("Client ID:");
+
+        jTextFieldClientID.setBackground(new java.awt.Color(220, 221, 225));
+
+        jTextFieldClientName.setBackground(new java.awt.Color(220, 221, 225));
 
         jButtonSearch.setText("Search");
         jButtonSearch.addActionListener(new java.awt.event.ActionListener() {
@@ -233,6 +241,8 @@ public class AdminManageInquirys extends javax.swing.JFrame {
                     .addComponent(jButtonSearchAll))
                 .addContainerGap(7, Short.MAX_VALUE))
         );
+
+        notesjPanel.setBackground(new java.awt.Color(113, 128, 147));
 
         jLabelNotes.setText("Notes:");
 
@@ -290,8 +300,11 @@ public class AdminManageInquirys extends javax.swing.JFrame {
             }
         });
 
+        dateAndTimejPanel.setBackground(new java.awt.Color(113, 128, 147));
+
         jLabel2.setText("Enquiry Date & Time:");
 
+        jTextFieldDate_Time.setBackground(new java.awt.Color(220, 221, 225));
         jTextFieldDate_Time.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldDate_TimeActionPerformed(evt);
@@ -330,8 +343,11 @@ public class AdminManageInquirys extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
+        dateAndTimejPanel2.setBackground(new java.awt.Color(113, 128, 147));
+
         jLabel5.setText("Enquiry ID:");
 
+        enquiryIDjTextField.setBackground(new java.awt.Color(220, 221, 225));
         enquiryIDjTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 enquiryIDjTextFieldActionPerformed(evt);
@@ -358,6 +374,8 @@ public class AdminManageInquirys extends javax.swing.JFrame {
                     .addComponent(enquiryIDjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        dateAndTimejPanel3.setBackground(new java.awt.Color(113, 128, 147));
 
         jLabel6.setText("Enquiry Status:");
 
@@ -488,7 +506,10 @@ public class AdminManageInquirys extends javax.swing.JFrame {
         });
         clientTablejScrollPane.setViewportView(clientTablejTable);
 
+        headerjPanel.setBackground(new java.awt.Color(47, 54, 64));
+
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(220, 221, 225));
         jLabel3.setText("Manage Inquirys");
 
         javax.swing.GroupLayout headerjPanelLayout = new javax.swing.GroupLayout(headerjPanel);
@@ -531,6 +552,8 @@ public class AdminManageInquirys extends javax.swing.JFrame {
         });
         appointmentTablejScrollPane.setViewportView(appointmentTablejTable);
 
+        jPanel1.setBackground(new java.awt.Color(113, 128, 147));
+
         appointmentIDjLabel.setText("Appointment ID");
 
         appointmentDatejLabel.setText("Appointment Date");
@@ -547,7 +570,18 @@ public class AdminManageInquirys extends javax.swing.JFrame {
 
         assignAppointmentjButton.setText("Assign Appointment");
 
+        appointmentNotesjLabel.setBackground(new java.awt.Color(113, 128, 147));
         appointmentNotesjLabel.setText("Notes");
+
+        appointmentIDjTextField.setBackground(new java.awt.Color(220, 221, 225));
+
+        appointmentDatejTextField.setBackground(new java.awt.Color(220, 221, 225));
+
+        appointmentStartjTextField.setBackground(new java.awt.Color(220, 221, 225));
+
+        appointmentEndjTextField.setBackground(new java.awt.Color(220, 221, 225));
+
+        appointmentCaseworkerjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -614,7 +648,7 @@ public class AdminManageInquirys extends javax.swing.JFrame {
                     .addComponent(appointmentCaseworkerjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(appointmentNotesjLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(assignAppointmentjButton)
@@ -816,8 +850,6 @@ public class AdminManageInquirys extends javax.swing.JFrame {
     }//GEN-LAST:event_deletejButtonActionPerformed
 
     private void appointmentTablejTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_appointmentTablejTableMouseClicked
-        appointment.testSQL();
-        
         DefaultTableModel userTable = (DefaultTableModel)appointmentTablejTable.getModel();
         int selectedRow = appointmentTablejTable.getSelectedRow();
         String selectedAppointmentPointer = (userTable.getValueAt(selectedRow, 0).toString());

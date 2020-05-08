@@ -56,7 +56,7 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(39, 60, 117));
+        jPanel1.setBackground(new java.awt.Color(113, 128, 147));
 
         jPanel2.setBackground(new java.awt.Color(47, 54, 64));
 
@@ -139,15 +139,15 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(manageDetailsjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(logOutjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(198, 198, 198))
+                .addGap(186, 186, 186))
         );
 
         jPanel3.setBackground(new java.awt.Color(47, 54, 64));
 
-        clientCountjPanel.setBackground(new java.awt.Color(39, 60, 117));
+        clientCountjPanel.setBackground(new java.awt.Color(113, 128, 147));
         clientCountjPanel.setPreferredSize(new java.awt.Dimension(175, 40));
 
         clientCountHeaderjLabel.setText("               Clients");
@@ -171,7 +171,7 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        caseworkerCountjPanel.setBackground(new java.awt.Color(39, 60, 117));
+        caseworkerCountjPanel.setBackground(new java.awt.Color(113, 128, 147));
         caseworkerCountjPanel.setPreferredSize(new java.awt.Dimension(175, 40));
 
         caseworkerCountHeaderjLabel.setText("           Case Workers");
@@ -194,7 +194,7 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addComponent(caseworkerCountjLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        appointmentCountjPanel.setBackground(new java.awt.Color(39, 60, 117));
+        appointmentCountjPanel.setBackground(new java.awt.Color(113, 128, 147));
         appointmentCountjPanel.setPreferredSize(new java.awt.Dimension(175, 40));
 
         appointmentCountHeaderjLabel.setText("  Upcoming Appointments");
@@ -217,7 +217,7 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addComponent(appointmentCountjLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        activeCasesCountjPanel.setBackground(new java.awt.Color(39, 60, 117));
+        activeCasesCountjPanel.setBackground(new java.awt.Color(113, 128, 147));
         activeCasesCountjPanel.setPreferredSize(new java.awt.Dimension(175, 40));
 
         activeCasesCountHeaderjLabel.setText("            Active Cases");
@@ -265,7 +265,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         );
 
         test.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
-        test.setText("Admin Dashboard: ");
+        test.setText("Admin Dashboard, Welcome  ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -287,7 +287,7 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(test)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 513, Short.MAX_VALUE)))

@@ -116,9 +116,15 @@ public class AdminManageUsers extends javax.swing.JFrame {
 
         userFirstnamejLabel.setText("Firstname");
 
+        userFirstnamejTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         userMiddlenamejLabel.setText("Middlename");
 
+        userMiddlenamejTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         userLastnamejLabel.setText("Lastname");
+
+        userLastnamejTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         userGenderjLabel.setText("Gender");
 
@@ -126,12 +132,15 @@ public class AdminManageUsers extends javax.swing.JFrame {
 
         userDOBjLabel.setText("DOB");
 
+        userDOBjTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         userTypejLabel.setText("User Type");
 
         userTypejComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User Type:", "Case Worker", "Admin" }));
 
         userUsernamejLabel.setText("Username");
 
+        userUsernamejTextField.setBackground(new java.awt.Color(220, 221, 225));
         userUsernamejTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userUsernamejTextFieldActionPerformed(evt);
@@ -140,16 +149,27 @@ public class AdminManageUsers extends javax.swing.JFrame {
 
         userPasswordjLabel.setText("Password");
 
+        userPasswordjTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         userEmailjLabel.setText("Email");
+
+        userEmailjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         userTeljLabel.setText("Telephone");
 
+        userTeljTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         userMobjLabel.setText("Mobile");
+
+        userMobjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         userWorkTeljLabel.setText("Work Tel");
 
+        userWorkTeljTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         userAddr1jLabel.setText("Addr 1");
 
+        userAddr1jTextField.setBackground(new java.awt.Color(220, 221, 225));
         userAddr1jTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userAddr1jTextFieldActionPerformed(evt);
@@ -158,8 +178,11 @@ public class AdminManageUsers extends javax.swing.JFrame {
 
         userAddr2jLabel.setText("Addr 2");
 
+        userAddr2jTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         userPostcodejLabel.setText("Postcode");
 
+        userPostcodejTextField.setBackground(new java.awt.Color(220, 221, 225));
         userPostcodejTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userPostcodejTextFieldActionPerformed(evt);
@@ -193,6 +216,7 @@ public class AdminManageUsers extends javax.swing.JFrame {
             }
         });
 
+        userIDjTextField.setBackground(new java.awt.Color(220, 221, 225));
         userIDjTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userIDjTextFieldActionPerformed(evt);

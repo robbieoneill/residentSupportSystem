@@ -40,9 +40,6 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
         manageCasesjButton = new javax.swing.JButton();
         logOutjButton = new javax.swing.JButton();
         manageProfilejButton = new javax.swing.JButton();
-        contactAdministratorjButton = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         manageAppointmentsjButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         clientCountjPanel = new javax.swing.JPanel();
@@ -57,12 +54,13 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
         activeCasesCountjPanel = new javax.swing.JPanel();
         activeCasesCountHeaderjLabel = new javax.swing.JLabel();
         activeCasesCountjLabel = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        windowjPanel.setBackground(new java.awt.Color(102, 102, 102));
+        windowjPanel.setBackground(new java.awt.Color(113, 128, 147));
 
-        navigationjPanel.setBackground(new java.awt.Color(153, 153, 153));
+        navigationjPanel.setBackground(new java.awt.Color(47, 54, 64));
 
         manageWorkingHoursjButton.setText("Manage Work Hours");
         manageWorkingHoursjButton.addActionListener(new java.awt.event.ActionListener() {
@@ -78,8 +76,6 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
             }
         });
 
-        logOutjButton.setBackground(new java.awt.Color(153, 0, 0));
-        logOutjButton.setForeground(new java.awt.Color(204, 204, 204));
         logOutjButton.setText("Log Out");
         logOutjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,33 +89,6 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
                 manageProfilejButtonActionPerformed(evt);
             }
         });
-
-        contactAdministratorjButton.setText("Contact Administrator");
-        contactAdministratorjButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                contactAdministratorjButtonActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel1.setText("Caseworker:  ");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
-                .addContainerGap())
-        );
 
         manageAppointmentsjButton1.setText("Your Appointments");
         manageAppointmentsjButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -135,30 +104,26 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
             .addComponent(manageCasesjButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(logOutjButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(manageProfilejButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(contactAdministratorjButton, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(manageWorkingHoursjButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(manageWorkingHoursjButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
             .addComponent(manageAppointmentsjButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         navigationjPanelLayout.setVerticalGroup(
             navigationjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navigationjPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(manageCasesjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(manageCasesjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(manageAppointmentsjButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(manageAppointmentsjButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(manageWorkingHoursjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(manageWorkingHoursjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(manageProfilejButton, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(contactAdministratorjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(209, 209, 209)
-                .addComponent(logOutjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
+                .addComponent(manageProfilejButton, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(logOutjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(237, 237, 237))
         );
+
+        jPanel3.setBackground(new java.awt.Color(47, 54, 64));
 
         clientCountjPanel.setBackground(new java.awt.Color(204, 204, 204));
         clientCountjPanel.setPreferredSize(new java.awt.Dimension(175, 40));
@@ -186,7 +151,7 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
                 .addComponent(clientCountHeaderjLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(clientCountjLabel)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         caseworkerCountjPanel.setBackground(new java.awt.Color(204, 204, 204));
@@ -272,7 +237,7 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
                 .addComponent(activeCasesCountHeaderjLabel)
                 .addGap(18, 18, 18)
                 .addComponent(activeCasesCountjLabel)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -302,23 +267,36 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel2.setText("Caseworker Dashboard, Welcome ");
+
         javax.swing.GroupLayout windowjPanelLayout = new javax.swing.GroupLayout(windowjPanel);
         windowjPanel.setLayout(windowjPanelLayout);
         windowjPanelLayout.setHorizontalGroup(
             windowjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(windowjPanelLayout.createSequentialGroup()
                 .addComponent(navigationjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(89, 89, 89))
+                .addGroup(windowjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(windowjPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(89, 89, 89))
+                    .addGroup(windowjPanelLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel2)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         windowjPanelLayout.setVerticalGroup(
             windowjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(navigationjPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(windowjPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(607, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(windowjPanelLayout.createSequentialGroup()
+                .addComponent(navigationjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -329,7 +307,9 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(windowjPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(windowjPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -340,7 +320,7 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
         caseworkerDashboardLogin.setVisible(true);
         caseworkerDashboardLogin.pack();
         caseworkerDashboardLogin.setLocationRelativeTo(null);
-        this.dispose();          // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_logOutjButtonActionPerformed
 
     private void manageProfilejButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageProfilejButtonActionPerformed
@@ -353,17 +333,14 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_manageWorkingHoursjButtonActionPerformed
 
-    private void contactAdministratorjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactAdministratorjButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_contactAdministratorjButtonActionPerformed
-
     private void manageCasesjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageCasesjButtonActionPerformed
         new CaseworkerDashboard(userLoggedIn).setVisible(true);
         this.dispose();          // TODO add your handling code here:
     }//GEN-LAST:event_manageCasesjButtonActionPerformed
 
     private void manageAppointmentsjButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageAppointmentsjButton1ActionPerformed
-        // TODO add your handling code here:
+        new CaseworkerManageAppointments(userLoggedIn).setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_manageAppointmentsjButton1ActionPerformed
 
     /**
@@ -384,9 +361,7 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel clientCountHeaderjLabel;
     private javax.swing.JLabel clientCountjLabel;
     private javax.swing.JPanel clientCountjPanel;
-    private javax.swing.JButton contactAdministratorjButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JButton logOutjButton;
     private javax.swing.JButton manageAppointmentsjButton1;

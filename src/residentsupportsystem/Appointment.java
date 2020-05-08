@@ -194,12 +194,13 @@ public class Appointment {
     
     public List setAppointmentDetails(int appointmentID){
         System.out.println("APPOINTMENT ID: "+appointmentID);
-        String getEnquiryDataQuery = ("﻿SELECT tbl_appointment.appointmentID, tbl_appointment.appointmentStartTime, tbl_appointment.appointmentEndTime, tbl_appointment.appointmentNotes, tbl_user.userFirstname, tbl_user.userLastname FROM tbl_appointment JOIN tbl_user ON tbl_appointment.appointmentCaseworkerID = tbl_user.userID WHERE appointmentID =?");
         List returnResultSet = new LinkedList();
         PreparedStatement preparedStatement;
         ResultSet resultSet;
-        
-        //String getEnquiryDataQuery = ("﻿SELECT tbl_appointment.appointmentID, tbl_appointment.appointmentStartTime, tbl_appointment.appointmentEndTime, tbl_appointment.appointmentNotes, tbl_user.userFirstname, tbl_user.userLastname FROM tbl_appointment JOIN tbl_user ON tbl_appointment.appointmentCaseworkerID = tbl_user.userID WHERE appointmentID =?");
+        String getEnquiryDataQuery = ("﻿SELECT tbl_appointment.appointmentID, tbl_appointment.appointmentStartTime,"
+                + " tbl_appointment.appointmentEndTime, tbl_appointment.appointmentNotes, tbl_user.userFirstname,"
+                + " tbl_user.userLastname FROM tbl_appointment JOIN tbl_user ON tbl_appointment.appointmentCaseworkerID"
+                + " = tbl_user.userID WHERE appointmentID =?");
         System.out.println(getEnquiryDataQuery);
         try {
             preparedStatement = databaseInstance.createConnection().prepareStatement (getEnquiryDataQuery);

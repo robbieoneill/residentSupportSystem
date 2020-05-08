@@ -100,9 +100,9 @@ public class AllUsersManageDetails extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        windowjPanel.setBackground(new java.awt.Color(39, 60, 117));
+        windowjPanel.setBackground(new java.awt.Color(113, 128, 147));
 
-        jPanel2.setBackground(new java.awt.Color(220, 221, 225));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         userFirstnamejLabel1.setText("Firstname");
 
@@ -110,11 +110,19 @@ public class AllUsersManageDetails extends javax.swing.JFrame {
 
         userLastnamejLabel1.setText("Lastname");
 
+        userLastnamejTextField.setBackground(new java.awt.Color(220, 221, 225));
+
+        userMiddlenamejTextField.setBackground(new java.awt.Color(220, 221, 225));
+
+        userFirstnamejTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         userGenderjLabel.setText("Gender");
 
         userGenderjComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User Gender:", "Male", "Female", "Other" }));
 
         userDOBjLabel.setText("DOB");
+
+        userDOBjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         personalDetailsjLabel.setText("Personal Details");
 
@@ -173,13 +181,19 @@ public class AllUsersManageDetails extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        contactDetailsjPanel.setBackground(new java.awt.Color(220, 221, 225));
+        contactDetailsjPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         userEmailjLabel.setText("Email");
 
         userTeljLabel.setText("Telephone");
 
+        userEmailjTextField.setBackground(new java.awt.Color(220, 221, 225));
+
+        userTeljTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         userMobjLabel.setText("Mobile");
+
+        userMobjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         contactDetailsjLabel.setText("Contact Details");
 
@@ -225,10 +239,11 @@ public class AllUsersManageDetails extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        homeDetailsjPanel.setBackground(new java.awt.Color(220, 221, 225));
+        homeDetailsjPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         userAddr1jLabel.setText("Addr 1");
 
+        userAddr1jTextField.setBackground(new java.awt.Color(220, 221, 225));
         userAddr1jTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userAddr1jTextFieldActionPerformed(evt);
@@ -237,8 +252,11 @@ public class AllUsersManageDetails extends javax.swing.JFrame {
 
         userAddr2jLabel.setText("Addr 2");
 
+        userAddr2jTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         userPostcodejLabel.setText("Postcode");
 
+        userPostcodejTextField.setBackground(new java.awt.Color(220, 221, 225));
         userPostcodejTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userPostcodejTextFieldActionPerformed(evt);

@@ -127,26 +127,43 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
                 .addContainerGap(63, Short.MAX_VALUE))
         );
 
+        clientDetailsjPanel.setBackground(new java.awt.Color(113, 128, 147));
+
         clientDetailsjLabel.setText("Client Details");
 
         clientFirstnamejLabel.setText("Firstname");
 
+        clientFirstnamejTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         clientMiddlenamejLabel.setText("Middlename");
 
+        clientMiddlenamejTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         clientLastnamejLabel.setText("Lastname");
+
+        clientLastnamejTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         clientGenderjLabel.setText("Gender");
 
         clientDOBjLabel.setText("DOB");
 
+        clientDOBjTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         clientEmailjLabel.setText("Email");
+
+        clientEmailjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         clientTeljLabel.setText("Telephone");
 
+        clientTeljTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         clientMobjLabel.setText("Mobile");
+
+        clientMobjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         clientAddr1jLabel.setText("Addr 1");
 
+        clientAddr1jTextField.setBackground(new java.awt.Color(220, 221, 225));
         clientAddr1jTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clientAddr1jTextFieldActionPerformed(evt);
@@ -155,8 +172,11 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
 
         clientAddr2jLabel.setText("Addr 2");
 
+        clientAddr2jTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         clientPostcodejLabel.setText("Postcode");
 
+        clientPostcodejTextField.setBackground(new java.awt.Color(220, 221, 225));
         clientPostcodejTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clientPostcodejTextFieldActionPerformed(evt);
@@ -171,6 +191,7 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
 
         jLabel1.setText("Client ID");
 
+        clientIDjTextField.setBackground(new java.awt.Color(220, 221, 225));
         clientIDjTextField.setEnabled(false);
         clientIDjTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,6 +205,8 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+
+        clientGenderjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         javax.swing.GroupLayout clientDetailsjPanelLayout = new javax.swing.GroupLayout(clientDetailsjPanel);
         clientDetailsjPanel.setLayout(clientDetailsjPanelLayout);
@@ -325,6 +348,8 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
         });
         clientTablejScrollPane.setViewportView(waitinglistTablejTable);
 
+        jPanel1.setBackground(new java.awt.Color(113, 128, 147));
+
         availableAppointmentjTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -350,6 +375,12 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
 
         enquiryDatejLabel.setText("Date");
 
+        adminIDjTextField.setBackground(new java.awt.Color(220, 221, 225));
+
+        areajTextField.setBackground(new java.awt.Color(220, 221, 225));
+
+        statusjTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         enquiryNotesjLabel.setText("Notes");
 
         enquiryNotesjTextArea.setColumns(20);
@@ -368,6 +399,13 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
 
         jButton2.setText("Assign Appointment");
 
+        appointmentDatejTextField.setBackground(new java.awt.Color(220, 221, 225));
+
+        appointmentFromjTextField.setBackground(new java.awt.Color(220, 221, 225));
+
+        appointmentTojTextField.setBackground(new java.awt.Color(220, 221, 225));
+
+        caseworkerjTextField.setBackground(new java.awt.Color(220, 221, 225));
         caseworkerjTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 caseworkerjTextFieldActionPerformed(evt);
@@ -379,6 +417,10 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
         appointmentNotesjTextArea.setColumns(20);
         appointmentNotesjTextArea.setRows(5);
         jScrollPane3.setViewportView(appointmentNotesjTextArea);
+
+        enquiryIDjTextField.setBackground(new java.awt.Color(220, 221, 225));
+
+        appointmentIDjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
