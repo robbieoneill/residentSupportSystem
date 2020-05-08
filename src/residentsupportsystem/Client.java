@@ -18,6 +18,28 @@ import javax.swing.table.DefaultTableModel;
 public class Client {
     DatabaseConnection databaseInstance = new DatabaseConnection();
     
+    public String clientCount(){
+         PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String clientCountQuery = ("SELECT COUNT (*) AS clientCount FROM tbl_client");
+        try {
+            preparedStatement = databaseInstance.createConnection().prepareStatement (clientCountQuery);
+            resultSet = preparedStatement.executeQuery();
+            String clientCount = (resultSet.getString("clientCount"));
+            resultSet.close();
+            preparedStatement.close();
+            databaseInstance.closeConnection();
+            return clientCount;
+        } catch (SQLException ex) { 
+            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+            return ("Null");
+        }
+        
+            
+            
+            
+    }
+    
     public boolean insertClient(
             String clientID,
             String clientFirstname,

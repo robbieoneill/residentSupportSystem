@@ -21,6 +21,27 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Inquiry {
 	DatabaseConnection databaseInstance = new DatabaseConnection();
+        
+        
+        public String inquiryCount(){
+         PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String clientCountQuery = ("SELECT COUNT (*) AS enquiryCount FROM tbl_enquiry WHERE enquiryStatus != 'CLOSED'");
+        try {
+            preparedStatement = databaseInstance.createConnection().prepareStatement (clientCountQuery);
+            resultSet = preparedStatement.executeQuery();
+            String clientCount = (resultSet.getString("enquiryCount"));
+            resultSet.close();
+            preparedStatement.close();
+            databaseInstance.closeConnection();
+            return clientCount;
+        } catch (SQLException ex) { 
+            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+            return ("Null");
+            }
+        }
+        
+        
 	public void setEnquiryTable(JTable jTableEnquiryTable) {
 		PreparedStatement preparedStatement;
 		ResultSet resultSet;

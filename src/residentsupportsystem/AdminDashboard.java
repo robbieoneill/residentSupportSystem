@@ -5,6 +5,8 @@
  */
 package residentsupportsystem;
 
+import java.util.List;
+
 /**
  *
  * @author robbieoneill
@@ -12,13 +14,21 @@ package residentsupportsystem;
 public class AdminDashboard extends javax.swing.JFrame {
     User user = new User();
     Client client = new Client();
+    Inquiry inquiry = new Inquiry();
+    Appointment appointment = new Appointment();
     int userLoggedIn;
     
     
     public AdminDashboard(int userID){
         userLoggedIn = userID; 
         initComponents();
-        test.setText(Integer.toString(userLoggedIn));
+        dashboardWelcomejLabel.setText(Integer.toString(userLoggedIn));
+        clientCountjLabel.setText(client.clientCount());
+        caseworkerCountjLabel.setText(user.caseworkerCount());
+        activeEnquiryCountjLabel.setText(inquiry.inquiryCount());
+        appointmentCountjLabel.setText(appointment.appointmentCount());
+        List resultSetArrayList = user.setUserDetails(userLoggedIn);
+        dashboardWelcomejLabel.setText("Administrator Dashboard for: "+resultSetArrayList.get(1).toString());
     }
 
     /**
@@ -51,8 +61,8 @@ public class AdminDashboard extends javax.swing.JFrame {
         appointmentCountjLabel = new javax.swing.JLabel();
         activeCasesCountjPanel = new javax.swing.JPanel();
         activeCasesCountHeaderjLabel = new javax.swing.JLabel();
-        activeCasesCountjLabel = new javax.swing.JLabel();
-        test = new javax.swing.JLabel();
+        activeEnquiryCountjLabel = new javax.swing.JLabel();
+        dashboardWelcomejLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -222,22 +232,22 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         activeCasesCountHeaderjLabel.setText("            Active Cases");
 
-        activeCasesCountjLabel.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        activeCasesCountjLabel.setText("Null");
+        activeEnquiryCountjLabel.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        activeEnquiryCountjLabel.setText("Null");
 
         javax.swing.GroupLayout activeCasesCountjPanelLayout = new javax.swing.GroupLayout(activeCasesCountjPanel);
         activeCasesCountjPanel.setLayout(activeCasesCountjPanelLayout);
         activeCasesCountjPanelLayout.setHorizontalGroup(
             activeCasesCountjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(activeCasesCountHeaderjLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
-            .addComponent(activeCasesCountjLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(activeEnquiryCountjLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         activeCasesCountjPanelLayout.setVerticalGroup(
             activeCasesCountjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(activeCasesCountjPanelLayout.createSequentialGroup()
                 .addComponent(activeCasesCountHeaderjLabel)
                 .addGap(18, 18, 18)
-                .addComponent(activeCasesCountjLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(activeEnquiryCountjLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -264,8 +274,8 @@ public class AdminDashboard extends javax.swing.JFrame {
             .addComponent(appointmentCountjPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
         );
 
-        test.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
-        test.setText("Admin Dashboard, Welcome  ");
+        dashboardWelcomejLabel.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        dashboardWelcomejLabel.setText("Admin Dashboard, Welcome  ");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -277,7 +287,7 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(test))
+                    .addComponent(dashboardWelcomejLabel))
                 .addContainerGap(12, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -288,7 +298,7 @@ public class AdminDashboard extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(test)
+                        .addComponent(dashboardWelcomejLabel)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 513, Short.MAX_VALUE)))
         );
@@ -352,8 +362,8 @@ public class AdminDashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel activeCasesCountHeaderjLabel;
-    private javax.swing.JLabel activeCasesCountjLabel;
     private javax.swing.JPanel activeCasesCountjPanel;
+    private javax.swing.JLabel activeEnquiryCountjLabel;
     private javax.swing.JLabel appointmentCountHeaderjLabel;
     private javax.swing.JLabel appointmentCountjLabel;
     private javax.swing.JPanel appointmentCountjPanel;
@@ -363,6 +373,7 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel clientCountHeaderjLabel;
     private javax.swing.JLabel clientCountjLabel;
     private javax.swing.JPanel clientCountjPanel;
+    private javax.swing.JLabel dashboardWelcomejLabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -373,6 +384,5 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JButton manageClientsjButton;
     private javax.swing.JButton manageDetailsjButton;
     private javax.swing.JButton manageInquirysjButton;
-    private javax.swing.JLabel test;
     // End of variables declaration//GEN-END:variables
 }

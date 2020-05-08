@@ -22,6 +22,25 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Appointment {
     DatabaseConnection databaseInstance = new DatabaseConnection();
+    
+    
+    public String appointmentCount(){
+         PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String clientCountQuery = ("SELECT COUNT (*) AS appointmentCount FROM tbl_appointment WHERE appointmentStatus = 'BOOKED'");
+        try {
+            preparedStatement = databaseInstance.createConnection().prepareStatement (clientCountQuery);
+            resultSet = preparedStatement.executeQuery();
+            String appointmentCount = (resultSet.getString("appointmentCount"));
+            resultSet.close();
+            preparedStatement.close();
+            databaseInstance.closeConnection();
+            return appointmentCount;
+        } catch (SQLException ex) { 
+            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+            return ("Null");
+        }
+    }
 
 
     public void setAppointmentTable(JTable appointmentTable, int caseSelected) {
@@ -160,7 +179,7 @@ public class Appointment {
                 preparedStatement.setInt(3, appointmentStartTime);
                 preparedStatement.setInt(4, appointmentEndTime);
                 preparedStatement.setString(5, "AVAILABLE");
-                preparedStatement.setString(6, "RED ROOM");
+                preparedStatement.setString(6, "");
                 preparedStatement.setInt(7, userID);
                 databaseInstance.createConnection().close();
                 preparedStatement.addBatch();

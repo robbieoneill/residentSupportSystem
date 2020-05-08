@@ -19,6 +19,28 @@ import javax.swing.table.DefaultTableModel;
  */
 public class User {
     DatabaseConnection databaseInstance = new DatabaseConnection();
+    
+    
+    
+    
+    public String caseworkerCount(){
+         PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String clientCountQuery = ("SELECT COUNT (*) AS userCount FROM tbl_user WHERE userType = 'Case Worker'");
+        try {
+            preparedStatement = databaseInstance.createConnection().prepareStatement (clientCountQuery);
+            resultSet = preparedStatement.executeQuery();
+            String clientCount = (resultSet.getString("userCount"));
+            resultSet.close();
+            preparedStatement.close();
+            databaseInstance.closeConnection();
+            return clientCount;
+        } catch (SQLException ex) { 
+            Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
+            return ("Null");
+        }
+    }
+    
 
     public boolean insertUser(String userID, String userFirstname,
         String userMiddlename, String userLastname, String userGender,

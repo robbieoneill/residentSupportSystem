@@ -49,7 +49,7 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                      <Component id="test" min="-2" max="-2" attributes="0"/>
+                      <Component id="dashboardWelcomejLabel" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="12" max="32767" attributes="0"/>
               </Group>
@@ -63,7 +63,7 @@
                       <Group type="102" attributes="0">
                           <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="test" min="-2" max="-2" attributes="0"/>
+                          <Component id="dashboardWelcomejLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Component id="jPanel2" pref="513" max="32767" attributes="0"/>
@@ -358,7 +358,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="activeCasesCountHeaderjLabel" alignment="1" pref="175" max="32767" attributes="0"/>
-                      <Component id="activeCasesCountjLabel" alignment="1" max="32767" attributes="0"/>
+                      <Component id="activeEnquiryCountjLabel" alignment="1" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -366,7 +366,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="activeCasesCountHeaderjLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="activeCasesCountjLabel" min="-2" pref="69" max="-2" attributes="0"/>
+                          <Component id="activeEnquiryCountjLabel" min="-2" pref="69" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -378,7 +378,7 @@
                     <Property name="text" type="java.lang.String" value="            Active Cases"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="activeCasesCountjLabel">
+                <Component class="javax.swing.JLabel" name="activeEnquiryCountjLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Dialog" size="24" style="1"/>
@@ -390,7 +390,7 @@
             </Container>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="test">
+        <Component class="javax.swing.JLabel" name="dashboardWelcomejLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Lucida Grande" size="24" style="0"/>
