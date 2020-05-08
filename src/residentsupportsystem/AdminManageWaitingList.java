@@ -364,7 +364,20 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
             new String [] {
                 "ID", "Date", "Time"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        availableAppointmentjTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                availableAppointmentjTableMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(availableAppointmentjTable);
 
         enquiryDetailsjLabel.setText("Enquiry Details");
@@ -665,6 +678,24 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
     private void areajTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_areajTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_areajTextFieldActionPerformed
+
+    private void availableAppointmentjTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_availableAppointmentjTableMouseClicked
+       
+        DefaultTableModel appointmentTable = (DefaultTableModel)availableAppointmentjTable.getModel();
+        int selectedRow = availableAppointmentjTable.getSelectedRow();
+        String selectedUserPointer = (availableAppointmentjTable.getValueAt(selectedRow, 0).toString());
+        int selectedAppointmentID = Integer.parseInt(selectedUserPointer);			
+        List appointmentArrayList = appointment.setAppointmentDetails(selectedAppointmentID);
+        appointmentIDjTextField.setText(appointmentArrayList.get(0).toString());
+        appointmentDatejTextField.setText(appointmentArrayList.get(1).toString());
+        appointmentFromjTextField.setText(appointmentArrayList.get(2).toString());
+        appointmentTojTextField.setText(appointmentArrayList.get(3).toString());
+        appointmentNotesjTextArea.setText(appointmentArrayList.get(4).toString());
+        caseworkerjTextField.setText(appointmentArrayList.get(5).toString()+" "+appointmentArrayList.get(6).toString());
+        
+        
+        
+    }//GEN-LAST:event_availableAppointmentjTableMouseClicked
 
     /**
      * @param args the command line arguments
