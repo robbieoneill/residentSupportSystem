@@ -230,6 +230,41 @@ public class Appointment {
         return returnResultSet;
         
     }
+    
+    
+    public void setCaseworkersAppointmentTable(JTable appointmentTable, int userID) {
+        System.out.println(userID);
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String selectCaseDetailsQuery = ("SELECT appointmentID, appointmentDate, appointmentStartTime,"
+                + " appointmentEndTime, appointmentStatus FROM tbl_appointment WHERE"
+                + " appointmentCaseworkerID =? AND appointmentStatus=?");
+        System.out.println(selectCaseDetailsQuery);
+        try {
+            preparedStatement = databaseInstance.createConnection().prepareStatement(selectCaseDetailsQuery);
+            preparedStatement.setInt(1, userID);
+            preparedStatement.setString(2, "BOOKED");
+            resultSet = preparedStatement.executeQuery();
+            ((DefaultTableModel) appointmentTable.getModel()).setNumRows(0);
+            DefaultTableModel userTableModel = (DefaultTableModel) appointmentTable.getModel();
+            Object[] row;
+            while (resultSet.next()) {
+                row = new Object[5];
+                row[0] = resultSet.getString(1);
+                row[1] = resultSet.getString(2);
+                row[2] = resultSet.getString(3);
+                row[3] = resultSet.getString(4);
+                row[4] = resultSet.getString(5);
+                userTableModel.addRow(row);
+            }
+            resultSet.close();
+            preparedStatement.close();
+            databaseInstance.closeConnection();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
 
 
