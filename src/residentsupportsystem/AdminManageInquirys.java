@@ -733,7 +733,7 @@ public class AdminManageInquirys extends javax.swing.JFrame {
     }//GEN-LAST:event_enquiryIDjTextFieldActionPerformed
 
     private void savejButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savejButtonActionPerformed
-        String enquiryID = "20";
+        String enquiryID = (enquiryIDjTextField.getText());
         String enquiryAdminID = (Integer.toString(userLoggedIn));
         String enquiryClientID = (jTextFieldClientID.getText());
         String enquiryArea = "";
@@ -855,12 +855,15 @@ public class AdminManageInquirys extends javax.swing.JFrame {
         String selectedAppointmentPointer = (userTable.getValueAt(selectedRow, 0).toString());
         int selectedAppointmentID = Integer.parseInt(selectedAppointmentPointer);			
         List resultSetArrayList = appointment.setAppointmentDetails(selectedAppointmentID);
-        
+        System.out.println(resultSetArrayList);
         appointmentIDjTextField.setText(resultSetArrayList.get(0).toString());
-        appointmentStartjTextField.setText(resultSetArrayList.get(1).toString());
-        appointmentEndjTextField.setText(resultSetArrayList.get(2).toString());
-        appointmentNotesjTextArea.setText(resultSetArrayList.get(3).toString());
-        appointmentCaseworkerjTextField.setText(resultSetArrayList.get(4).toString()+" "+resultSetArrayList.get(5).toString());
+        appointmentDatejTextField.setText(resultSetArrayList.get(1).toString());
+        appointmentStartjTextField.setText(resultSetArrayList.get(2).toString());
+        appointmentEndjTextField.setText(resultSetArrayList.get(3).toString());
+        appointmentNotesjTextArea.setText(resultSetArrayList.get(4).toString());
+        appointmentCaseworkerjTextField.setText(resultSetArrayList.get(5).toString()+" "+resultSetArrayList.get(6).toString());
+        
+        
         
         
     }//GEN-LAST:event_appointmentTablejTableMouseClicked
