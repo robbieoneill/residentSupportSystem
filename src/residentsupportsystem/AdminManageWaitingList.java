@@ -16,11 +16,15 @@ import javax.swing.table.DefaultTableModel;
 public class AdminManageWaitingList extends javax.swing.JFrame {
     int userLoggedIn;
     Client client = new Client();
+    Inquiry inquiry = new Inquiry();
     WaitingList waitingList = new WaitingList();
+    User user = new User();
+    Appointment appointment = new Appointment();
     public AdminManageWaitingList(int userID) {
         userLoggedIn = userID;
         initComponents();
         waitingList.setWaitingListTable(waitinglistTablejTable); //Rename this
+        appointment.setMiniAppointmentTable(availableAppointmentjTable);
     }
 
     /**
@@ -76,7 +80,7 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
         areajLabel = new javax.swing.JLabel();
         statusjLabel = new javax.swing.JLabel();
         enquiryDatejLabel = new javax.swing.JLabel();
-        adminIDjTextField = new javax.swing.JTextField();
+        adminNamejTextField = new javax.swing.JTextField();
         areajTextField = new javax.swing.JTextField();
         statusjTextField = new javax.swing.JTextField();
         enquiryDatejTextField = new javax.swing.JTextField();
@@ -375,9 +379,14 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
 
         enquiryDatejLabel.setText("Date");
 
-        adminIDjTextField.setBackground(new java.awt.Color(220, 221, 225));
+        adminNamejTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         areajTextField.setBackground(new java.awt.Color(220, 221, 225));
+        areajTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                areajTextFieldActionPerformed(evt);
+            }
+        });
 
         statusjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
@@ -453,7 +462,7 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
                                     .addComponent(enquiryIDjTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE))
                                 .addComponent(statusjTextField)
                                 .addComponent(areajTextField)
-                                .addComponent(adminIDjTextField)
+                                .addComponent(adminNamejTextField)
                                 .addComponent(enquiryDatejTextField)))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                             .addGap(6, 6, 6)
@@ -497,7 +506,7 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(adminIDjLabel)
-                    .addComponent(adminIDjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(adminNamejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(areajLabel)
@@ -603,8 +612,44 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void waitinglistTablejTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_waitinglistTablejTableMouseClicked
-        // TODO add your handling code here:
+       
         
+        
+        DefaultTableModel clientTable = (DefaultTableModel)waitinglistTablejTable.getModel();
+        int selectedRow = waitinglistTablejTable.getSelectedRow();
+        String selectedUserPointer = (waitinglistTablejTable.getValueAt(selectedRow, 0).toString());
+        int selectedEnquiryID = Integer.parseInt(selectedUserPointer);			
+        List enquiryArrayList = inquiry.setEnquiryDetailArea(selectedEnquiryID);
+        System.out.println(enquiryArrayList);
+        enquiryIDjTextField.setText(enquiryArrayList.get(0).toString());
+        
+        int enquiryAdminID = Integer.parseInt(enquiryArrayList.get(1).toString());
+        int enquiryClientID = Integer.parseInt(enquiryArrayList.get(2).toString());
+        
+        areajTextField.setText(enquiryArrayList.get(3).toString());
+        statusjTextField.setText(enquiryArrayList.get(4).toString());
+        enquiryDatejTextField.setText(enquiryArrayList.get(5).toString());
+        List clientArrayList = client.setClientDetails(enquiryClientID);
+        
+        
+        clientIDjTextField.setText(clientArrayList.get(0).toString());
+        clientFirstnamejTextField.setText(clientArrayList.get(1).toString());
+        clientMiddlenamejTextField.setText(clientArrayList.get(2).toString());
+        clientLastnamejTextField.setText(clientArrayList.get(3).toString());
+        clientGenderjTextField.setText(clientArrayList.get(4).toString());
+        clientDOBjTextField.setText(clientArrayList.get(5).toString());
+        clientEmailjTextField.setText(clientArrayList.get(6).toString());
+        clientTeljTextField.setText(clientArrayList.get(7).toString());
+        clientMobjTextField.setText(clientArrayList.get(8).toString());
+        clientAddr1jTextField.setText(clientArrayList.get(9).toString());
+        clientAddr2jTextField.setText(clientArrayList.get(10).toString());
+        clientPostcodejTextField.setText(clientArrayList.get(11).toString());
+        clientNotesjTextArea.setText(clientArrayList.get(12).toString());
+       
+        List userArrayList = user.setUserDetails(enquiryAdminID);
+        adminNamejTextField.setText(userArrayList.get(1).toString()+" "+userArrayList.get(2).toString());
+        
+
 
     }//GEN-LAST:event_waitinglistTablejTableMouseClicked
 
@@ -617,6 +662,10 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_caseworkerjTextFieldActionPerformed
 
+    private void areajTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_areajTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_areajTextFieldActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -624,7 +673,7 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel adminIDjLabel;
-    private javax.swing.JTextField adminIDjTextField;
+    private javax.swing.JTextField adminNamejTextField;
     private javax.swing.JLabel appointmentCaseworkerjLabel;
     private javax.swing.JLabel appointmentDatejLabel;
     private javax.swing.JTextField appointmentDatejTextField;

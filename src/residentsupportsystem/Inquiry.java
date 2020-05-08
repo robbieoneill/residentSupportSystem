@@ -197,4 +197,49 @@ public class Inquiry {
         
     }
         
+        
+        
+        public List setEnquiryDetailArea(int enquiryID) {
+        List returnResultSet = new LinkedList();
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String getEnquiryQuery = ("SELECT enquiryID, enquiryAdminID, enquiryClientID, enquiryArea, enquiryStatus, enquiryDate, enquiryNotes FROM tbl_enquiry WHERE enquiryID = ?");
+        try {
+            preparedStatement = databaseInstance.createConnection().prepareStatement(getEnquiryQuery);
+            preparedStatement.setInt(1, enquiryID);
+            System.out.println(preparedStatement.toString());
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                returnResultSet.add(resultSet.getString("enquiryID"));
+                returnResultSet.add(resultSet.getString("enquiryAdminID"));
+                returnResultSet.add(resultSet.getString("enquiryClientID"));
+                returnResultSet.add(resultSet.getString("enquiryArea"));
+                returnResultSet.add(resultSet.getString("enquiryStatus"));
+                returnResultSet.add(resultSet.getString("enquiryDate"));    
+                if (resultSet.getString("enquiryNotes") == null) {
+                    returnResultSet.add("");
+                } else {
+                    returnResultSet.add(resultSet.getString("enquiryNotes"));
+                }
+                
+                resultSet.close();
+                preparedStatement.close();
+                databaseInstance.closeConnection();
+                return returnResultSet;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        System.out.println(getEnquiryQuery);
+        return returnResultSet;
+
+    }
+        
+        
+        
+        
+        
+        
 }

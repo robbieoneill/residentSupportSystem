@@ -105,9 +105,10 @@ public class Appointment {
     public void setMiniAppointmentTable(JTable appointmentTable) {
         PreparedStatement preparedStatement;
         ResultSet resultSet;
-        String appointmentData = ("SELECT appointmentID, appointmentDate, appointmentStartTime FROM tbl_appointment WHERE appointmentStatus = 'AVAILABLE'");
+        String appointmentData =("SELECT appointmentID, appointmentDate, appointmentStartTime FROM tbl_appointment WHERE appointmentStatus =?");
         try {
             preparedStatement = databaseInstance.createConnection().prepareStatement(appointmentData);
+            preparedStatement.setString(1, "AVAILABLE");
             resultSet = preparedStatement.executeQuery();
             ((DefaultTableModel) appointmentTable.getModel()).setNumRows(0); // RESET TABLE TO ALLOW REFRESH
             DefaultTableModel userTableModel = (DefaultTableModel) appointmentTable.getModel();
