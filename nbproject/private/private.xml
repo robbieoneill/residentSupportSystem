@@ -3,7 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/robbieoneill/Documents/GitHub/residentSupportSystem/src/residentsupportsystem/DatabaseConnection.java</file>
+            <file>file:/C:/SOHAIB/Uni/Sem4/SoftwareEngineeringPractice/residentSupportSystem/src/residentsupportsystem/AdminManageClients.java</file>
+            <file>file:/C:/SOHAIB/Uni/Sem4/SoftwareEngineeringPractice/residentSupportSystem/src/residentsupportsystem/AdminManageUsers.java</file>
+            <file>file:/C:/SOHAIB/Uni/Sem4/SoftwareEngineeringPractice/residentSupportSystem/src/residentsupportsystem/AllUsersManageDetails.java</file>
+            <file>file:/C:/SOHAIB/Uni/Sem4/SoftwareEngineeringPractice/residentSupportSystem/src/residentsupportsystem/Login.java</file>
+            <file>file:/C:/SOHAIB/Uni/Sem4/SoftwareEngineeringPractice/residentSupportSystem/src/residentsupportsystem/Client.java</file>
+            <file>file:/C:/SOHAIB/Uni/Sem4/SoftwareEngineeringPractice/residentSupportSystem/src/residentsupportsystem/WorkHours.java</file>
+            <file>file:/C:/SOHAIB/Uni/Sem4/SoftwareEngineeringPractice/residentSupportSystem/src/residentsupportsystem/CaseworkerManageWorkingTime.java</file>
+            <file>file:/C:/SOHAIB/Uni/Sem4/SoftwareEngineeringPractice/residentSupportSystem/src/residentsupportsystem/ResidentSupportSystem.java</file>
+            <file>file:/C:/SOHAIB/Uni/Sem4/SoftwareEngineeringPractice/residentSupportSystem/src/residentsupportsystem/AdminDashboard.java</file>
+            <file>file:/C:/SOHAIB/Uni/Sem4/SoftwareEngineeringPractice/residentSupportSystem/src/residentsupportsystem/Inquiry.java</file>
+            <file>file:/C:/SOHAIB/Uni/Sem4/SoftwareEngineeringPractice/residentSupportSystem/src/residentsupportsystem/Appointment.java</file>
+            <file>file:/C:/SOHAIB/Uni/Sem4/SoftwareEngineeringPractice/residentSupportSystem/src/residentsupportsystem/AdminManageInquirys.java</file>
+            <file>file:/C:/SOHAIB/Uni/Sem4/SoftwareEngineeringPractice/residentSupportSystem/src/residentsupportsystem/User.java</file>
+            <file>file:/C:/SOHAIB/Uni/Sem4/SoftwareEngineeringPractice/residentSupportSystem/src/residentsupportsystem/Case.java</file>
+            <file>file:/C:/SOHAIB/Uni/Sem4/SoftwareEngineeringPractice/residentSupportSystem/src/residentsupportsystem/DatabaseConnection.java</file>
+            <file>file:/C:/SOHAIB/Uni/Sem4/SoftwareEngineeringPractice/residentSupportSystem/src/residentsupportsystem/CaseworkerDashboard.java</file>
         </group>
     </open-files>
 </project-private>
