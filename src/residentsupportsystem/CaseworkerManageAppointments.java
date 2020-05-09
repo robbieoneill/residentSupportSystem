@@ -641,15 +641,12 @@ public class CaseworkerManageAppointments extends javax.swing.JFrame {
         appointmentNotesjTextArea.setText(appointmentArrayList.get(4).toString());
         appointmentStatusjTextField.setText(appointmentArrayList.get(7).toString());
         appointmentAdminNamejTextField.setText(appointmentArrayList.get(5).toString()+" "+appointmentArrayList.get(6).toString());
-        
         clientNamejTextField.setText(clientArrayList.get(1).toString()+" "+clientArrayList.get(3).toString());
         clientGenderjTextField.setText(clientArrayList.get(4).toString());
         clientDOBjTextField.setText(clientArrayList.get(5).toString());
         clientEmailjTextField.setText(clientArrayList.get(6).toString());
         clientTeljTextField.setText(clientArrayList.get(7).toString());
         clientMobjTextField.setText(clientArrayList.get(8).toString());
-        
-        
         clientNotesjTextArea.setText(clientArrayList.get(12).toString());
     }//GEN-LAST:event_appointmentTablejTableMouseClicked
 

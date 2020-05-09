@@ -46,7 +46,8 @@ public class Appointment {
     public void setAppointmentTable(JTable appointmentTable, int caseSelected) {
         PreparedStatement preparedStatement;
         ResultSet resultSet;
-        String selectCaseDetailsQuery = ("SELECT appointmentID, appointmentDate, appointmentStartTime, appointmentEndTime, appointmentStatus FROM tbl_appointment WHERE appointmentEnquiryID = ?");
+        String selectCaseDetailsQuery = ("SELECT appointmentID, appointmentDate, appointmentStartTime, "
+                + "appointmentEndTime, appointmentStatus FROM tbl_appointment WHERE appointmentEnquiryID = ?");
         System.out.println(selectCaseDetailsQuery);
         try {
             preparedStatement = databaseInstance.createConnection().prepareStatement(selectCaseDetailsQuery);
@@ -76,7 +77,9 @@ public class Appointment {
     public void setAvailableAppointmentTable(JTable appointmentTable) {
         PreparedStatement preparedStatement;
         ResultSet resultSet;
-        String appointmentData = ("SELECT appointmentID, appointmentDate, appointmentStartTime, appointmentEndTime, appointmentStatus, appointmentRoom FROM tbl_appointment WHERE appointmentStatus = 'AVAILABLE'");
+        String appointmentData = ("SELECT appointmentID, appointmentDate, appointmentStartTime,"
+                + " appointmentEndTime, appointmentStatus, appointmentRoom "
+                + "FROM tbl_appointment WHERE appointmentStatus = 'AVAILABLE'");
         try {
             preparedStatement = databaseInstance.createConnection().prepareStatement(appointmentData);
             resultSet = preparedStatement.executeQuery();
@@ -216,7 +219,13 @@ public class Appointment {
         List returnResultSet = new LinkedList();
         PreparedStatement preparedStatement;
         ResultSet resultSet;
-        String getEnquiryDataQuery = ("SELECT tbl_appointment.appointmentID, tbl_appointment.appointmentDate, tbl_appointment.appointmentStartTime, tbl_appointment.appointmentEndTime, tbl_appointment.appointmentNotes, tbl_user.userFirstname, tbl_user.userLastname, tbl_appointment.appointmentStatus, tbl_appointment.appointmentAdminID,  tbl_enquiry.enquiryClientID FROM tbl_appointment JOIN tbl_user ON tbl_appointment.appointmentCaseworkerID = tbl_user.userID JOIN tbl_enquiry ON tbl_appointment.appointmentEnquiryID = tbl_enquiry.enquiryID WHERE appointmentID=?");
+        String getEnquiryDataQuery = ("SELECT tbl_appointment.appointmentID, tbl_appointment.appointmentDate,"
+                + " tbl_appointment.appointmentStartTime, tbl_appointment.appointmentEndTime,"
+                + " tbl_appointment.appointmentNotes, tbl_user.userFirstname, tbl_user.userLastname,"
+                + " tbl_appointment.appointmentStatus, tbl_appointment.appointmentAdminID,"
+                + "  tbl_enquiry.enquiryClientID FROM tbl_appointment "
+                + "JOIN tbl_user ON tbl_appointment.appointmentCaseworkerID = tbl_user.userID JOIN tbl_enquiry "
+                + "ON tbl_appointment.appointmentEnquiryID = tbl_enquiry.enquiryID WHERE appointmentID=?");
         try {
             preparedStatement = databaseInstance.createConnection().prepareStatement (getEnquiryDataQuery);
             preparedStatement.setInt(1,inquiryID);
