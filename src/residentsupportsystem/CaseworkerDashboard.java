@@ -37,7 +37,6 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
         windowjPanel = new javax.swing.JPanel();
         navigationjPanel = new javax.swing.JPanel();
         manageWorkingHoursjButton = new javax.swing.JButton();
-        manageCasesjButton = new javax.swing.JButton();
         logOutjButton = new javax.swing.JButton();
         manageProfilejButton = new javax.swing.JButton();
         manageAppointmentsjButton1 = new javax.swing.JButton();
@@ -69,13 +68,6 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
             }
         });
 
-        manageCasesjButton.setText("Manage Cases");
-        manageCasesjButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageCasesjButtonActionPerformed(evt);
-            }
-        });
-
         logOutjButton.setText("Log Out");
         logOutjButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +93,6 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
         navigationjPanel.setLayout(navigationjPanelLayout);
         navigationjPanelLayout.setHorizontalGroup(
             navigationjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(manageCasesjButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(logOutjButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(manageProfilejButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(manageWorkingHoursjButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
@@ -110,9 +101,7 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
         navigationjPanelLayout.setVerticalGroup(
             navigationjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(navigationjPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(manageCasesjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addContainerGap(24, Short.MAX_VALUE)
                 .addComponent(manageAppointmentsjButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(manageWorkingHoursjButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -295,7 +284,7 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(windowjPanelLayout.createSequentialGroup()
-                .addComponent(navigationjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(navigationjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -333,11 +322,6 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_manageWorkingHoursjButtonActionPerformed
 
-    private void manageCasesjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageCasesjButtonActionPerformed
-        new CaseworkerDashboard(userLoggedIn).setVisible(true);
-        this.dispose();          // TODO add your handling code here:
-    }//GEN-LAST:event_manageCasesjButtonActionPerformed
-
     private void manageAppointmentsjButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageAppointmentsjButton1ActionPerformed
         new CaseworkerManageAppointments(userLoggedIn).setVisible(true);
         this.dispose();
@@ -365,7 +349,6 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JButton logOutjButton;
     private javax.swing.JButton manageAppointmentsjButton1;
-    private javax.swing.JButton manageCasesjButton;
     private javax.swing.JButton manageProfilejButton;
     private javax.swing.JButton manageWorkingHoursjButton;
     private javax.swing.JPanel navigationjPanel;

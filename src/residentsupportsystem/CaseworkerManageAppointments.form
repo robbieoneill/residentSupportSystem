@@ -378,6 +378,9 @@
                           <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="appointmentTablejTableMouseClicked"/>
+                      </Events>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -455,7 +458,7 @@
                           <Component id="clientEmailjTextField" max="32767" attributes="0"/>
                           <Component id="clientTeljTextField" alignment="0" max="32767" attributes="0"/>
                           <Component id="clientMobjTextField" alignment="0" pref="267" max="32767" attributes="0"/>
-                          <Component id="appointmentClientNamejTextField" alignment="0" max="32767" attributes="0"/>
+                          <Component id="clientNamejTextField" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -484,7 +487,7 @@
                       <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="appointmentClientNamejTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="clientNamejTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -614,7 +617,7 @@
                 <Property name="text" type="java.lang.String" value="Mob"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="appointmentClientNamejTextField">
+            <Component class="javax.swing.JTextField" name="clientNamejTextField">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="e1" green="dd" red="dc" type="rgb"/>

@@ -5,6 +5,7 @@
  */
 package residentsupportsystem;
 
+import java.util.List;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -15,6 +16,8 @@ public class CaseworkerManageAppointments extends javax.swing.JFrame {
 
     int userLoggedIn;
     Appointment appointment = new Appointment();
+    User user = new User();
+    Client client = new Client();
     /**
      * Creates new form caseworkerManageCases
      */
@@ -72,7 +75,7 @@ public class CaseworkerManageAppointments extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        appointmentClientNamejTextField = new javax.swing.JTextField();
+        clientNamejTextField = new javax.swing.JTextField();
         clientGenderjTextField = new javax.swing.JTextField();
         clientDOBjTextField = new javax.swing.JTextField();
         clientEmailjTextField = new javax.swing.JTextField();
@@ -179,6 +182,11 @@ public class CaseworkerManageAppointments extends javax.swing.JFrame {
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
+            }
+        });
+        appointmentTablejTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                appointmentTablejTableMouseClicked(evt);
             }
         });
         appointmentTablejScrollPane.setViewportView(appointmentTablejTable);
@@ -353,7 +361,7 @@ public class CaseworkerManageAppointments extends javax.swing.JFrame {
 
         jLabel17.setText("Mob");
 
-        appointmentClientNamejTextField.setBackground(new java.awt.Color(220, 221, 225));
+        clientNamejTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         clientGenderjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
@@ -387,7 +395,7 @@ public class CaseworkerManageAppointments extends javax.swing.JFrame {
                     .addComponent(clientEmailjTextField)
                     .addComponent(clientTeljTextField)
                     .addComponent(clientMobjTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
-                    .addComponent(appointmentClientNamejTextField))
+                    .addComponent(clientNamejTextField))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, appointmentsjPanelLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -410,7 +418,7 @@ public class CaseworkerManageAppointments extends javax.swing.JFrame {
                 .addGap(3, 3, 3)
                 .addGroup(appointmentsjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(appointmentClientNamejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(clientNamejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(appointmentsjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
@@ -615,6 +623,36 @@ public class CaseworkerManageAppointments extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_markCompletejButtonActionPerformed
 
+    private void appointmentTablejTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_appointmentTablejTableMouseClicked
+         DefaultTableModel appointmentTable = (DefaultTableModel)appointmentTablejTable.getModel();
+        int selectedRow = appointmentTablejTable.getSelectedRow();
+        String selectedAppointmentPointer = (appointmentTable.getValueAt(selectedRow, 0).toString());
+        int selectedAppointmentID = Integer.parseInt(selectedAppointmentPointer);			
+        List appointmentArrayList = appointment.setAppointmentDetails(selectedAppointmentID);
+        int adminID = Integer.parseInt(appointmentArrayList.get(9).toString());
+        List userArrayList = user.setUserDetails(adminID);
+        int clientID = Integer.parseInt(appointmentArrayList.get(9).toString());	
+        List clientArrayList = client.setClientDetails(clientID);
+        System.out.println(appointmentArrayList);
+        appointmentIDjTextField.setText(appointmentArrayList.get(0).toString());
+        appointmentDatejTextField.setText(appointmentArrayList.get(1).toString());
+        appointmentStartjTextField.setText(appointmentArrayList.get(2).toString());
+        appointmentEndjTextField.setText(appointmentArrayList.get(3).toString());
+        appointmentNotesjTextArea.setText(appointmentArrayList.get(4).toString());
+        appointmentStatusjTextField.setText(appointmentArrayList.get(7).toString());
+        appointmentAdminNamejTextField.setText(appointmentArrayList.get(5).toString()+" "+appointmentArrayList.get(6).toString());
+        
+        clientNamejTextField.setText(clientArrayList.get(1).toString()+" "+clientArrayList.get(3).toString());
+        clientGenderjTextField.setText(clientArrayList.get(4).toString());
+        clientDOBjTextField.setText(clientArrayList.get(5).toString());
+        clientEmailjTextField.setText(clientArrayList.get(6).toString());
+        clientTeljTextField.setText(clientArrayList.get(7).toString());
+        clientMobjTextField.setText(clientArrayList.get(8).toString());
+        
+        
+        clientNotesjTextArea.setText(clientArrayList.get(12).toString());
+    }//GEN-LAST:event_appointmentTablejTableMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -624,7 +662,6 @@ public class CaseworkerManageAppointments extends javax.swing.JFrame {
     private javax.swing.JButton addToWaitingListjButton;
     private javax.swing.JButton allCasesjButton;
     private javax.swing.JTextField appointmentAdminNamejTextField;
-    private javax.swing.JTextField appointmentClientNamejTextField;
     private javax.swing.JTextField appointmentDatejTextField;
     private javax.swing.JTextField appointmentEndjTextField;
     private javax.swing.JLabel appointmentIDjLabel;
@@ -645,6 +682,7 @@ public class CaseworkerManageAppointments extends javax.swing.JFrame {
     private javax.swing.JTextField clientEmailjTextField;
     private javax.swing.JTextField clientGenderjTextField;
     private javax.swing.JTextField clientMobjTextField;
+    private javax.swing.JTextField clientNamejTextField;
     private javax.swing.JTextArea clientNotesjTextArea;
     private javax.swing.JTextField clientTeljTextField;
     private javax.swing.JPanel detailsjPanel;
