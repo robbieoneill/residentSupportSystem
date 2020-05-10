@@ -5,7 +5,19 @@
  */
 package residentsupportsystem;
 
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartFrame;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
 
 /**
  *
@@ -29,8 +41,52 @@ public class AdminDashboard extends javax.swing.JFrame {
         appointmentCountjLabel.setText(appointment.appointmentCount());
         List resultSetArrayList = user.setUserDetails(userLoggedIn);
         dashboardWelcomejLabel.setText("Administrator Dashboard for: "+resultSetArrayList.get(1).toString());
+        
+        apptChartPanel.setLayout(new java.awt.BorderLayout());
+        JFreeChart apptChart = appointmentsChart();
+        
+        ChartPanel CP = new ChartPanel(apptChart);
+        apptChartPanel.add(CP, BorderLayout.CENTER);
+        apptChartPanel.validate();
+        
+
+//        ChartFrame frame = new ChartFrame("Demo", appointmentsChart());
+//        frame.pack();
+//        frame.setVisible(true);
     }
 
+    // Display chart for the appointments 
+    
+    public JFreeChart appointmentsChart(){
+        DefaultCategoryDataset apptDataset = new DefaultCategoryDataset();
+
+        TreeMap<String, String> apptCountByDate = appointment.getAppointmentsCountByDate();
+        // Using for-each loop 
+        for (Map.Entry mapElement : apptCountByDate.entrySet()) { 
+            String key = (String)mapElement.getKey(); 
+            String value = (String)mapElement.getValue(); 
+            int intValue = Integer.parseInt(value);
+            apptDataset.setValue(intValue, "Appointments", key);
+            System.out.println(key + " : " + value); 
+        }                 
+//        apptDataset.setValue(20,"COMPLETED","01/01/2020");
+       
+        JFreeChart apptChart = ChartFactory.createBarChart(
+        "Appointments Stats",     //Chart title
+        "Dates",     //Domain axis label
+        "No. of Appointments",         //Range axis label
+        apptDataset,         //Chart Data 
+        PlotOrientation.VERTICAL, // orientation
+        true,             // include legend?
+        true,             // include tooltips?
+        false             // include URLs?
+        );
+        
+        return apptChart;
+    }
+
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -63,6 +119,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         activeCasesCountHeaderjLabel = new javax.swing.JLabel();
         activeEnquiryCountjLabel = new javax.swing.JLabel();
         dashboardWelcomejLabel = new javax.swing.JLabel();
+        apptChartPanel = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -268,7 +325,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(activeCasesCountjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 108, Short.MAX_VALUE)
+            .addComponent(activeCasesCountjPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
             .addComponent(caseworkerCountjPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
             .addComponent(clientCountjPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
             .addComponent(appointmentCountjPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
@@ -276,6 +333,17 @@ public class AdminDashboard extends javax.swing.JFrame {
 
         dashboardWelcomejLabel.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         dashboardWelcomejLabel.setText("Admin Dashboard, Welcome  ");
+
+        javax.swing.GroupLayout apptChartPanelLayout = new javax.swing.GroupLayout(apptChartPanel);
+        apptChartPanel.setLayout(apptChartPanelLayout);
+        apptChartPanelLayout.setHorizontalGroup(
+            apptChartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 543, Short.MAX_VALUE)
+        );
+        apptChartPanelLayout.setVerticalGroup(
+            apptChartPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 223, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -287,7 +355,8 @@ public class AdminDashboard extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dashboardWelcomejLabel))
+                    .addComponent(dashboardWelcomejLabel)
+                    .addComponent(apptChartPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(12, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -299,8 +368,10 @@ public class AdminDashboard extends javax.swing.JFrame {
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(dashboardWelcomejLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(apptChartPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 513, Short.MAX_VALUE)))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 513, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -367,6 +438,7 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JLabel appointmentCountHeaderjLabel;
     private javax.swing.JLabel appointmentCountjLabel;
     private javax.swing.JPanel appointmentCountjPanel;
+    private javax.swing.JPanel apptChartPanel;
     private javax.swing.JLabel caseworkerCountHeaderjLabel;
     private javax.swing.JLabel caseworkerCountjLabel;
     private javax.swing.JPanel caseworkerCountjPanel;

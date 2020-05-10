@@ -119,7 +119,7 @@ public class CaseworkerManageAppointments extends javax.swing.JFrame {
             .addGroup(headerjPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         casesjPanel.setBackground(new java.awt.Color(47, 54, 64));

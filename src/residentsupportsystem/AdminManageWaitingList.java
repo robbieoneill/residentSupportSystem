@@ -128,7 +128,7 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
             .addGroup(headerjPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         clientDetailsjPanel.setBackground(new java.awt.Color(113, 128, 147));

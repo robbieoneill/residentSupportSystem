@@ -107,7 +107,7 @@ public class AdminManageUsers extends javax.swing.JFrame {
             .addGroup(headerjPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         userDetailsjPanel.setBackground(new java.awt.Color(113, 128, 147));

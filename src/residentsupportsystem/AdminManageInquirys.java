@@ -526,7 +526,7 @@ public class AdminManageInquirys extends javax.swing.JFrame {
             .addGroup(headerjPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel3)
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         appointmentTablejTable.setModel(new javax.swing.table.DefaultTableModel(

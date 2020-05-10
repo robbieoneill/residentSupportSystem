@@ -328,7 +328,7 @@ public class AllUsersManageDetails extends javax.swing.JFrame {
             .addGroup(headerjPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(manageDetailsjLabel)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         saveChangesjButton.setForeground(new java.awt.Color(39, 60, 117));

@@ -9,13 +9,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
-
+import java.util.Map;
+import java.util.TreeMap;
 /**
  *
  * @author robbieoneill
@@ -299,7 +301,32 @@ public class Appointment {
         }
     }
 
-
+    /*
+        getAppointmentsCountByDate - Method will give the appointments count by dates
+        
+    */
+    public TreeMap getAppointmentsCountByDate(){
+        TreeMap<String,String> appointmentCountByDate = null;
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String getAppointmentsCountByDateQuery = ("SELECT appointmentDate, COUNT(*) as count "+ 
+                "FROM tbl_appointment GROUP BY appointmentDate");
+        try {
+            preparedStatement = databaseInstance.createConnection().prepareStatement(getAppointmentsCountByDateQuery);
+            resultSet = preparedStatement.executeQuery();
+            appointmentCountByDate = new TreeMap<>();
+            while (resultSet.next()) { 
+                appointmentCountByDate.put(resultSet.getString(1), resultSet.getString(2));
+            }
+            resultSet.close();
+            preparedStatement.close();
+            databaseInstance.closeConnection();
+        } catch(SQLException ex){
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return appointmentCountByDate;
+    }
 
 
 }
