@@ -24,7 +24,7 @@ public class DatabaseConnection {
     public Connection createConnection() {
         databaseConnection = null;
         try {
-            String database = "jdbc:sqlite:" + "C://SOHAIB//Uni//Sem4//SoftwareEngineeringPractice//residentSupportSystem//rssDB.db";
+            String database = "jdbc:sqlite:" + "//Users//robbieoneill//Documents//GitHub//residentSupportSystem//rssDB.db";
             databaseConnection = DriverManager.getConnection(database);
         
         } catch (SQLException ex) {

@@ -397,8 +397,8 @@ public class AdminDashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_logOutjButtonActionPerformed
 
     private void manageInquirysjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageInquirysjButtonActionPerformed
-        new AdminManageInquirys(userLoggedIn).setVisible(true);
-        this.dispose(); 
+       new AdminManageInquirys(userLoggedIn).setVisible(true);
+       this.dispose(); 
     }//GEN-LAST:event_manageInquirysjButtonActionPerformed
 
     private void manageCaseworkersjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageCaseworkersjButtonActionPerformed
@@ -407,7 +407,8 @@ public class AdminDashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_manageCaseworkersjButtonActionPerformed
 
     private void manageAppointmentsjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageAppointmentsjButtonActionPerformed
-       
+       new AdminManageAppointments(userLoggedIn).setVisible(true);
+       this.dispose();
     }//GEN-LAST:event_manageAppointmentsjButtonActionPerformed
 
     private void manageClientsjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageClientsjButtonActionPerformed
