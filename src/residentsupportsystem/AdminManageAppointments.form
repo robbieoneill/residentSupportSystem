@@ -23,10 +23,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="windowjPanel" max="32767" attributes="0"/>
-          </Group>
+          <Component id="windowjPanel" alignment="1" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -49,23 +46,16 @@
               <Component id="headerjPanel" alignment="0" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" attributes="0">
-                          <Component id="backjButton" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="userDetailsjPanel" max="32767" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane1" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" max="32767" attributes="0"/>
                       </Group>
+                      <Component id="backjButton" min="-2" max="-2" attributes="0"/>
+                      <Component id="userDetailsjPanel" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace min="0" pref="15" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -74,10 +64,10 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="headerjPanel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="userDetailsjPanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jScrollPane1" pref="447" max="32767" attributes="0"/>
+                  <Component id="userDetailsjPanel" pref="319" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jScrollPane1" pref="431" max="32767" attributes="0"/>
                       <Component id="jPanel4" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
@@ -101,7 +91,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="920" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -140,375 +130,185 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="14" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jPanel3" max="32767" attributes="0"/>
+                          <Component id="jPanel5" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="14" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="jPanel3" max="32767" attributes="0"/>
-                          <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jPanel5" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="jPanel1">
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="userPostcodejLabel" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userMobjLabel" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userTeljLabel" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userEmailjLabel" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userGenderjLabel" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userFirstnamejLabel" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="userMobjTextField" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userTeljTextField" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userEmailjTextField" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userGenderjComboBox" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="userPostcodejTextField" max="32767" attributes="0"/>
-                                              <Component id="userFirstnamejTextField" alignment="0" min="-2" pref="193" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="userIDjLabel" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                          <Component id="userDetailsjLabel" min="-2" pref="97" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="userIDjTextField" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
-                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace pref="36" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userDetailsjLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userIDjTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userIDjLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userFirstnamejLabel" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                              <Component id="userFirstnamejTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userGenderjLabel" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                              <Component id="userGenderjComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userEmailjTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userEmailjLabel" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userTeljTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userTeljLabel" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userMobjTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userMobjLabel" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userPostcodejTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userPostcodejLabel" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JTextField" name="userPostcodejTextField">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userPostcodejTextFieldActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JLabel" name="userGenderjLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Gender"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="userTeljTextField">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="userGenderjComboBox">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="4">
-                        <StringItem index="0" value="User Gender:"/>
-                        <StringItem index="1" value="Male"/>
-                        <StringItem index="2" value="Female"/>
-                        <StringItem index="3" value="Other"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
-                <Component class="javax.swing.JLabel" name="userFirstnamejLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Firstname"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="userIDjTextField">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userIDjTextFieldActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="userEmailjTextField">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="userPostcodejLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Postcode"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="userEmailjLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Email"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="userMobjLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Mobile"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="userTeljLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Telephone"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="userMobjTextField">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="userFirstnamejTextField">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="userDetailsjLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="User ID"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="userIDjLabel">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="User ID"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="jLabel2">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="User Details"/>
-                  </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
             <Container class="javax.swing.JPanel" name="jPanel2">
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="userPostcodejLabel1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="userMobjLabel1" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="userDetailsjLabel1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="appointmentIDjTextField" min="-2" pref="128" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                           <Component id="userTeljLabel1" alignment="0" max="32767" attributes="0"/>
                                           <Component id="userEmailjLabel1" alignment="0" max="32767" attributes="0"/>
                                           <Component id="userGenderjLabel1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="userFirstnamejLabel1" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                                          <Component id="userFirstnamejLabel1" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="userMobjLabel1" min="-2" pref="66" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="userMobjTextField1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="userTeljTextField1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="userEmailjTextField1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="userGenderjComboBox1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="userPostcodejTextField1" alignment="1" max="32767" attributes="0"/>
-                                          <Component id="userFirstnamejTextField1" alignment="0" min="-2" pref="193" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel9" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="userIDjLabel1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                      <Component id="userDetailsjLabel1" min="-2" pref="97" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="userIDjTextField1" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="enquiryIDjTextField" pref="149" max="32767" attributes="0"/>
+                                      <Component id="appointmentStatusjTextField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="appointmentEndjTextField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="appointmentStartjTextField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="appointmentDatejTextField" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="appointmentRoomjTextField" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="appointmentCaseworkerjTextField" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="181" max="32767" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jScrollPane2" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="userPostcodejLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="184" max="-2" attributes="0"/>
+                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="13" max="32767" attributes="0"/>
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userDetailsjLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userIDjTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userIDjLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userFirstnamejLabel1" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                              <Component id="userFirstnamejTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userGenderjLabel1" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                              <Component id="userGenderjComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userEmailjTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userEmailjLabel1" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userTeljTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userTeljLabel1" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userMobjTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userMobjLabel1" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userPostcodejTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userPostcodejLabel1" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="userDetailsjLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="appointmentIDjTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="userFirstnamejLabel1" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                                      <Component id="appointmentDatejTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="userGenderjLabel1" min="-2" pref="19" max="-2" attributes="0"/>
+                                      <Component id="appointmentStartjTextField" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="userEmailjLabel1" min="-2" pref="19" max="-2" attributes="0"/>
+                                      <Component id="appointmentEndjTextField" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="userTeljLabel1" min="-2" pref="19" max="-2" attributes="0"/>
+                                      <Component id="appointmentStatusjTextField" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="userMobjLabel1" min="-2" pref="19" max="-2" attributes="0"/>
+                                      <Component id="appointmentRoomjTextField" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                      <Component id="appointmentCaseworkerjTextField" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="enquiryIDjTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="userPostcodejLabel1" min="-2" pref="19" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jScrollPane2" max="32767" attributes="0"/>
+                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="userPostcodejTextField1">
+                <Component class="javax.swing.JTextField" name="appointmentRoomjTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="e1" green="dd" red="dc" type="rgb"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userPostcodejTextField1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="appointmentRoomjTextFieldActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="userGenderjLabel1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Gender"/>
+                    <Property name="text" type="java.lang.String" value="Start"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="userTeljTextField1">
+                <Component class="javax.swing.JTextField" name="appointmentEndjTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="e1" green="dd" red="dc" type="rgb"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="userGenderjComboBox1">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="4">
-                        <StringItem index="0" value="User Gender:"/>
-                        <StringItem index="1" value="Male"/>
-                        <StringItem index="2" value="Female"/>
-                        <StringItem index="3" value="Other"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
                 <Component class="javax.swing.JLabel" name="userFirstnamejLabel1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Firstname"/>
+                    <Property name="text" type="java.lang.String" value="Date"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="userIDjTextField1">
+                <Component class="javax.swing.JTextField" name="appointmentIDjTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="e1" green="dd" red="dc" type="rgb"/>
                     </Property>
                   </Properties>
                   <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userIDjTextField1ActionPerformed"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="appointmentIDjTextFieldActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="userEmailjTextField1">
+                <Component class="javax.swing.JTextField" name="appointmentStartjTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="e1" green="dd" red="dc" type="rgb"/>
@@ -517,32 +317,32 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="userPostcodejLabel1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Postcode"/>
+                    <Property name="text" type="java.lang.String" value="Notes"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="userEmailjLabel1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Email"/>
+                    <Property name="text" type="java.lang.String" value="End"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="userMobjLabel1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Mobile"/>
+                    <Property name="text" type="java.lang.String" value="Room"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="userTeljLabel1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Telephone"/>
+                    <Property name="text" type="java.lang.String" value="Status"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="userMobjTextField1">
+                <Component class="javax.swing.JTextField" name="appointmentStatusjTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="e1" green="dd" red="dc" type="rgb"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="userFirstnamejTextField1">
+                <Component class="javax.swing.JTextField" name="appointmentDatejTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="e1" green="dd" red="dc" type="rgb"/>
@@ -551,18 +351,42 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="userDetailsjLabel1">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="User ID"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="userIDjLabel1">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="User ID"/>
+                    <Property name="text" type="java.lang.String" value="Appointment ID"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel3">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Appoiontment Details"/>
                   </Properties>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="appointmentNotesjTextArea">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="rows" type="int" value="5"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JLabel" name="jLabel7">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Caseworker"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel9">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Enquiry"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="enquiryIDjTextField">
+                </Component>
+                <Component class="javax.swing.JTextField" name="appointmentCaseworkerjTextField">
                 </Component>
               </SubComponents>
             </Container>
@@ -571,197 +395,341 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="userPostcodejLabel2" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userMobjLabel2" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userTeljLabel2" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userEmailjLabel2" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userGenderjLabel2" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userFirstnamejLabel2" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="userMobjTextField2" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userTeljTextField2" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userEmailjTextField2" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userGenderjComboBox2" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="userPostcodejTextField2" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="userFirstnamejTextField2" alignment="0" min="-2" pref="193" max="-2" attributes="0"/>
-                                  </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="userGenderjLabel2" min="-2" pref="76" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Component id="enquiryAreajTextField" min="-2" pref="167" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="userEmailjLabel2" min="-2" pref="75" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="enquiryStatusjTextField" min="-2" pref="167" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="userIDjLabel2" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                  <Component id="userDetailsjLabel2" min="-2" pref="97" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="userIDjTextField2" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="userFirstnamejLabel2" min="-2" pref="98" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                  <Component id="adminNamejTextField" max="32767" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="18" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="233" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userDetailsjLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userIDjTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userIDjLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="userFirstnamejLabel2" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                              <Component id="userFirstnamejTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="adminNamejTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userGenderjLabel2" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                              <Component id="userGenderjComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userEmailjTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="userEmailjLabel2" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="enquiryStatusjTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="userGenderjLabel2" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="enquiryAreajTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userTeljTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userTeljLabel2" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userMobjTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userMobjLabel2" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="userPostcodejTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="userPostcodejLabel2" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                          </Group>
+                          <EmptySpace pref="15" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JTextField" name="userPostcodejTextField2">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userPostcodejTextField2ActionPerformed"/>
-                  </Events>
-                </Component>
                 <Component class="javax.swing.JLabel" name="userGenderjLabel2">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Gender"/>
+                    <Property name="text" type="java.lang.String" value="Area"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="userTeljTextField2">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="userGenderjComboBox2">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="4">
-                        <StringItem index="0" value="User Gender:"/>
-                        <StringItem index="1" value="Male"/>
-                        <StringItem index="2" value="Female"/>
-                        <StringItem index="3" value="Other"/>
-                      </StringArray>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JLabel" name="userFirstnamejLabel2">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Firstname"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="userIDjTextField2">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="userIDjTextField2ActionPerformed"/>
-                  </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="userEmailjTextField2">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="userPostcodejLabel2">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Postcode"/>
+                    <Property name="text" type="java.lang.String" value="Admin"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="userEmailjLabel2">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="Email"/>
+                    <Property name="text" type="java.lang.String" value="Status"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="userMobjLabel2">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Mobile"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="userTeljLabel2">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Telephone"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="userMobjTextField2">
+                <Component class="javax.swing.JTextField" name="adminNamejTextField">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="e1" green="dd" red="dc" type="rgb"/>
                     </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="userFirstnamejTextField2">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="userDetailsjLabel2">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="User ID"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="userIDjLabel2">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="User ID"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel4">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Enquiry Details"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="enquiryAreajTextField">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="enquiryAreajTextFieldActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="enquiryStatusjTextField">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="enquiryStatusjTextFieldActionPerformed"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel5">
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="userDetailsjLabel3" min="-2" pref="77" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                              <Component id="userTeljLabel3" pref="77" max="32767" attributes="0"/>
+                                              <Component id="userGenderjLabel3" max="32767" attributes="0"/>
+                                              <Component id="userFirstnamejLabel3" max="32767" attributes="0"/>
+                                              <Component id="userEmailjLabel3" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="userEmailjTextField3" min="-2" pref="193" max="-2" attributes="0"/>
+                                              <Component id="userFirstnamejTextField3" min="-2" pref="193" max="-2" attributes="0"/>
+                                              <Component id="userTeljTextField4" min="-2" pref="193" max="-2" attributes="0"/>
+                                              <Component id="clientIDjTextField" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
+                                              <Component id="userTeljTextField3" alignment="0" min="-2" pref="193" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="userTeljLabel8" min="-2" pref="76" max="-2" attributes="0"/>
+                                              <Component id="userTeljLabel4" min="-2" pref="76" max="-2" attributes="0"/>
+                                              <Component id="userTeljLabel7" min="-2" pref="76" max="-2" attributes="0"/>
+                                              <Component id="userTeljLabel5" alignment="0" min="-2" pref="76" max="-2" attributes="0"/>
+                                              <Component id="userTeljLabel6" min="-2" pref="76" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="userTeljTextField7" min="-2" pref="193" max="-2" attributes="0"/>
+                                      <Component id="userTeljTextField8" min="-2" pref="193" max="-2" attributes="0"/>
+                                      <Component id="clientEmailjTextField" alignment="0" min="-2" pref="193" max="-2" attributes="0"/>
+                                      <Component id="clientMobjTextField" min="-2" pref="193" max="-2" attributes="0"/>
+                                      <Component id="userTeljTextField9" min="-2" pref="193" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="258" max="-2" attributes="0"/>
+                                  <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="16" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="userDetailsjLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="clientIDjTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="userFirstnamejLabel3" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                                      <Component id="userFirstnamejTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="userTeljLabel5" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                                      <Component id="clientEmailjTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="userGenderjLabel3" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                                      <Component id="userEmailjTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="userTeljLabel6" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                                      <Component id="userTeljTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="userEmailjLabel3" min="-2" pref="19" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="userTeljLabel7" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                                          <Component id="userTeljTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="userTeljTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="clientMobjTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="userTeljLabel4" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="userTeljLabel3" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="userTeljTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="userTeljLabel8" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
+                              <Component id="userTeljTextField8" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="userGenderjLabel3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Gender"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="userTeljTextField3">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="userFirstnamejLabel3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Name"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="clientIDjTextField">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clientIDjTextFieldActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="userEmailjTextField3">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="userEmailjLabel3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="DOB"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="userTeljLabel3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Telephone"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="userFirstnamejTextField3">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="userDetailsjLabel3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Client ID"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel10">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Client Details"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="userTeljTextField4">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="userTeljLabel4">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Mobile"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="clientMobjTextField">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="userTeljLabel5">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Email"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="clientEmailjTextField">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="userTeljLabel6">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Addr1"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="userTeljLabel7">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Addr2"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="userTeljTextField7">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="userTeljTextField8">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="userTeljLabel8">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Postcode"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="userTeljTextField9">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e1" green="dd" red="dc" type="rgb"/>
+                    </Property>
                   </Properties>
                 </Component>
               </SubComponents>
@@ -783,17 +751,65 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="appointmentjTable">
+            <Component class="javax.swing.JTable" name="customAppointmentjTable">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="4" rowCount="4">
-                    <Column editable="true" title="Title 1" type="java.lang.Object"/>
-                    <Column editable="true" title="Title 2" type="java.lang.Object"/>
-                    <Column editable="true" title="Title 3" type="java.lang.Object"/>
-                    <Column editable="true" title="Title 4" type="java.lang.Object"/>
+                  <Table columnCount="7" rowCount="4">
+                    <Column editable="false" title="ID" type="java.lang.Object"/>
+                    <Column editable="false" title="Date" type="java.lang.Object"/>
+                    <Column editable="false" title="Start" type="java.lang.Object"/>
+                    <Column editable="false" title="End" type="java.lang.Object"/>
+                    <Column editable="false" title="Caseworker" type="java.lang.Object"/>
+                    <Column editable="false" title="Client" type="java.lang.Object"/>
+                    <Column editable="false" title="Status" type="java.lang.Object"/>
                   </Table>
                 </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="customAppointmentjTableMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -802,86 +818,79 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="106" max="-2" attributes="0"/>
-                  </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="queryTypejComboBox" min="-2" pref="130" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="queryConditionjTextField" min="-2" pref="149" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
-                                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jButton1" alignment="1" max="32767" attributes="0"/>
-                                  <Component id="jButton3" alignment="1" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                                              <Component id="jTextField1" min="-2" pref="259" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="cancelledAppointmentjRadioButton" max="32767" attributes="0"/>
+                                          <Component id="closedAppointmentjRadioButton" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="availableAppointmentjRadioButton" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="cancelledAppointmentjRadioButton1" alignment="1" max="32767" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="queryTypejComboBox" min="-2" pref="130" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="queryConditionjTextField" min="-2" pref="130" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="canceljButton" alignment="0" min="-2" pref="266" max="-2" attributes="0"/>
+                                  <Component id="reschedulejButton" alignment="0" min="-2" pref="266" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                      <Component id="nextSlotjTextField" min="-2" pref="254" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                              <Component id="searchjButton" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="19" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="queryTypejComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="queryConditionjTextField" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                      <Component id="searchjButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="availableAppointmentjRadioButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="closedAppointmentjRadioButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="cancelledAppointmentjRadioButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="cancelledAppointmentjRadioButton1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="canceljButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="reschedulejButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="nextSlotjTextField" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -892,7 +901,7 @@
                 <Property name="text" type="java.lang.String" value="Quick Actions"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="searchjButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Search"/>
               </Properties>
@@ -900,17 +909,16 @@
             <Component class="javax.swing.JComboBox" name="queryTypejComboBox">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="10">
+                  <StringArray count="9">
                     <StringItem index="0" value="Search By:"/>
                     <StringItem index="1" value="Status"/>
-                    <StringItem index="2" value="Admin ID"/>
-                    <StringItem index="3" value="Caseworker ID"/>
-                    <StringItem index="4" value="Client ID"/>
-                    <StringItem index="5" value="Enquiry ID"/>
-                    <StringItem index="6" value="Enquiry Types"/>
-                    <StringItem index="7" value="Date"/>
-                    <StringItem index="8" value="Start"/>
-                    <StringItem index="9" value="End"/>
+                    <StringItem index="2" value="Caseworker ID"/>
+                    <StringItem index="3" value="Client ID"/>
+                    <StringItem index="4" value="Enquiry ID"/>
+                    <StringItem index="5" value="Enquiry Type"/>
+                    <StringItem index="6" value="Date"/>
+                    <StringItem index="7" value="Start"/>
+                    <StringItem index="8" value="End"/>
                   </StringArray>
                 </Property>
               </Properties>
@@ -919,43 +927,42 @@
               </AuxValues>
             </Component>
             <Component class="javax.swing.JTextField" name="queryConditionjTextField">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jTextField1"/>
-              </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+            <Component class="javax.swing.JRadioButton" name="availableAppointmentjRadioButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Available Appointments"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+            <Component class="javax.swing.JRadioButton" name="closedAppointmentjRadioButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Closed Appointments"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="jRadioButton3">
+            <Component class="javax.swing.JRadioButton" name="cancelledAppointmentjRadioButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cancelled Appointments"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="canceljButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Cancel Appointment"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
+            <Component class="javax.swing.JButton" name="reschedulejButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Reschedule to Next Avaiable Slot"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jTextField1"/>
-              </Properties>
+            <Component class="javax.swing.JTextField" name="nextSlotjTextField">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel6">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Next Available Slot: "/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="cancelledAppointmentjRadioButton1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Your Appointments"/>
               </Properties>
             </Component>
           </SubComponents>

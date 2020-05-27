@@ -327,6 +327,128 @@ public class Appointment {
         
         return appointmentCountByDate;
     }
+    
+    public void setInitAppointmentTable(JTable appointmentTable,  String whereTerm, String whereCondition) {
+        System.out.println("SEARCH CRITERIA: "+ whereTerm +" =  "+ whereCondition);
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String setInitAppointmentTable=("SELECT tbl_appointment.appointmentID, tbl_appointment.appointmentDate,tbl_appointment.appointmentStartTime, tbl_appointment.appointmentEndTime, tbl_user.userFirstname, tbl_user.userLastname, tbl_client.clientFirstname, tbl_client.clientLastname, tbl_appointment.appointmentStatus FROM tbl_appointment JOIN tbl_user ON tbl_appointment.appointmentCaseworkerID = tbl_user.userID JOIN tbl_enquiry ON tbl_appointment.appointmentEnquiryID = tbl_enquiry.enquiryID JOIN tbl_client ON tbl_enquiry.enquiryClientID = tbl_client.clientID");
+        
+        
+        System.out.println(setInitAppointmentTable);
+        try {
+            preparedStatement = databaseInstance.createConnection().prepareStatement(setInitAppointmentTable);
+            
+            resultSet = preparedStatement.executeQuery();
+            ((DefaultTableModel) appointmentTable.getModel()).setNumRows(0);
+            DefaultTableModel userTableModel = (DefaultTableModel) appointmentTable.getModel();
+            Object[] row;
+            while (resultSet.next()) {
+                row = new Object[7];
+                row[0] = resultSet.getString(1); //Appointment ID
+                row[1] = resultSet.getString(2); //Appointment Date
+                row[2] = resultSet.getString(3); //Appointment Start
+                row[3] = resultSet.getString(4); //Appointment End
+                row[4] = (resultSet.getString(5) + " "+ resultSet.getString (6)); //Caseworker Firstname & Lastname
+                row[5] = (resultSet.getString(7) + " "+ resultSet.getString (8)); //Client Firstname & Lastname
+                row[6] = resultSet.getString(9); //Appointment Status
+                userTableModel.addRow(row);
+            }
+            resultSet.close();
+            preparedStatement.close();
+            databaseInstance.closeConnection();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void setCustomAppointmentTable(JTable appointmentTable,  String whereTerm, String whereCondition) {
+        System.out.println("SEARCH CRITERIA: "+ whereTerm +" =  "+ whereCondition);
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String selectCaseDetailsQuery = ("﻿SELECT tbl_appointment.appointmentID, tbl_appointment.appointmentDate,"
+                + " tbl_appointment.appointmentStartTime, tbl_appointment.appointmentEndTime, tbl_user.userFirstname,"
+                + " tbl_user.userLastname, tbl_client.clientFirstname, tbl_client.clientLastname,"
+                + " tbl_appointment.appointmentStatus "
+                + " FROM tbl_appointment JOIN tbl_user ON tbl_appointment.appointmentCaseworkerID = tbl_user.userID "
+                + " JOIN tbl_enquiry ON tbl_appointment.appointmentEnquiryID = tbl_enquiry.enquiryID "
+                + " JOIN tbl_client ON tbl_enquiry.enquiryClientID = tbl_client.clientID "
+                + " WHERE ? = ?");
+        
+        System.out.println(selectCaseDetailsQuery);
+        try {
+            preparedStatement = databaseInstance.createConnection().prepareStatement(selectCaseDetailsQuery);
+            preparedStatement.setString(1, whereTerm);
+            preparedStatement.setString(2, whereCondition);
+            resultSet = preparedStatement.executeQuery();
+            ((DefaultTableModel) appointmentTable.getModel()).setNumRows(0);
+            DefaultTableModel userTableModel = (DefaultTableModel) appointmentTable.getModel();
+            Object[] row;
+            while (resultSet.next()) {
+                row = new Object[7];
+                row[0] = resultSet.getString(1); //Appointment ID
+                row[1] = resultSet.getString(2); //Appointment Date
+                row[2] = resultSet.getString(3); //Appointment Start
+                row[3] = resultSet.getString(4); //Appointment End
+                row[4] = (resultSet.getString(5) + " "+ resultSet.getString (6)); //Caseworker Firstname & Lastname
+                row[5] = (resultSet.getString(7) + " "+ resultSet.getString (8)); //Client Firstname & Lastname
+                row[6] = resultSet.getString(9); //Appointment Status
+                userTableModel.addRow(row);
+            }
+            resultSet.close();
+            preparedStatement.close();
+            databaseInstance.closeConnection();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    
+    public List setAllAppointmentDetails(int appointmentID){
+        List returnResultSet = new LinkedList();
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String getAppointmentDataQuery = ("SELECT tbl_appointment.appointmentID, tbl_appointment.appointmentDate, "
+                + "tbl_appointment.appointmentStartTime, tbl_appointment.appointmentEndTime, "
+                + "tbl_appointment.appointmentStatus, tbl_appointment.appointmentRoom, tbl_user.userFirstname, "
+                + "tbl_user.userLastname, tbl_enquiry.enquiryID, tbl_enquiry.enquiryArea, tbl_enquiry.enquiryStatus, "
+                + "tbl_client.clientID, tbl_client.clientFirstname, tbl_client.clientLastname, "
+                + "tbl_client.clientGender, tbl_client.clientDOB, tbl_client.clientTelNumber, "
+                + "tbl_client.clientMobNumber, tbl_client.clientEmail, tbl_client.clientAddr1, "
+                + "tbl_client.clientAddr2, tbl_client.clientPostcode "
+                + "FROM tbl_appointment JOIN tbl_user ON tbl_appointment.appointmentCaseworkerID = tbl_user.userID "
+                + "JOIN tbl_enquiry ON tbl_appointment.appointmentEnquiryID = tbl_enquiry.enquiryID "
+                + "JOIN tbl_client ON tbl_enquiry.enquiryClientID = tbl_client.clientID "
+                + "WHERE appointmentID = ?");
+        System.out.println("ALL DATA: "+getAppointmentDataQuery);
+        try {
+            preparedStatement = databaseInstance.createConnection().prepareStatement (getAppointmentDataQuery);
+            preparedStatement.setInt(1,appointmentID);
+            resultSet = preparedStatement.executeQuery();
+            
+            while(resultSet.next()){
+               returnResultSet.add(resultSet.getString("appointmentID"));
+               
+               
+               resultSet.close();
+               preparedStatement.close();
+               databaseInstance.closeConnection();
+               return returnResultSet;
+            }    
+        
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
+        
+        System.out.println(getAppointmentDataQuery);
+        return returnResultSet;
+        
+    }
+    
+    
 
 
 }

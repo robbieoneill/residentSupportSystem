@@ -17,6 +17,7 @@ import javax.swing.table.DefaultTableModel;
 public class AdminManageAppointments extends javax.swing.JFrame {
     int userLoggedIn;
     User user = new User();
+    Appointment appointment = new Appointment();
     
     
     public AdminManageAppointments(int userID) {
@@ -24,7 +25,8 @@ public class AdminManageAppointments extends javax.swing.JFrame {
         initComponents();
         //user.setUserTable(userTablejTable);
         int userAutoID = user.getUserAutoID();
-        userIDjTextField.setText(String.valueOf(userAutoID));
+        appointment.setInitAppointmentTable(customAppointmentjTable, "ALL", "ALL");
+        //userIDjTextField.setText(String.valueOf(userAutoID));
     }
 
     /**
@@ -40,72 +42,73 @@ public class AdminManageAppointments extends javax.swing.JFrame {
         headerjPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         userDetailsjPanel = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        userPostcodejTextField = new javax.swing.JTextField();
-        userGenderjLabel = new javax.swing.JLabel();
-        userTeljTextField = new javax.swing.JTextField();
-        userGenderjComboBox = new javax.swing.JComboBox<>();
-        userFirstnamejLabel = new javax.swing.JLabel();
-        userIDjTextField = new javax.swing.JTextField();
-        userEmailjTextField = new javax.swing.JTextField();
-        userPostcodejLabel = new javax.swing.JLabel();
-        userEmailjLabel = new javax.swing.JLabel();
-        userMobjLabel = new javax.swing.JLabel();
-        userTeljLabel = new javax.swing.JLabel();
-        userMobjTextField = new javax.swing.JTextField();
-        userFirstnamejTextField = new javax.swing.JTextField();
-        userDetailsjLabel = new javax.swing.JLabel();
-        userIDjLabel = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        userPostcodejTextField1 = new javax.swing.JTextField();
+        appointmentRoomjTextField = new javax.swing.JTextField();
         userGenderjLabel1 = new javax.swing.JLabel();
-        userTeljTextField1 = new javax.swing.JTextField();
-        userGenderjComboBox1 = new javax.swing.JComboBox<>();
+        appointmentEndjTextField = new javax.swing.JTextField();
         userFirstnamejLabel1 = new javax.swing.JLabel();
-        userIDjTextField1 = new javax.swing.JTextField();
-        userEmailjTextField1 = new javax.swing.JTextField();
+        appointmentIDjTextField = new javax.swing.JTextField();
+        appointmentStartjTextField = new javax.swing.JTextField();
         userPostcodejLabel1 = new javax.swing.JLabel();
         userEmailjLabel1 = new javax.swing.JLabel();
         userMobjLabel1 = new javax.swing.JLabel();
         userTeljLabel1 = new javax.swing.JLabel();
-        userMobjTextField1 = new javax.swing.JTextField();
-        userFirstnamejTextField1 = new javax.swing.JTextField();
+        appointmentStatusjTextField = new javax.swing.JTextField();
+        appointmentDatejTextField = new javax.swing.JTextField();
         userDetailsjLabel1 = new javax.swing.JLabel();
-        userIDjLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        appointmentNotesjTextArea = new javax.swing.JTextArea();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        enquiryIDjTextField = new javax.swing.JTextField();
+        appointmentCaseworkerjTextField = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
-        userPostcodejTextField2 = new javax.swing.JTextField();
         userGenderjLabel2 = new javax.swing.JLabel();
-        userTeljTextField2 = new javax.swing.JTextField();
-        userGenderjComboBox2 = new javax.swing.JComboBox<>();
         userFirstnamejLabel2 = new javax.swing.JLabel();
-        userIDjTextField2 = new javax.swing.JTextField();
-        userEmailjTextField2 = new javax.swing.JTextField();
-        userPostcodejLabel2 = new javax.swing.JLabel();
         userEmailjLabel2 = new javax.swing.JLabel();
-        userMobjLabel2 = new javax.swing.JLabel();
-        userTeljLabel2 = new javax.swing.JLabel();
-        userMobjTextField2 = new javax.swing.JTextField();
-        userFirstnamejTextField2 = new javax.swing.JTextField();
-        userDetailsjLabel2 = new javax.swing.JLabel();
-        userIDjLabel2 = new javax.swing.JLabel();
+        adminNamejTextField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        enquiryAreajTextField = new javax.swing.JTextField();
+        enquiryStatusjTextField = new javax.swing.JTextField();
+        jPanel5 = new javax.swing.JPanel();
+        userGenderjLabel3 = new javax.swing.JLabel();
+        userTeljTextField3 = new javax.swing.JTextField();
+        userFirstnamejLabel3 = new javax.swing.JLabel();
+        clientIDjTextField = new javax.swing.JTextField();
+        userEmailjTextField3 = new javax.swing.JTextField();
+        userEmailjLabel3 = new javax.swing.JLabel();
+        userTeljLabel3 = new javax.swing.JLabel();
+        userFirstnamejTextField3 = new javax.swing.JTextField();
+        userDetailsjLabel3 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        userTeljTextField4 = new javax.swing.JTextField();
+        userTeljLabel4 = new javax.swing.JLabel();
+        clientMobjTextField = new javax.swing.JTextField();
+        userTeljLabel5 = new javax.swing.JLabel();
+        clientEmailjTextField = new javax.swing.JTextField();
+        userTeljLabel6 = new javax.swing.JLabel();
+        userTeljLabel7 = new javax.swing.JLabel();
+        userTeljTextField7 = new javax.swing.JTextField();
+        userTeljTextField8 = new javax.swing.JTextField();
+        userTeljLabel8 = new javax.swing.JLabel();
+        userTeljTextField9 = new javax.swing.JTextField();
         backjButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        appointmentjTable = new javax.swing.JTable();
+        customAppointmentjTable = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        searchjButton = new javax.swing.JButton();
         queryTypejComboBox = new javax.swing.JComboBox<>();
         queryConditionjTextField = new javax.swing.JTextField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        availableAppointmentjRadioButton = new javax.swing.JRadioButton();
+        closedAppointmentjRadioButton = new javax.swing.JRadioButton();
+        cancelledAppointmentjRadioButton = new javax.swing.JRadioButton();
+        canceljButton = new javax.swing.JButton();
+        reschedulejButton = new javax.swing.JButton();
+        nextSlotjTextField = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
+        cancelledAppointmentjRadioButton1 = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,7 +127,7 @@ public class AdminManageAppointments extends javax.swing.JFrame {
             .addGroup(headerjPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(920, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         headerjPanelLayout.setVerticalGroup(
             headerjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,272 +139,162 @@ public class AdminManageAppointments extends javax.swing.JFrame {
 
         userDetailsjPanel.setBackground(new java.awt.Color(113, 128, 147));
 
-        userPostcodejTextField.setBackground(new java.awt.Color(220, 221, 225));
-        userPostcodejTextField.addActionListener(new java.awt.event.ActionListener() {
+        appointmentRoomjTextField.setBackground(new java.awt.Color(220, 221, 225));
+        appointmentRoomjTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userPostcodejTextFieldActionPerformed(evt);
+                appointmentRoomjTextFieldActionPerformed(evt);
             }
         });
 
-        userGenderjLabel.setText("Gender");
+        userGenderjLabel1.setText("Start");
 
-        userTeljTextField.setBackground(new java.awt.Color(220, 221, 225));
+        appointmentEndjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
-        userGenderjComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User Gender:", "Male", "Female", "Other" }));
+        userFirstnamejLabel1.setText("Date");
 
-        userFirstnamejLabel.setText("Firstname");
-
-        userIDjTextField.setBackground(new java.awt.Color(220, 221, 225));
-        userIDjTextField.addActionListener(new java.awt.event.ActionListener() {
+        appointmentIDjTextField.setBackground(new java.awt.Color(220, 221, 225));
+        appointmentIDjTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userIDjTextFieldActionPerformed(evt);
+                appointmentIDjTextFieldActionPerformed(evt);
             }
         });
 
-        userEmailjTextField.setBackground(new java.awt.Color(220, 221, 225));
+        appointmentStartjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
-        userPostcodejLabel.setText("Postcode");
+        userPostcodejLabel1.setText("Notes");
 
-        userEmailjLabel.setText("Email");
+        userEmailjLabel1.setText("End");
 
-        userMobjLabel.setText("Mobile");
+        userMobjLabel1.setText("Room");
 
-        userTeljLabel.setText("Telephone");
+        userTeljLabel1.setText("Status");
 
-        userMobjTextField.setBackground(new java.awt.Color(220, 221, 225));
+        appointmentStatusjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
-        userFirstnamejTextField.setBackground(new java.awt.Color(220, 221, 225));
+        appointmentDatejTextField.setBackground(new java.awt.Color(220, 221, 225));
 
-        userDetailsjLabel.setText("User ID");
-
-        userIDjLabel.setText("User ID");
-
-        jLabel2.setText("User Details");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(userPostcodejLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(userMobjLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(userTeljLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(userEmailjLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(userGenderjLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(userFirstnamejLabel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(userMobjTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(userTeljTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(userEmailjTextField, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(userGenderjComboBox, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(userPostcodejTextField)
-                                    .addComponent(userFirstnamejTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(userIDjLabel)
-                                .addGap(31, 31, 31)
-                                .addComponent(userDetailsjLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(userIDjTextField))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(127, 127, 127)
-                        .addComponent(jLabel2)))
-                .addContainerGap(36, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userDetailsjLabel)
-                    .addComponent(userIDjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userIDjLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userFirstnamejLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userFirstnamejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userGenderjLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userGenderjComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userEmailjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userEmailjLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userTeljTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userTeljLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userMobjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userMobjLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userPostcodejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userPostcodejLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
-        userPostcodejTextField1.setBackground(new java.awt.Color(220, 221, 225));
-        userPostcodejTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userPostcodejTextField1ActionPerformed(evt);
-            }
-        });
-
-        userGenderjLabel1.setText("Gender");
-
-        userTeljTextField1.setBackground(new java.awt.Color(220, 221, 225));
-
-        userGenderjComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User Gender:", "Male", "Female", "Other" }));
-
-        userFirstnamejLabel1.setText("Firstname");
-
-        userIDjTextField1.setBackground(new java.awt.Color(220, 221, 225));
-        userIDjTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userIDjTextField1ActionPerformed(evt);
-            }
-        });
-
-        userEmailjTextField1.setBackground(new java.awt.Color(220, 221, 225));
-
-        userPostcodejLabel1.setText("Postcode");
-
-        userEmailjLabel1.setText("Email");
-
-        userMobjLabel1.setText("Mobile");
-
-        userTeljLabel1.setText("Telephone");
-
-        userMobjTextField1.setBackground(new java.awt.Color(220, 221, 225));
-
-        userFirstnamejTextField1.setBackground(new java.awt.Color(220, 221, 225));
-
-        userDetailsjLabel1.setText("User ID");
-
-        userIDjLabel1.setText("User ID");
+        userDetailsjLabel1.setText("Appointment ID");
 
         jLabel3.setText("Appoiontment Details");
+
+        appointmentNotesjTextArea.setColumns(20);
+        appointmentNotesjTextArea.setRows(5);
+        jScrollPane2.setViewportView(appointmentNotesjTextArea);
+
+        jLabel7.setText("Caseworker");
+
+        jLabel9.setText("Enquiry");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(userDetailsjLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(appointmentIDjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(userPostcodejLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(userMobjLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(userTeljLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(userEmailjLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(userGenderjLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(userFirstnamejLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(userMobjTextField1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(userTeljTextField1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(userEmailjTextField1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(userGenderjComboBox1, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(userPostcodejTextField1)
-                                .addComponent(userFirstnamejTextField1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addComponent(userIDjLabel1)
-                            .addGap(31, 31, 31)
-                            .addComponent(userDetailsjLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(userIDjTextField1))))
-                .addContainerGap(181, Short.MAX_VALUE))
+                                .addComponent(userFirstnamejLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(userMobjLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(enquiryIDjTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
+                            .addComponent(appointmentStatusjTextField)
+                            .addComponent(appointmentEndjTextField)
+                            .addComponent(appointmentStartjTextField)
+                            .addComponent(appointmentDatejTextField)
+                            .addComponent(appointmentRoomjTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(appointmentCaseworkerjTextField, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(userPostcodejLabel1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(184, 184, 184)
+                .addComponent(jLabel3)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 13, Short.MAX_VALUE)
                 .addComponent(jLabel3)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userDetailsjLabel1)
-                    .addComponent(userIDjTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userIDjLabel1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userFirstnamejLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userFirstnamejTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userGenderjLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userGenderjComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userEmailjTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userEmailjLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userTeljTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userTeljLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userMobjTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userMobjLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userPostcodejTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userPostcodejLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(userDetailsjLabel1)
+                            .addComponent(appointmentIDjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(userFirstnamejLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(appointmentDatejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(userGenderjLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(appointmentStartjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(userEmailjLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(appointmentEndjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(userTeljLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(appointmentStatusjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(userMobjLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(appointmentRoomjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(appointmentCaseworkerjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(enquiryIDjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(8, 8, 8))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(userPostcodejLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane2)
+                        .addGap(11, 11, 11))))
         );
 
-        userPostcodejTextField2.setBackground(new java.awt.Color(220, 221, 225));
-        userPostcodejTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userPostcodejTextField2ActionPerformed(evt);
-            }
-        });
+        userGenderjLabel2.setText("Area");
 
-        userGenderjLabel2.setText("Gender");
+        userFirstnamejLabel2.setText("Admin");
 
-        userTeljTextField2.setBackground(new java.awt.Color(220, 221, 225));
+        userEmailjLabel2.setText("Status");
 
-        userGenderjComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User Gender:", "Male", "Female", "Other" }));
-
-        userFirstnamejLabel2.setText("Firstname");
-
-        userIDjTextField2.setBackground(new java.awt.Color(220, 221, 225));
-        userIDjTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userIDjTextField2ActionPerformed(evt);
-            }
-        });
-
-        userEmailjTextField2.setBackground(new java.awt.Color(220, 221, 225));
-
-        userPostcodejLabel2.setText("Postcode");
-
-        userEmailjLabel2.setText("Email");
-
-        userMobjLabel2.setText("Mobile");
-
-        userTeljLabel2.setText("Telephone");
-
-        userMobjTextField2.setBackground(new java.awt.Color(220, 221, 225));
-
-        userFirstnamejTextField2.setBackground(new java.awt.Color(220, 221, 225));
-
-        userDetailsjLabel2.setText("User ID");
-
-        userIDjLabel2.setText("User ID");
+        adminNamejTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         jLabel4.setText("Enquiry Details");
+
+        enquiryAreajTextField.setBackground(new java.awt.Color(220, 221, 225));
+        enquiryAreajTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enquiryAreajTextFieldActionPerformed(evt);
+            }
+        });
+
+        enquiryStatusjTextField.setBackground(new java.awt.Color(220, 221, 225));
+        enquiryStatusjTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enquiryStatusjTextFieldActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -411,67 +304,171 @@ public class AdminManageAppointments extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(userPostcodejLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(userMobjLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(userTeljLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(userEmailjLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(userGenderjLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(userFirstnamejLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(userMobjTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(userTeljTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(userEmailjTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(userGenderjComboBox2, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(userPostcodejTextField2)
-                            .addComponent(userFirstnamejTextField2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(userGenderjLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(enquiryAreajTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(userEmailjLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(enquiryStatusjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(userIDjLabel2)
-                        .addGap(31, 31, 31)
-                        .addComponent(userDetailsjLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(userIDjTextField2)))
-                .addContainerGap(18, Short.MAX_VALUE))
+                        .addComponent(userFirstnamejLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5)
+                        .addComponent(adminNamejTextField)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel4)
-                .addGap(112, 112, 112))
+                .addGap(233, 233, 233))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userDetailsjLabel2)
-                    .addComponent(userIDjTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userIDjLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(userFirstnamejLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userFirstnamejTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(adminNamejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(userEmailjLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(enquiryStatusjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(userGenderjLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userGenderjComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userEmailjTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userEmailjLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userTeljTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userTeljLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userMobjTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userMobjLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(userPostcodejTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userPostcodejLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(enquiryAreajTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(15, Short.MAX_VALUE))
+        );
+
+        userGenderjLabel3.setText("Gender");
+
+        userTeljTextField3.setBackground(new java.awt.Color(220, 221, 225));
+
+        userFirstnamejLabel3.setText("Name");
+
+        clientIDjTextField.setBackground(new java.awt.Color(220, 221, 225));
+        clientIDjTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clientIDjTextFieldActionPerformed(evt);
+            }
+        });
+
+        userEmailjTextField3.setBackground(new java.awt.Color(220, 221, 225));
+
+        userEmailjLabel3.setText("DOB");
+
+        userTeljLabel3.setText("Telephone");
+
+        userFirstnamejTextField3.setBackground(new java.awt.Color(220, 221, 225));
+
+        userDetailsjLabel3.setText("Client ID");
+
+        jLabel10.setText("Client Details");
+
+        userTeljTextField4.setBackground(new java.awt.Color(220, 221, 225));
+
+        userTeljLabel4.setText("Mobile");
+
+        clientMobjTextField.setBackground(new java.awt.Color(220, 221, 225));
+
+        userTeljLabel5.setText("Email");
+
+        clientEmailjTextField.setBackground(new java.awt.Color(220, 221, 225));
+
+        userTeljLabel6.setText("Addr1");
+
+        userTeljLabel7.setText("Addr2");
+
+        userTeljTextField7.setBackground(new java.awt.Color(220, 221, 225));
+
+        userTeljTextField8.setBackground(new java.awt.Color(220, 221, 225));
+
+        userTeljLabel8.setText("Postcode");
+
+        userTeljTextField9.setBackground(new java.awt.Color(220, 221, 225));
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(userDetailsjLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(userTeljLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 77, Short.MAX_VALUE)
+                                    .addComponent(userGenderjLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(userFirstnamejLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(userEmailjLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(userEmailjTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(userFirstnamejTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(userTeljTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(clientIDjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(userTeljTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(userTeljLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(userTeljLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(userTeljLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(userTeljLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(userTeljLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(userTeljTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userTeljTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(clientEmailjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(clientMobjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userTeljTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(258, 258, 258)
+                        .addComponent(jLabel10)))
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(userDetailsjLabel3)
+                            .addComponent(clientIDjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(userFirstnamejLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userFirstnamejTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userTeljLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(clientEmailjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(9, 9, 9)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(userGenderjLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userEmailjTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userTeljLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userTeljTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(5, 5, 5)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(userEmailjLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(userTeljLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(userTeljTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(userTeljTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(clientMobjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userTeljLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(96, 96, 96)))
+                .addGap(4, 4, 4)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(userTeljLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(userTeljTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(userTeljLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(userTeljTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(55, 55, 55))
         );
 
         javax.swing.GroupLayout userDetailsjPanelLayout = new javax.swing.GroupLayout(userDetailsjPanel);
@@ -479,23 +476,25 @@ public class AdminManageAppointments extends javax.swing.JFrame {
         userDetailsjPanelLayout.setHorizontalGroup(
             userDetailsjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userDetailsjPanelLayout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(userDetailsjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         userDetailsjPanelLayout.setVerticalGroup(
             userDetailsjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userDetailsjPanelLayout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
-                .addGroup(userDetailsjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(14, 14, 14))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(userDetailsjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(userDetailsjPanelLayout.createSequentialGroup()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                .addGap(120, 120, 120))
         );
 
         backjButton.setText("Back");
@@ -505,109 +504,116 @@ public class AdminManageAppointments extends javax.swing.JFrame {
             }
         });
 
-        appointmentjTable.setModel(new javax.swing.table.DefaultTableModel(
+        customAppointmentjTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID", "Date", "Start", "End", "Caseworker", "Client", "Status"
             }
-        ));
-        jScrollPane1.setViewportView(appointmentjTable);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        customAppointmentjTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                customAppointmentjTableMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(customAppointmentjTable);
 
         jLabel5.setText("Quick Actions");
 
-        jButton2.setText("Search");
+        searchjButton.setText("Search");
 
-        queryTypejComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Search By:", "Status", "Admin ID", "Caseworker ID", "Client ID", "Enquiry ID", "Enquiry Types", "Date", "Start", "End" }));
+        queryTypejComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Search By:", "Status", "Caseworker ID", "Client ID", "Enquiry ID", "Enquiry Type", "Date", "Start", "End" }));
 
-        queryConditionjTextField.setText("jTextField1");
+        availableAppointmentjRadioButton.setText("Available Appointments");
 
-        jRadioButton1.setText("Available Appointments");
+        closedAppointmentjRadioButton.setText("Closed Appointments");
 
-        jRadioButton2.setText("Closed Appointments");
+        cancelledAppointmentjRadioButton.setText("Cancelled Appointments");
 
-        jRadioButton3.setText("Cancelled Appointments");
+        canceljButton.setText("Cancel Appointment");
 
-        jButton1.setText("Cancel Appointment");
-
-        jButton3.setText("Reschedule to Next Avaiable Slot");
-
-        jTextField1.setText("jTextField1");
+        reschedulejButton.setText("Reschedule to Next Avaiable Slot");
 
         jLabel6.setText("Next Available Slot: ");
+
+        cancelledAppointmentjRadioButton1.setText("Your Appointments");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addGap(106, 106, 106))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(queryTypejComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(queryConditionjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(93, 93, 93)
-                                .addComponent(jButton2)))
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel6))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
-                .addContainerGap())
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButton3)
-                    .addComponent(jRadioButton2)
-                    .addComponent(jRadioButton1))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(48, 48, 48)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(cancelledAppointmentjRadioButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(closedAppointmentjRadioButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(availableAppointmentjRadioButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(cancelledAppointmentjRadioButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(queryTypejComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(queryConditionjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(canceljButton, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(reschedulejButton, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(nextSlotjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(70, 70, 70)
+                                .addComponent(jLabel6))))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(96, 96, 96)
+                        .addComponent(jLabel5))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(98, 98, 98)
+                        .addComponent(searchjButton)))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
                 .addComponent(jLabel5)
-                .addGap(15, 15, 15)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(queryTypejComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(queryConditionjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
-                .addGap(18, 18, 18)
-                .addComponent(jRadioButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jRadioButton2)
-                .addGap(18, 18, 18)
-                .addComponent(jRadioButton3)
-                .addGap(12, 12, 12)
-                .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3)
+                .addComponent(searchjButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(availableAppointmentjRadioButton)
+                .addGap(18, 18, 18)
+                .addComponent(closedAppointmentjRadioButton)
+                .addGap(18, 18, 18)
+                .addComponent(cancelledAppointmentjRadioButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cancelledAppointmentjRadioButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(canceljButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(reschedulejButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(nextSlotjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38))
         );
 
         javax.swing.GroupLayout windowjPanelLayout = new javax.swing.GroupLayout(windowjPanel);
@@ -617,28 +623,24 @@ public class AdminManageAppointments extends javax.swing.JFrame {
             .addComponent(headerjPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(windowjPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(windowjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(windowjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(windowjPanelLayout.createSequentialGroup()
-                        .addComponent(backjButton)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(windowjPanelLayout.createSequentialGroup()
-                        .addGroup(windowjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(userDetailsjPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(windowjPanelLayout.createSequentialGroup()
-                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane1)))
-                        .addContainerGap())))
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1))
+                    .addComponent(backjButton)
+                    .addComponent(userDetailsjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 15, Short.MAX_VALUE))
         );
         windowjPanelLayout.setVerticalGroup(
             windowjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(windowjPanelLayout.createSequentialGroup()
                 .addComponent(headerjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(userDetailsjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(windowjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 447, Short.MAX_VALUE)
+                .addComponent(userDetailsjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 319, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(windowjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(12, 12, 12)
                 .addComponent(backjButton)
@@ -649,9 +651,7 @@ public class AdminManageAppointments extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(windowjPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(windowjPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -661,35 +661,44 @@ public class AdminManageAppointments extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void userPostcodejTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userPostcodejTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_userPostcodejTextFieldActionPerformed
-
-    private void userIDjTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userIDjTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_userIDjTextFieldActionPerformed
-
-    private void userPostcodejTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userPostcodejTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_userPostcodejTextField1ActionPerformed
-
-    private void userIDjTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userIDjTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_userIDjTextField1ActionPerformed
-
-    private void userPostcodejTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userPostcodejTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_userPostcodejTextField2ActionPerformed
-
-    private void userIDjTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userIDjTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_userIDjTextField2ActionPerformed
-
     private void backjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backjButtonActionPerformed
         new AdminDashboard(userLoggedIn).setVisible(true);
         this.dispose();
         
     }//GEN-LAST:event_backjButtonActionPerformed
+
+    private void appointmentIDjTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_appointmentIDjTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_appointmentIDjTextFieldActionPerformed
+
+    private void appointmentRoomjTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_appointmentRoomjTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_appointmentRoomjTextFieldActionPerformed
+
+    private void clientIDjTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientIDjTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clientIDjTextFieldActionPerformed
+
+    private void enquiryAreajTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enquiryAreajTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_enquiryAreajTextFieldActionPerformed
+
+    private void enquiryStatusjTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enquiryStatusjTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_enquiryStatusjTextFieldActionPerformed
+
+    private void customAppointmentjTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_customAppointmentjTableMouseClicked
+        DefaultTableModel customAppointmentTable = (DefaultTableModel)customAppointmentjTable.getModel();
+        int selectedRow = customAppointmentjTable.getSelectedRow();
+        String selectedUserPointer = (customAppointmentjTable.getValueAt(selectedRow, 0).toString());
+        int selectedAppointmentID = Integer.parseInt(selectedUserPointer);			
+        
+        List appointmentArrayList = appointment.setAllAppointmentDetails(selectedAppointmentID);
+        System.out.println(appointmentArrayList);
+        enquiryIDjTextField.setText(appointmentArrayList.get(0).toString());
+        
+        
+    }//GEN-LAST:event_customAppointmentjTableMouseClicked
 
     /**
      * @param args the command line arguments
@@ -697,75 +706,76 @@ public class AdminManageAppointments extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable appointmentjTable;
+    private javax.swing.JTextField adminNamejTextField;
+    private javax.swing.JTextField appointmentCaseworkerjTextField;
+    private javax.swing.JTextField appointmentDatejTextField;
+    private javax.swing.JTextField appointmentEndjTextField;
+    private javax.swing.JTextField appointmentIDjTextField;
+    private javax.swing.JTextArea appointmentNotesjTextArea;
+    private javax.swing.JTextField appointmentRoomjTextField;
+    private javax.swing.JTextField appointmentStartjTextField;
+    private javax.swing.JTextField appointmentStatusjTextField;
+    private javax.swing.JRadioButton availableAppointmentjRadioButton;
     private javax.swing.JButton backjButton;
+    private javax.swing.JButton canceljButton;
+    private javax.swing.JRadioButton cancelledAppointmentjRadioButton;
+    private javax.swing.JRadioButton cancelledAppointmentjRadioButton1;
+    private javax.swing.JTextField clientEmailjTextField;
+    private javax.swing.JTextField clientIDjTextField;
+    private javax.swing.JTextField clientMobjTextField;
+    private javax.swing.JRadioButton closedAppointmentjRadioButton;
+    private javax.swing.JTable customAppointmentjTable;
+    private javax.swing.JTextField enquiryAreajTextField;
+    private javax.swing.JTextField enquiryIDjTextField;
+    private javax.swing.JTextField enquiryStatusjTextField;
     private javax.swing.JPanel headerjPanel;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField nextSlotjTextField;
     private javax.swing.JTextField queryConditionjTextField;
     private javax.swing.JComboBox<String> queryTypejComboBox;
-    private javax.swing.JLabel userDetailsjLabel;
+    private javax.swing.JButton reschedulejButton;
+    private javax.swing.JButton searchjButton;
     private javax.swing.JLabel userDetailsjLabel1;
-    private javax.swing.JLabel userDetailsjLabel2;
+    private javax.swing.JLabel userDetailsjLabel3;
     private javax.swing.JPanel userDetailsjPanel;
-    private javax.swing.JLabel userEmailjLabel;
     private javax.swing.JLabel userEmailjLabel1;
     private javax.swing.JLabel userEmailjLabel2;
-    private javax.swing.JTextField userEmailjTextField;
-    private javax.swing.JTextField userEmailjTextField1;
-    private javax.swing.JTextField userEmailjTextField2;
-    private javax.swing.JLabel userFirstnamejLabel;
+    private javax.swing.JLabel userEmailjLabel3;
+    private javax.swing.JTextField userEmailjTextField3;
     private javax.swing.JLabel userFirstnamejLabel1;
     private javax.swing.JLabel userFirstnamejLabel2;
-    private javax.swing.JTextField userFirstnamejTextField;
-    private javax.swing.JTextField userFirstnamejTextField1;
-    private javax.swing.JTextField userFirstnamejTextField2;
-    private javax.swing.JComboBox<String> userGenderjComboBox;
-    private javax.swing.JComboBox<String> userGenderjComboBox1;
-    private javax.swing.JComboBox<String> userGenderjComboBox2;
-    private javax.swing.JLabel userGenderjLabel;
+    private javax.swing.JLabel userFirstnamejLabel3;
+    private javax.swing.JTextField userFirstnamejTextField3;
     private javax.swing.JLabel userGenderjLabel1;
     private javax.swing.JLabel userGenderjLabel2;
-    private javax.swing.JLabel userIDjLabel;
-    private javax.swing.JLabel userIDjLabel1;
-    private javax.swing.JLabel userIDjLabel2;
-    private javax.swing.JTextField userIDjTextField;
-    private javax.swing.JTextField userIDjTextField1;
-    private javax.swing.JTextField userIDjTextField2;
-    private javax.swing.JLabel userMobjLabel;
+    private javax.swing.JLabel userGenderjLabel3;
     private javax.swing.JLabel userMobjLabel1;
-    private javax.swing.JLabel userMobjLabel2;
-    private javax.swing.JTextField userMobjTextField;
-    private javax.swing.JTextField userMobjTextField1;
-    private javax.swing.JTextField userMobjTextField2;
-    private javax.swing.JLabel userPostcodejLabel;
     private javax.swing.JLabel userPostcodejLabel1;
-    private javax.swing.JLabel userPostcodejLabel2;
-    private javax.swing.JTextField userPostcodejTextField;
-    private javax.swing.JTextField userPostcodejTextField1;
-    private javax.swing.JTextField userPostcodejTextField2;
-    private javax.swing.JLabel userTeljLabel;
     private javax.swing.JLabel userTeljLabel1;
-    private javax.swing.JLabel userTeljLabel2;
-    private javax.swing.JTextField userTeljTextField;
-    private javax.swing.JTextField userTeljTextField1;
-    private javax.swing.JTextField userTeljTextField2;
+    private javax.swing.JLabel userTeljLabel3;
+    private javax.swing.JLabel userTeljLabel4;
+    private javax.swing.JLabel userTeljLabel5;
+    private javax.swing.JLabel userTeljLabel6;
+    private javax.swing.JLabel userTeljLabel7;
+    private javax.swing.JLabel userTeljLabel8;
+    private javax.swing.JTextField userTeljTextField3;
+    private javax.swing.JTextField userTeljTextField4;
+    private javax.swing.JTextField userTeljTextField7;
+    private javax.swing.JTextField userTeljTextField8;
+    private javax.swing.JTextField userTeljTextField9;
     private javax.swing.JPanel windowjPanel;
     // End of variables declaration//GEN-END:variables
 }
