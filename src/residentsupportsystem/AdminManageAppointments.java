@@ -73,27 +73,26 @@ public class AdminManageAppointments extends javax.swing.JFrame {
         enquiryStatusjTextField = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         userGenderjLabel3 = new javax.swing.JLabel();
-        userTeljTextField3 = new javax.swing.JTextField();
+        clientTeljTextField = new javax.swing.JTextField();
         userFirstnamejLabel3 = new javax.swing.JLabel();
         clientIDjTextField = new javax.swing.JTextField();
-        userEmailjTextField3 = new javax.swing.JTextField();
+        clientGenderjTextField = new javax.swing.JTextField();
         userEmailjLabel3 = new javax.swing.JLabel();
         userTeljLabel3 = new javax.swing.JLabel();
-        userFirstnamejTextField3 = new javax.swing.JTextField();
+        clientNamejTextField = new javax.swing.JTextField();
         userDetailsjLabel3 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        userTeljTextField4 = new javax.swing.JTextField();
+        clientDOBjTextField = new javax.swing.JTextField();
         userTeljLabel4 = new javax.swing.JLabel();
         clientMobjTextField = new javax.swing.JTextField();
         userTeljLabel5 = new javax.swing.JLabel();
         clientEmailjTextField = new javax.swing.JTextField();
         userTeljLabel6 = new javax.swing.JLabel();
         userTeljLabel7 = new javax.swing.JLabel();
-        userTeljTextField7 = new javax.swing.JTextField();
-        userTeljTextField8 = new javax.swing.JTextField();
+        clientAddr1jTextField = new javax.swing.JTextField();
+        clientPostcodejTextField = new javax.swing.JTextField();
         userTeljLabel8 = new javax.swing.JLabel();
-        userTeljTextField9 = new javax.swing.JTextField();
-        backjButton = new javax.swing.JButton();
+        clientAddr2jTextField = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         customAppointmentjTable = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
@@ -101,14 +100,12 @@ public class AdminManageAppointments extends javax.swing.JFrame {
         searchjButton = new javax.swing.JButton();
         queryTypejComboBox = new javax.swing.JComboBox<>();
         queryConditionjTextField = new javax.swing.JTextField();
-        availableAppointmentjRadioButton = new javax.swing.JRadioButton();
-        closedAppointmentjRadioButton = new javax.swing.JRadioButton();
-        cancelledAppointmentjRadioButton = new javax.swing.JRadioButton();
         canceljButton = new javax.swing.JButton();
         reschedulejButton = new javax.swing.JButton();
         nextSlotjTextField = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        cancelledAppointmentjRadioButton1 = new javax.swing.JRadioButton();
+        searchAlljButton = new javax.swing.JButton();
+        backjButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -341,7 +338,7 @@ public class AdminManageAppointments extends javax.swing.JFrame {
 
         userGenderjLabel3.setText("Gender");
 
-        userTeljTextField3.setBackground(new java.awt.Color(220, 221, 225));
+        clientTeljTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         userFirstnamejLabel3.setText("Name");
 
@@ -352,19 +349,19 @@ public class AdminManageAppointments extends javax.swing.JFrame {
             }
         });
 
-        userEmailjTextField3.setBackground(new java.awt.Color(220, 221, 225));
+        clientGenderjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         userEmailjLabel3.setText("DOB");
 
         userTeljLabel3.setText("Telephone");
 
-        userFirstnamejTextField3.setBackground(new java.awt.Color(220, 221, 225));
+        clientNamejTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         userDetailsjLabel3.setText("Client ID");
 
         jLabel10.setText("Client Details");
 
-        userTeljTextField4.setBackground(new java.awt.Color(220, 221, 225));
+        clientDOBjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         userTeljLabel4.setText("Mobile");
 
@@ -378,13 +375,13 @@ public class AdminManageAppointments extends javax.swing.JFrame {
 
         userTeljLabel7.setText("Addr2");
 
-        userTeljTextField7.setBackground(new java.awt.Color(220, 221, 225));
+        clientAddr1jTextField.setBackground(new java.awt.Color(220, 221, 225));
 
-        userTeljTextField8.setBackground(new java.awt.Color(220, 221, 225));
+        clientPostcodejTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         userTeljLabel8.setText("Postcode");
 
-        userTeljTextField9.setBackground(new java.awt.Color(220, 221, 225));
+        clientAddr2jTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -404,11 +401,11 @@ public class AdminManageAppointments extends javax.swing.JFrame {
                                     .addComponent(userEmailjLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(userEmailjTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(userFirstnamejTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(userTeljTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(clientGenderjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(clientNamejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(clientDOBjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(clientIDjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(userTeljTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(clientTeljTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(userTeljLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -418,11 +415,11 @@ public class AdminManageAppointments extends javax.swing.JFrame {
                                     .addComponent(userTeljLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(userTeljTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(userTeljTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(clientAddr1jTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(clientPostcodejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(clientEmailjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(clientMobjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(userTeljTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(clientAddr2jTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(258, 258, 258)
                         .addComponent(jLabel10)))
@@ -441,22 +438,22 @@ public class AdminManageAppointments extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(userFirstnamejLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(userFirstnamejTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(clientNamejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(userTeljLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(clientEmailjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(9, 9, 9)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(userGenderjLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(userEmailjTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(clientGenderjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(userTeljLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(userTeljTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(clientAddr1jTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(5, 5, 5)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(userEmailjLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(userTeljLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(userTeljTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(userTeljTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(clientDOBjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(clientAddr2jTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(clientMobjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -465,9 +462,9 @@ public class AdminManageAppointments extends javax.swing.JFrame {
                 .addGap(4, 4, 4)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(userTeljLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userTeljTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clientTeljTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(userTeljLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(userTeljTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(clientPostcodejTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(55, 55, 55))
         );
 
@@ -496,13 +493,6 @@ public class AdminManageAppointments extends javax.swing.JFrame {
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
                 .addGap(120, 120, 120))
         );
-
-        backjButton.setText("Back");
-        backjButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backjButtonActionPerformed(evt);
-            }
-        });
 
         customAppointmentjTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -533,14 +523,13 @@ public class AdminManageAppointments extends javax.swing.JFrame {
         jLabel5.setText("Quick Actions");
 
         searchjButton.setText("Search");
+        searchjButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchjButtonActionPerformed(evt);
+            }
+        });
 
         queryTypejComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Search By:", "Status", "Caseworker ID", "Client ID", "Enquiry ID", "Enquiry Type", "Date", "Start", "End" }));
-
-        availableAppointmentjRadioButton.setText("Available Appointments");
-
-        closedAppointmentjRadioButton.setText("Closed Appointments");
-
-        cancelledAppointmentjRadioButton.setText("Cancelled Appointments");
 
         canceljButton.setText("Cancel Appointment");
 
@@ -548,7 +537,12 @@ public class AdminManageAppointments extends javax.swing.JFrame {
 
         jLabel6.setText("Next Available Slot: ");
 
-        cancelledAppointmentjRadioButton1.setText("Your Appointments");
+        searchAlljButton.setText("Search All");
+        searchAlljButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchAlljButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -560,30 +554,26 @@ public class AdminManageAppointments extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(48, 48, 48)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cancelledAppointmentjRadioButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(closedAppointmentjRadioButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(availableAppointmentjRadioButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cancelledAppointmentjRadioButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(queryTypejComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(queryConditionjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(canceljButton, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(reschedulejButton, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(nextSlotjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(70, 70, 70)
-                                .addComponent(jLabel6))))
+                            .addComponent(reschedulejButton, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(96, 96, 96)
                         .addComponent(jLabel5))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(98, 98, 98)
-                        .addComponent(searchjButton)))
+                        .addComponent(searchjButton))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(searchAlljButton, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(73, 73, 73)
+                        .addComponent(jLabel6))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(nextSlotjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
@@ -597,24 +587,25 @@ public class AdminManageAppointments extends javax.swing.JFrame {
                     .addComponent(queryConditionjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(searchjButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(availableAppointmentjRadioButton)
-                .addGap(18, 18, 18)
-                .addComponent(closedAppointmentjRadioButton)
-                .addGap(18, 18, 18)
-                .addComponent(cancelledAppointmentjRadioButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cancelledAppointmentjRadioButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(searchAlljButton)
+                .addGap(18, 18, 18)
                 .addComponent(canceljButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(reschedulejButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nextSlotjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        backjButton.setText("Back");
+        backjButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backjButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout windowjPanelLayout = new javax.swing.GroupLayout(windowjPanel);
         windowjPanel.setLayout(windowjPanelLayout);
@@ -623,13 +614,14 @@ public class AdminManageAppointments extends javax.swing.JFrame {
             .addComponent(headerjPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(windowjPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(windowjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(windowjPanelLayout.createSequentialGroup()
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1))
-                    .addComponent(backjButton)
-                    .addComponent(userDetailsjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(windowjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(windowjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(windowjPanelLayout.createSequentialGroup()
+                            .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jScrollPane1))
+                        .addComponent(userDetailsjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(backjButton))
                 .addGap(0, 15, Short.MAX_VALUE))
         );
         windowjPanelLayout.setVerticalGroup(
@@ -640,11 +632,10 @@ public class AdminManageAppointments extends javax.swing.JFrame {
                 .addComponent(userDetailsjPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 319, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(windowjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(12, 12, 12)
-                .addComponent(backjButton)
-                .addContainerGap())
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 606, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(backjButton))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -695,10 +686,100 @@ public class AdminManageAppointments extends javax.swing.JFrame {
         
         List appointmentArrayList = appointment.setAllAppointmentDetails(selectedAppointmentID);
         System.out.println(appointmentArrayList);
-        enquiryIDjTextField.setText(appointmentArrayList.get(0).toString());
+        //appointmentID
+                //appointmentDate
+                //apointmentStart
+                //appointmentEnd
+                //appointmentStatus
+                //appointmentRoom
+                //appointmentNotes
+                //userFirstname
+                //userLastname (JOIN)
+                //enquiryID
+                //enquiryArea
+                //enquiryStatus
+                //clientID
+                //clientFirstname
+                //clientLastname (JOIN)
+                //clientGender
+                //clientDOB
+                //clientTelNumber
+                //clientMobNumber
+                //clientEmail
+                //clientAddr1
+                //clientAddr2
+                //clientPostcode
+                
+        appointmentIDjTextField.setText(appointmentArrayList.get(0).toString());
+        appointmentDatejTextField.setText(appointmentArrayList.get(1).toString());
+        appointmentStartjTextField.setText(appointmentArrayList.get(2).toString());
+        appointmentEndjTextField.setText(appointmentArrayList.get(3).toString());
+        appointmentStatusjTextField.setText(appointmentArrayList.get(4).toString());
+        appointmentRoomjTextField.setText(appointmentArrayList.get(5).toString());
+        appointmentNotesjTextArea.setText(appointmentArrayList.get(6).toString());
+        appointmentCaseworkerjTextField.setText(appointmentArrayList.get(7).toString());
+        enquiryIDjTextField.setText(appointmentArrayList.get(8).toString());
+        enquiryAreajTextField.setText(appointmentArrayList.get(9).toString());
+        enquiryStatusjTextField.setText(appointmentArrayList.get(10).toString());
+        clientIDjTextField.setText(appointmentArrayList.get(11).toString());
+        clientNamejTextField.setText(appointmentArrayList.get(12).toString());
+        clientGenderjTextField.setText(appointmentArrayList.get(13).toString());
+        clientDOBjTextField.setText(appointmentArrayList.get(14).toString());
+        clientTeljTextField.setText(appointmentArrayList.get(15).toString());
+        clientMobjTextField.setText(appointmentArrayList.get(16).toString());
+        clientEmailjTextField.setText(appointmentArrayList.get(17).toString());
+        clientAddr1jTextField.setText(appointmentArrayList.get(18).toString());
+        clientAddr2jTextField.setText(appointmentArrayList.get(19).toString());
+        clientPostcodejTextField.setText(appointmentArrayList.get(20).toString());
+
         
         
     }//GEN-LAST:event_customAppointmentjTableMouseClicked
+
+    private void searchjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchjButtonActionPerformed
+
+       
+        String whereTerm = queryTypejComboBox.getSelectedItem().toString();
+        String whereCondition = queryConditionjTextField.getText();
+        
+        if (whereTerm.equals("Search By:")){
+            System.out.println("NO SEARCH TERM CHOSEN");
+            JOptionPane.showMessageDialog(rootPane,"Please Select Search Term","Warning", 2);
+        }else{
+            if(whereTerm.equals("Status")){
+                whereTerm = "tbl_appointment.appointmentStatus";
+            }else if(whereTerm.equals("Caseworker ID")){
+                whereTerm = "tbl_appointment.appointmentCaseworkerID";
+            }else if(whereTerm.equals("Client ID")){
+                whereTerm = "tbl_client.clientID";
+            }else if(whereTerm.equals("Enquiry ID")){
+                whereTerm = "tbl_appointment.appointmentEnquiryID";
+            }else if(whereTerm.equals("Enquiry Type")){
+                whereTerm = "tbl_enquiry.enquiryArea";
+            }else if(whereTerm.equals("Date")){
+                whereTerm = "tbl_appointment.appointmentDate";
+            }else if(whereTerm.equals("Start")){
+                whereTerm = "tbl_appointment.appointmentStartTime";
+            }else if(whereTerm.equals("End")){
+                whereTerm = "tbl_appointment.appointmentEndTime";
+            }else{
+                System.out.println("NO SEARCH TERM SUITABLE");
+            JOptionPane.showMessageDialog(rootPane,"Error, Please Try Again","Error", 2);
+            }
+            appointment.setCustomAppointmentTable(customAppointmentjTable, whereTerm, whereCondition);
+        }
+        
+
+
+
+
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_searchjButtonActionPerformed
+
+    private void searchAlljButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchAlljButtonActionPerformed
+        appointment.setInitAppointmentTable(customAppointmentjTable, "ALL", "ALL");
+    }//GEN-LAST:event_searchAlljButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -715,15 +796,18 @@ public class AdminManageAppointments extends javax.swing.JFrame {
     private javax.swing.JTextField appointmentRoomjTextField;
     private javax.swing.JTextField appointmentStartjTextField;
     private javax.swing.JTextField appointmentStatusjTextField;
-    private javax.swing.JRadioButton availableAppointmentjRadioButton;
     private javax.swing.JButton backjButton;
     private javax.swing.JButton canceljButton;
-    private javax.swing.JRadioButton cancelledAppointmentjRadioButton;
-    private javax.swing.JRadioButton cancelledAppointmentjRadioButton1;
+    private javax.swing.JTextField clientAddr1jTextField;
+    private javax.swing.JTextField clientAddr2jTextField;
+    private javax.swing.JTextField clientDOBjTextField;
     private javax.swing.JTextField clientEmailjTextField;
+    private javax.swing.JTextField clientGenderjTextField;
     private javax.swing.JTextField clientIDjTextField;
     private javax.swing.JTextField clientMobjTextField;
-    private javax.swing.JRadioButton closedAppointmentjRadioButton;
+    private javax.swing.JTextField clientNamejTextField;
+    private javax.swing.JTextField clientPostcodejTextField;
+    private javax.swing.JTextField clientTeljTextField;
     private javax.swing.JTable customAppointmentjTable;
     private javax.swing.JTextField enquiryAreajTextField;
     private javax.swing.JTextField enquiryIDjTextField;
@@ -747,6 +831,7 @@ public class AdminManageAppointments extends javax.swing.JFrame {
     private javax.swing.JTextField queryConditionjTextField;
     private javax.swing.JComboBox<String> queryTypejComboBox;
     private javax.swing.JButton reschedulejButton;
+    private javax.swing.JButton searchAlljButton;
     private javax.swing.JButton searchjButton;
     private javax.swing.JLabel userDetailsjLabel1;
     private javax.swing.JLabel userDetailsjLabel3;
@@ -754,11 +839,9 @@ public class AdminManageAppointments extends javax.swing.JFrame {
     private javax.swing.JLabel userEmailjLabel1;
     private javax.swing.JLabel userEmailjLabel2;
     private javax.swing.JLabel userEmailjLabel3;
-    private javax.swing.JTextField userEmailjTextField3;
     private javax.swing.JLabel userFirstnamejLabel1;
     private javax.swing.JLabel userFirstnamejLabel2;
     private javax.swing.JLabel userFirstnamejLabel3;
-    private javax.swing.JTextField userFirstnamejTextField3;
     private javax.swing.JLabel userGenderjLabel1;
     private javax.swing.JLabel userGenderjLabel2;
     private javax.swing.JLabel userGenderjLabel3;
@@ -771,11 +854,6 @@ public class AdminManageAppointments extends javax.swing.JFrame {
     private javax.swing.JLabel userTeljLabel6;
     private javax.swing.JLabel userTeljLabel7;
     private javax.swing.JLabel userTeljLabel8;
-    private javax.swing.JTextField userTeljTextField3;
-    private javax.swing.JTextField userTeljTextField4;
-    private javax.swing.JTextField userTeljTextField7;
-    private javax.swing.JTextField userTeljTextField8;
-    private javax.swing.JTextField userTeljTextField9;
     private javax.swing.JPanel windowjPanel;
     // End of variables declaration//GEN-END:variables
 }

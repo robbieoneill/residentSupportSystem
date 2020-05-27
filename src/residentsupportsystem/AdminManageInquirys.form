@@ -281,23 +281,18 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jLabelClientName" max="32767" attributes="0"/>
-                                      <Component id="jLabelClientID" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTextFieldClientName" pref="289" max="32767" attributes="0"/>
-                                      <Component id="jTextFieldClientID" max="32767" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="jLabelClientID" min="-2" pref="81" max="-2" attributes="0"/>
+                              <Component id="jLabelClientName" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jTextFieldClientID" alignment="0" pref="289" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   <Component id="jButtonSearchAll" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jButtonSearch" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <Component id="jTextFieldClientName" alignment="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -313,15 +308,15 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabelClientName" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextFieldClientName" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonSearchAll" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButtonSearch" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButtonSearch" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButtonSearchAll" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelClientName" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextFieldClientName" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="13" max="32767" attributes="0"/>
+                          <EmptySpace pref="16" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>

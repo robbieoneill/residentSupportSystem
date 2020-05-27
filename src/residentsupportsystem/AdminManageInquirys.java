@@ -209,19 +209,16 @@ public class AdminManageInquirys extends javax.swing.JFrame {
             .addGroup(searchjPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(searchjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(searchjPanelLayout.createSequentialGroup()
-                        .addGroup(searchjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabelClientName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelClientID, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(searchjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldClientName, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
-                            .addComponent(jTextFieldClientID)))
+                    .addComponent(jLabelClientID, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelClientName))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(searchjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextFieldClientID, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, searchjPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButtonSearchAll)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonSearch)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonSearch))
+                    .addComponent(jTextFieldClientName))
                 .addContainerGap())
         );
         searchjPanelLayout.setVerticalGroup(
@@ -233,13 +230,13 @@ public class AdminManageInquirys extends javax.swing.JFrame {
                     .addComponent(jTextFieldClientID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(searchjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelClientName)
-                    .addComponent(jTextFieldClientName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonSearchAll)
+                    .addComponent(jButtonSearch))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(searchjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonSearch)
-                    .addComponent(jButtonSearchAll))
-                .addContainerGap(13, Short.MAX_VALUE))
+                    .addComponent(jLabelClientName)
+                    .addComponent(jTextFieldClientName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         notesjPanel.setBackground(new java.awt.Color(113, 128, 147));
@@ -835,7 +832,7 @@ public class AdminManageInquirys extends javax.swing.JFrame {
         LocalDateTime dateToday = LocalDateTime.now();
         String newEnquiryDate = (dateFormat.format(dateToday));
         resetCheckboxes();
-        enquiryIDjTextField.setText("");
+        enquiryIDjTextField.setText(Integer.toString(inquiry.getAutoEnquiryID()));
         jTextFieldClientID.setText("");
         jTextFieldClientName.setText("");
         jTextEnquiryNotes.setText("");

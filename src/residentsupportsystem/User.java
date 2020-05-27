@@ -185,8 +185,8 @@ public class User {
             preparedStatement = databaseInstance.createConnection().prepareStatement(getSequentialID);
             resultSet = preparedStatement.executeQuery();
             System.out.println("PREVIOUS USER ID = " + resultSet.getInt("userID"));
-            System.out.println("NEXT SEQUENTIAL USER ID = " + resultSet.getInt("userID") + 1);
-            sequentialUserIDResult = resultSet.getInt("userID") + 1;
+            System.out.println("NEXT SEQUENTIAL USER ID = " + (resultSet.getInt("userID") + 1));
+            sequentialUserIDResult = (resultSet.getInt("userID") + 1);
             resultSet.close();
             preparedStatement.close();
             databaseInstance.closeConnection();
@@ -302,5 +302,25 @@ public class User {
             return false;
         }
     }
+    
+    
+    
+    boolean deleteUser(String userID){
+       PreparedStatement preparedStatement;
+       String deleteSql = "DELETE FROM tbl_user WHERE userID =?";
+       System.out.println("USER ID TO BE DELETED: "+userID);
+       try{
+           preparedStatement = databaseInstance.createConnection().prepareStatement(deleteSql);
+           preparedStatement.setString(1, userID);
+           preparedStatement.execute();
+           //resultSet.close();
+            preparedStatement.close();
+            databaseInstance.closeConnection();
+           return true;
+       } catch(SQLException e){
+           Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, e);
+           return false;
+       }
+   }
 
 }

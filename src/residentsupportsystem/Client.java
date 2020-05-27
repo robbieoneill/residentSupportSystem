@@ -275,8 +275,8 @@ public class Client {
             preparedStatement = databaseInstance.createConnection().prepareStatement (getSequentialID);
             resultSet = preparedStatement.executeQuery();
             System.out.println ("PREVIOUS CLIENT ID = "+ resultSet.getInt("clientID"));
-            System.out.println ("NEXT CLIENT ID = "+ resultSet.getInt("clientID")+1);
-            sequentialUserIDResult = resultSet.getInt("clientID")+1;
+            System.out.println ("NEXT CLIENT ID = "+ (resultSet.getInt("clientID")+1));
+            sequentialUserIDResult = (resultSet.getInt("clientID")+1);
             resultSet.close();
             preparedStatement.close();
             databaseInstance.closeConnection();

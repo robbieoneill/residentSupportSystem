@@ -367,20 +367,12 @@ public class Appointment {
         System.out.println("SEARCH CRITERIA: "+ whereTerm +" =  "+ whereCondition);
         PreparedStatement preparedStatement;
         ResultSet resultSet;
-        String selectCaseDetailsQuery = ("﻿SELECT tbl_appointment.appointmentID, tbl_appointment.appointmentDate,"
-                + " tbl_appointment.appointmentStartTime, tbl_appointment.appointmentEndTime, tbl_user.userFirstname,"
-                + " tbl_user.userLastname, tbl_client.clientFirstname, tbl_client.clientLastname,"
-                + " tbl_appointment.appointmentStatus "
-                + " FROM tbl_appointment JOIN tbl_user ON tbl_appointment.appointmentCaseworkerID = tbl_user.userID "
-                + " JOIN tbl_enquiry ON tbl_appointment.appointmentEnquiryID = tbl_enquiry.enquiryID "
-                + " JOIN tbl_client ON tbl_enquiry.enquiryClientID = tbl_client.clientID "
-                + " WHERE ? = ?");
+        String setCustomAppointmentTable=("SELECT tbl_appointment.appointmentID, tbl_appointment.appointmentDate,tbl_appointment.appointmentStartTime, tbl_appointment.appointmentEndTime, tbl_user.userFirstname, tbl_user.userLastname, tbl_client.clientFirstname, tbl_client.clientLastname, tbl_appointment.appointmentStatus FROM tbl_appointment JOIN tbl_user ON tbl_appointment.appointmentCaseworkerID = tbl_user.userID JOIN tbl_enquiry ON tbl_appointment.appointmentEnquiryID = tbl_enquiry.enquiryID JOIN tbl_client ON tbl_enquiry.enquiryClientID = tbl_client.clientID WHERE " +whereTerm +" =?");
         
-        System.out.println(selectCaseDetailsQuery);
+        System.out.println(setCustomAppointmentTable);
         try {
-            preparedStatement = databaseInstance.createConnection().prepareStatement(selectCaseDetailsQuery);
-            preparedStatement.setString(1, whereTerm);
-            preparedStatement.setString(2, whereCondition);
+            preparedStatement = databaseInstance.createConnection().prepareStatement(setCustomAppointmentTable);
+            preparedStatement.setString(1, whereCondition);
             resultSet = preparedStatement.executeQuery();
             ((DefaultTableModel) appointmentTable.getModel()).setNumRows(0);
             DefaultTableModel userTableModel = (DefaultTableModel) appointmentTable.getModel();
@@ -412,7 +404,8 @@ public class Appointment {
         ResultSet resultSet;
         String getAppointmentDataQuery = ("SELECT tbl_appointment.appointmentID, tbl_appointment.appointmentDate, "
                 + "tbl_appointment.appointmentStartTime, tbl_appointment.appointmentEndTime, "
-                + "tbl_appointment.appointmentStatus, tbl_appointment.appointmentRoom, tbl_user.userFirstname, "
+                + "tbl_appointment.appointmentStatus, tbl_appointment.appointmentRoom, "
+                + "tbl_appointment.appointmentNotes, tbl_user.userFirstname, "
                 + "tbl_user.userLastname, tbl_enquiry.enquiryID, tbl_enquiry.enquiryArea, tbl_enquiry.enquiryStatus, "
                 + "tbl_client.clientID, tbl_client.clientFirstname, tbl_client.clientLastname, "
                 + "tbl_client.clientGender, tbl_client.clientDOB, tbl_client.clientTelNumber, "
@@ -429,9 +422,66 @@ public class Appointment {
             resultSet = preparedStatement.executeQuery();
             
             while(resultSet.next()){
+                
+                //appointmentID
+                //appointmentDate
+                //apointmentStart
+                //appointmentEnd
+                //appointmentStatus
+                //appointmentRoom
+                //appointmentNotes
+                //userFirstname
+                //userLastname (JOIN)
+                //enquiryID
+                //enquiryArea
+                //enquiryStatus
+                //clientID
+                //clientFirstname
+                //clientLastname (JOIN)
+                //clientGender
+                //clientDOB
+                //clientTelNumber
+                //clientMobNumber
+                //clientEmail
+                //clientAddr1
+                //clientAddr2
+                //clientPostcode
+                
                returnResultSet.add(resultSet.getString("appointmentID"));
+               returnResultSet.add(resultSet.getString("appointmentDate"));
+               returnResultSet.add(resultSet.getString("appointmentStartTime"));
+               returnResultSet.add(resultSet.getString("appointmentEndTime"));
+               returnResultSet.add(resultSet.getString("appointmentStatus"));
+               returnResultSet.add(resultSet.getString("appointmentRoom"));
+               if (resultSet.getString("appointmentNotes") == null) {
+                    returnResultSet.add("");
+                } else {
+
+                    returnResultSet.add(resultSet.getString("appointmentNotes"));
+                }
+               returnResultSet.add(resultSet.getString("userFirstname")+" "+resultSet.getString("userLastname"));
+               returnResultSet.add(resultSet.getString("enquiryID"));
+               returnResultSet.add(resultSet.getString("enquiryArea"));
+               returnResultSet.add(resultSet.getString("enquiryStatus"));
+               returnResultSet.add(resultSet.getString("clientID"));
+               returnResultSet.add(resultSet.getString("clientFirstname")+" "+ resultSet.getString("clientLastname"));
+               returnResultSet.add(resultSet.getString("clientGender"));
+               returnResultSet.add(resultSet.getString("clientDOB"));
+               returnResultSet.add(resultSet.getString("clientTelNumber"));
+               returnResultSet.add(resultSet.getString("clientMobNumber"));
+               returnResultSet.add(resultSet.getString("clientEmail"));
+               returnResultSet.add(resultSet.getString("clientAddr1"));
+               
+               if(resultSet.getString("clientAddr2")==null){
+                   returnResultSet.add("");
+               }else{
+                   returnResultSet.add("");
+               }
                
                
+               returnResultSet.add(resultSet.getString("clientPostcode"));
+               
+       
                resultSet.close();
                preparedStatement.close();
                databaseInstance.closeConnection();

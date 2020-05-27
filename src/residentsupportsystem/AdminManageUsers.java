@@ -514,7 +514,7 @@ public class AdminManageUsers extends javax.swing.JFrame {
     private void addUserjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addUserjButtonActionPerformed
 
 
-        userIDjTextField.setText(""); // Auto id this
+        userIDjTextField.setText(Integer.toString(user.getUserAutoID()));
         userFirstnamejTextField.setText("");
         userMiddlenamejTextField.setText("");
         userLastnamejTextField.setText("");
@@ -535,11 +535,16 @@ public class AdminManageUsers extends javax.swing.JFrame {
     }//GEN-LAST:event_addUserjButtonActionPerformed
 
     private void deleteUserjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteUserjButtonActionPerformed
-        // TODO add your handling code here:
+        String userID =  userIDjTextField.getText();
+        if(user.deleteUser(userID)){
+            System.out.println("USER DELETED");
+        }else{
+            System.out.println("USER FAILED");
+        }
     }//GEN-LAST:event_deleteUserjButtonActionPerformed
 
     private void userUsernamejTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userUsernamejTextFieldActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_userUsernamejTextFieldActionPerformed
 
     private void userAddr1jTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userAddr1jTextFieldActionPerformed

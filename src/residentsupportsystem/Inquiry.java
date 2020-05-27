@@ -238,7 +238,27 @@ public class Inquiry {
     }
         
         
-        
+    int getAutoEnquiryID(){
+       PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String getSequentialID = ("SELECT MAX (enquiryID) AS 'enquiryID' FROM tbl_enquiry");
+        System.out.println(getSequentialID);
+        int sequentialUserIDResult;
+        try {
+            preparedStatement = databaseInstance.createConnection().prepareStatement (getSequentialID);
+            resultSet = preparedStatement.executeQuery();
+            System.out.println ("PREVIOUS ENQUIRY ID = "+ resultSet.getInt("enquiryID"));
+            System.out.println ("NEXT ENQUIRY ID = "+ (resultSet.getInt("enquiryID")+1));
+            sequentialUserIDResult = (resultSet.getInt("enquiryID")+1);
+            resultSet.close();
+            preparedStatement.close();
+            databaseInstance.closeConnection();
+            return sequentialUserIDResult;
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+            return -1;
+        }
+   }
         
         
         
