@@ -27,6 +27,7 @@ public class CaseworkerManageWorkingTime extends javax.swing.JFrame {
     public CaseworkerManageWorkingTime(int userID) {
         userLoggedIn = userID;
         initComponents();
+        workHours.setWorkHistoryTable(workHistoryjTable, userLoggedIn);
     }
 
     /** This method is called from within the constructor to
@@ -84,10 +85,6 @@ public class CaseworkerManageWorkingTime extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         workHistoryjTable = new javax.swing.JTable();
-        searchjButton = new javax.swing.JButton();
-        weekSearchjTextField = new javax.swing.JTextField();
-        weekSearchjLabel = new javax.swing.JLabel();
-        viewAlljButton = new javax.swing.JButton();
         backjButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -402,7 +399,7 @@ public class CaseworkerManageWorkingTime extends javax.swing.JFrame {
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(savejButton)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         jPanel5.setBackground(new java.awt.Color(113, 128, 147));
@@ -411,24 +408,16 @@ public class CaseworkerManageWorkingTime extends javax.swing.JFrame {
 
         workHistoryjTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Week", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+                "Date", "Start", "End"
             }
         ));
         jScrollPane1.setViewportView(workHistoryjTable);
-
-        searchjButton.setText("Search");
-
-        weekSearchjTextField.setBackground(new java.awt.Color(220, 221, 225));
-
-        weekSearchjLabel.setText("Week Start Date: ");
-
-        viewAlljButton.setText("View All");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -440,16 +429,7 @@ public class CaseworkerManageWorkingTime extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap(27, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(weekSearchjLabel)
-                        .addGap(18, 18, 18)
-                        .addComponent(weekSearchjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(searchjButton)
-                        .addGap(18, 18, 18)
-                        .addComponent(viewAlljButton))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 686, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -459,12 +439,6 @@ public class CaseworkerManageWorkingTime extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(searchjButton)
-                    .addComponent(weekSearchjTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(weekSearchjLabel)
-                    .addComponent(viewAlljButton))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -566,7 +540,7 @@ public class CaseworkerManageWorkingTime extends javax.swing.JFrame {
                 int numberOfHours = (5);
                 int dayIndex = 0;
                 int userID = 1;
-                appointment.addAppointment(startOfWeekDate, dayIndex, userID, numberOfHours, startTime, endTime);
+                appointment.addAppointment(startOfWeekDate, dayIndex, userLoggedIn, numberOfHours, startTime, endTime);
             } catch (ParseException ex) {
                 Logger.getLogger(CaseworkerManageWorkingTime.class.getName()).log(Level.SEVERE, null, ex);
             }
@@ -574,21 +548,117 @@ public class CaseworkerManageWorkingTime extends javax.swing.JFrame {
         }
         if(tuesdayjCheckBox.isSelected()){
             JOptionPane.showMessageDialog(rootPane,"Checkbox Tuesday is Checked","Info", 2);
+            startTimeEntered = (tuesdayStartjComboBox.getSelectedItem().toString());
+            endTimeEntered = (tuesdayEndjComboBox.getSelectedItem().toString());
+            
+            try {
+                Date validStartTime = new SimpleDateFormat("HH:mm").parse(startTimeEntered);
+                Date validEndTime = new SimpleDateFormat("HH:mm").parse(endTimeEntered);
+                int startTime = validStartTime.getHours();
+                System.out.println("START TIME ENTERED BY USER: "+startTime);
+                int endTime = validEndTime.getHours();
+                int numberOfHours = (5);
+                int dayIndex = 1;
+                int userID = 1;
+                appointment.addAppointment(startOfWeekDate, dayIndex, userLoggedIn, numberOfHours, startTime, endTime);
+            } catch (ParseException ex) {
+                Logger.getLogger(CaseworkerManageWorkingTime.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if(wednesdayjCheckBox.isSelected()){
             JOptionPane.showMessageDialog(rootPane,"Checkbox Tuesday is Checked","Info", 2);
+            startTimeEntered = (wednesdayStartjComboBox.getSelectedItem().toString());
+            endTimeEntered = (wednesdayEndjComboBox.getSelectedItem().toString());
+            
+            try {
+                Date validStartTime = new SimpleDateFormat("HH:mm").parse(startTimeEntered);
+                Date validEndTime = new SimpleDateFormat("HH:mm").parse(endTimeEntered);
+                int startTime = validStartTime.getHours();
+                System.out.println("START TIME ENTERED BY USER: "+startTime);
+                int endTime = validEndTime.getHours();
+                int numberOfHours = (5);
+                int dayIndex = 0;
+                int userID = 2;
+                appointment.addAppointment(startOfWeekDate, dayIndex, userLoggedIn, numberOfHours, startTime, endTime);
+            } catch (ParseException ex) {
+                Logger.getLogger(CaseworkerManageWorkingTime.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if(thursdayjCheckBox.isSelected()){
             JOptionPane.showMessageDialog(rootPane,"Checkbox Tuesday is Checked","Info", 2);
+            startTimeEntered = (thursdayStartjComboBox.getSelectedItem().toString());
+            endTimeEntered = (thursdayEndjComboBox.getSelectedItem().toString());
+            
+            try {
+                Date validStartTime = new SimpleDateFormat("HH:mm").parse(startTimeEntered);
+                Date validEndTime = new SimpleDateFormat("HH:mm").parse(endTimeEntered);
+                int startTime = validStartTime.getHours();
+                System.out.println("START TIME ENTERED BY USER: "+startTime);
+                int endTime = validEndTime.getHours();
+                int numberOfHours = (5);
+                int dayIndex = 0;
+                int userID = 3;
+                appointment.addAppointment(startOfWeekDate, dayIndex, userLoggedIn, numberOfHours, startTime, endTime);
+            } catch (ParseException ex) {
+                Logger.getLogger(CaseworkerManageWorkingTime.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if(fridayjCheckBox.isSelected()){
             JOptionPane.showMessageDialog(rootPane,"Checkbox Tuesday is Checked","Info", 2);
+            startTimeEntered = (fridayStartjComboBox.getSelectedItem().toString());
+            endTimeEntered = (fridayEndjComboBox.getSelectedItem().toString());
+            
+            try {
+                Date validStartTime = new SimpleDateFormat("HH:mm").parse(startTimeEntered);
+                Date validEndTime = new SimpleDateFormat("HH:mm").parse(endTimeEntered);
+                int startTime = validStartTime.getHours();
+                System.out.println("START TIME ENTERED BY USER: "+startTime);
+                int endTime = validEndTime.getHours();
+                int numberOfHours = (5);
+                int dayIndex = 4;
+                int userID = 1;
+                appointment.addAppointment(startOfWeekDate, dayIndex, userLoggedIn, numberOfHours, startTime, endTime);
+            } catch (ParseException ex) {
+                Logger.getLogger(CaseworkerManageWorkingTime.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if(saturdayjCheckBox.isSelected()){
             JOptionPane.showMessageDialog(rootPane,"Checkbox Tuesday is Checked","Info", 2);
+            startTimeEntered = (fridayStartjComboBox.getSelectedItem().toString());
+            endTimeEntered = (fridayEndjComboBox.getSelectedItem().toString());
+            
+            try {
+                Date validStartTime = new SimpleDateFormat("HH:mm").parse(startTimeEntered);
+                Date validEndTime = new SimpleDateFormat("HH:mm").parse(endTimeEntered);
+                int startTime = validStartTime.getHours();
+                System.out.println("START TIME ENTERED BY USER: "+startTime);
+                int endTime = validEndTime.getHours();
+                int numberOfHours = (5);
+                int dayIndex = 5;
+                int userID = 1;
+                appointment.addAppointment(startOfWeekDate, dayIndex, userLoggedIn, numberOfHours, startTime, endTime);
+            } catch (ParseException ex) {
+                Logger.getLogger(CaseworkerManageWorkingTime.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         if(sundayjCheckBox.isSelected()){
             JOptionPane.showMessageDialog(rootPane,"Checkbox Tuesday is Checked","Info", 2);
+            startTimeEntered = (saturdayStartjComboBox.getSelectedItem().toString());
+            endTimeEntered = (saturdayEndjComboBox.getSelectedItem().toString());
+            
+            try {
+                Date validStartTime = new SimpleDateFormat("HH:mm").parse(startTimeEntered);
+                Date validEndTime = new SimpleDateFormat("HH:mm").parse(endTimeEntered);
+                int startTime = validStartTime.getHours();
+                System.out.println("START TIME ENTERED BY USER: "+startTime);
+                int endTime = validEndTime.getHours();
+                int numberOfHours = (5);
+                int dayIndex = 6;
+                int userID = 1;
+                appointment.addAppointment(startOfWeekDate, dayIndex, userLoggedIn, numberOfHours, startTime, endTime);
+            } catch (ParseException ex) {
+                Logger.getLogger(CaseworkerManageWorkingTime.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
 
 
@@ -631,7 +701,6 @@ public class CaseworkerManageWorkingTime extends javax.swing.JFrame {
     private javax.swing.JLabel saturdayTojLabel;
     private javax.swing.JCheckBox saturdayjCheckBox;
     private javax.swing.JButton savejButton;
-    private javax.swing.JButton searchjButton;
     private javax.swing.JLabel setHourHeadingjLabel;
     private javax.swing.JComboBox<String> sundayEndjComboBox;
     private javax.swing.JLabel sundayFromjLabel;
@@ -648,14 +717,11 @@ public class CaseworkerManageWorkingTime extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> tuesdayStartjComboBox;
     private javax.swing.JLabel tuesdayTojLabel;
     private javax.swing.JCheckBox tuesdayjCheckBox;
-    private javax.swing.JButton viewAlljButton;
     private javax.swing.JComboBox<String> wednesdayEndjComboBox;
     private javax.swing.JLabel wednesdayFromjLabel;
     private javax.swing.JComboBox<String> wednesdayStartjComboBox;
     private javax.swing.JLabel wednesdayTojLabel;
     private javax.swing.JCheckBox wednesdayjCheckBox;
-    private javax.swing.JLabel weekSearchjLabel;
-    private javax.swing.JTextField weekSearchjTextField;
     private javax.swing.JTable workHistoryjTable;
     // End of variables declaration//GEN-END:variables
 

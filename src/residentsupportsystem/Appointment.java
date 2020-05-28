@@ -147,7 +147,7 @@ public class Appointment {
             resultSet = preparedStatement.executeQuery();
             System.out.println("PREVIOUS APPOINTMENT ID = " + resultSet.getInt("appointmentID"));
             System.out.println("NEXT SEQUENTIAL APPOINTMENT ID = " + resultSet.getInt("appointmentID") + 1);
-            sequentialAppointmentIDResult = resultSet.getInt("appointmentID") + 1;
+            sequentialAppointmentIDResult = (resultSet.getInt("appointmentID") + 1);
             preparedStatement.close();
             databaseInstance.closeConnection();
             return sequentialAppointmentIDResult;
@@ -177,7 +177,8 @@ public class Appointment {
                 "appointmentEndTime, " +
                 "appointmentStatus," +
                 "appointmentRoom, " +
-                "appointmentCaseworkerID) VALUES (?,?,?,?,?,?,?)";
+                "appointmentCaseworkerID, appointmentEnquiryID, "
+                    + "appointmentNotes, appointmentAdminID) VALUES (?,?,?,?,?,?,?,?,?,?)";
             try {
                 preparedStatement = databaseInstance.createConnection().prepareStatement(addAppointmentQuery);
                 preparedStatement.setInt(1, getAppointmentAutoID()); 
@@ -187,28 +188,21 @@ public class Appointment {
                 preparedStatement.setString(5, "AVAILABLE");
                 preparedStatement.setString(6, "");
                 preparedStatement.setInt(7, userID);
+                preparedStatement.setString(8, " ");
+                preparedStatement.setString(9, " ");
+                preparedStatement.setString (10, "AUTO ADD");
+                
                 databaseInstance.createConnection().close();
-                preparedStatement.addBatch();
-
+                preparedStatement.executeUpdate();
                 System.out.println("APPOINTMENT ADDED");
                 preparedStatement.close();
                 databaseInstance.closeConnection();
 
-
             } catch (SQLException ex) {
                 Logger.getLogger(Appointment.class.getName()).log(Level.SEVERE, null, ex);
             }
-
-
-
         }
-        try {
-            preparedStatement.executeBatch();
-        } catch (SQLException ex) {
-            Logger.getLogger(Appointment.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-
+       
     }
     
     

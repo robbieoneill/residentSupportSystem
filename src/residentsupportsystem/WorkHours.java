@@ -4,15 +4,23 @@
  * and open the template in the editor.
  */
 package residentsupportsystem;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.*;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Date;
 import java.time.LocalDate;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author robbieoneill
  */
 public class WorkHours {
+    DatabaseConnection databaseInstance = new DatabaseConnection();
     
     
     public LocalDate startOfNextConsecutiveWeek(){
@@ -22,8 +30,32 @@ public class WorkHours {
         return (date.with(TemporalAdjusters.next(DayOfWeek.MONDAY)));
     }
     
-    public void setWorkingHoursTable(){
-        
+    public void setWorkHistoryTable(JTable workHistoryTable, int userID) {
+        PreparedStatement preparedStatement;
+        ResultSet resultSet;
+        String appointmentData = ("SELECT appointmentDate, appointmentStartTime, appointmentEndTime FROM tbl_appointment where appointmentCaseworkerID =?");
+        try {
+            preparedStatement = databaseInstance.createConnection().prepareStatement(appointmentData);
+            preparedStatement.setInt(1, userID);
+            resultSet = preparedStatement.executeQuery();
+            ((DefaultTableModel) workHistoryTable.getModel()).setNumRows(0); // RESET TABLE TO ALLOW REFRESH
+            DefaultTableModel userTableModel = (DefaultTableModel) workHistoryTable.getModel();
+
+            Object[] row;
+            while (resultSet.next()) {
+                row = new Object[3];
+                row[0] = resultSet.getString(1);
+                row[1] = resultSet.getString(2);
+                row[2] = resultSet.getString(3);
+                
+                userTableModel.addRow(row);
+            }
+            resultSet.close();
+            preparedStatement.close();
+            databaseInstance.closeConnection();
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     

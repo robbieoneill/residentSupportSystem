@@ -18,13 +18,15 @@ import java.util.logging.Logger;
 //Luke -  
 //Rajan - 
 
+
+
 public class DatabaseConnection {
     private Connection databaseConnection;
     
     public Connection createConnection() {
         databaseConnection = null;
         try {
-            String database = "jdbc:sqlite:" + "//Users//robbieoneill//Documents//GitHub//residentSupportSystem//rssDB.db";
+            String database = "jdbc:sqlite:" + "//Users//robbieoneill//Documents//GitHub//residentSupportSystem//rssDB.db"; // NOTE TO MARKER --  THIS IS THE FILEPATH YOU NEED TO CHANGE
             databaseConnection = DriverManager.getConnection(database);
         
         } catch (SQLException ex) {
