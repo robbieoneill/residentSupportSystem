@@ -522,7 +522,7 @@ public class CaseworkerManageWorkingTime extends javax.swing.JFrame {
     }//GEN-LAST:event_fridayjCheckBoxActionPerformed
 
     private void savejButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savejButtonActionPerformed
-
+        JOptionPane.showMessageDialog(rootPane,"Work Hours Added","Info", 2);
         LocalDate startOfWeekDate = workHours.startOfNextConsecutiveWeek();
         String startTimeEntered = "";
         String endTimeEntered = "";

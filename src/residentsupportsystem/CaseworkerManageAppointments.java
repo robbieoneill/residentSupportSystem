@@ -6,6 +6,7 @@
 package residentsupportsystem;
 
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -374,6 +375,11 @@ public class CaseworkerManageAppointments extends javax.swing.JFrame {
         clientMobjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         updateNotesjButton.setText("Update Notes");
+        updateNotesjButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateNotesjButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout appointmentsjPanelLayout = new javax.swing.GroupLayout(appointmentsjPanel);
         appointmentsjPanel.setLayout(appointmentsjPanelLayout);
@@ -505,6 +511,11 @@ public class CaseworkerManageAppointments extends javax.swing.JFrame {
         );
 
         addToWaitingListjButton.setText("Add to Wating list");
+        addToWaitingListjButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addToWaitingListjButtonActionPerformed(evt);
+            }
+        });
 
         jLabel9.setText("If client requires addition appointment, add to waiting list.");
 
@@ -620,7 +631,7 @@ public class CaseworkerManageAppointments extends javax.swing.JFrame {
     }//GEN-LAST:event_allCasesjButtonActionPerformed
 
     private void markCompletejButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_markCompletejButtonActionPerformed
-        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(rootPane,"Appointment Marked as Complete","Info", 2);
     }//GEN-LAST:event_markCompletejButtonActionPerformed
 
     private void appointmentTablejTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_appointmentTablejTableMouseClicked
@@ -649,6 +660,14 @@ public class CaseworkerManageAppointments extends javax.swing.JFrame {
         clientMobjTextField.setText(clientArrayList.get(8).toString());
         clientNotesjTextArea.setText(clientArrayList.get(12).toString());
     }//GEN-LAST:event_appointmentTablejTableMouseClicked
+
+    private void updateNotesjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateNotesjButtonActionPerformed
+        JOptionPane.showMessageDialog(rootPane,"Notes Updated","Info", 2);
+    }//GEN-LAST:event_updateNotesjButtonActionPerformed
+
+    private void addToWaitingListjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToWaitingListjButtonActionPerformed
+        JOptionPane.showMessageDialog(rootPane,"Added to Waiting List","Info", 2);
+    }//GEN-LAST:event_addToWaitingListjButtonActionPerformed
 
     /**
      * @param args the command line arguments
