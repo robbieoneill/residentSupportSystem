@@ -7,3 +7,12 @@
 
 **In event that code doesn’t run correctly, please attempt to pull from our GitHub Repository**
 
+# Login Details
+**Administrator Login: -**
+**Username:** admin
+**Password:** admin
+
+**Caseworker Login: -**
+**Username:** caseworker
+**Password:** caseworker
+
