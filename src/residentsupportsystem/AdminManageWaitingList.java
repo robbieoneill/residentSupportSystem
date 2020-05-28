@@ -420,6 +420,11 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
         appointmentCaseworkerjLabel.setText("Caseworker");
 
         jButton2.setText("Assign Appointment");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         appointmentDatejTextField.setBackground(new java.awt.Color(220, 221, 225));
 
@@ -696,6 +701,10 @@ public class AdminManageWaitingList extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_availableAppointmentjTableMouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       JOptionPane.showMessageDialog(rootPane,"Appointment Assigned","Info", 2);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

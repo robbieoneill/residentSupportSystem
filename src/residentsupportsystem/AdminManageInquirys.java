@@ -8,6 +8,7 @@ package residentsupportsystem;
 import java.util.List;
 import java.time.format.DateTimeFormatter;  
 import java.time.LocalDateTime;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 
@@ -567,6 +568,11 @@ public class AdminManageInquirys extends javax.swing.JFrame {
         jScrollPane1.setViewportView(appointmentNotesjTextArea);
 
         assignAppointmentjButton.setText("Assign Appointment");
+        assignAppointmentjButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                assignAppointmentjButtonActionPerformed(evt);
+            }
+        });
 
         appointmentNotesjLabel.setBackground(new java.awt.Color(113, 128, 147));
         appointmentNotesjLabel.setText("Notes");
@@ -731,6 +737,7 @@ public class AdminManageInquirys extends javax.swing.JFrame {
     }//GEN-LAST:event_enquiryIDjTextFieldActionPerformed
 
     private void savejButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_savejButtonActionPerformed
+        
         String enquiryID = (enquiryIDjTextField.getText());
         String enquiryAdminID = (Integer.toString(userLoggedIn));
         String enquiryClientID = (jTextFieldClientID.getText());
@@ -757,9 +764,10 @@ public class AdminManageInquirys extends javax.swing.JFrame {
         String enquiryStatus = (jComboBoxEnquiryStatus.getSelectedItem().toString());
         String enquiryNotes = (jTextEnquiryNotes.getText());
         String enquiryDate =  (jTextFieldDate_Time.getText());
-        
+        JOptionPane.showMessageDialog(rootPane,"Enquiry Saved","Info", 2);
         if (inquiry.insertEnquiry(enquiryID, enquiryAdminID, enquiryClientID, enquiryArea, enquiryStatus, enquiryNotes, enquiryDate)){
             System.out.println("DATABASE UPDATED SUCCESSFULLY");
+            JOptionPane.showMessageDialog(rootPane,"Changes Saved","Info", 2);
         }
         else {
             System.out.println ("DATABASE INSERT FAILED");
@@ -844,7 +852,7 @@ public class AdminManageInquirys extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBoxEnquiryStatusActionPerformed
 
     private void deletejButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletejButtonActionPerformed
-        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(rootPane,"Added to Waiting List","Info", 2);
     }//GEN-LAST:event_deletejButtonActionPerformed
 
     private void appointmentTablejTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_appointmentTablejTableMouseClicked
@@ -865,6 +873,10 @@ public class AdminManageInquirys extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_appointmentTablejTableMouseClicked
+
+    private void assignAppointmentjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignAppointmentjButtonActionPerformed
+       JOptionPane.showMessageDialog(rootPane,"Appointment Added","Info", 2);
+    }//GEN-LAST:event_assignAppointmentjButtonActionPerformed
 
     public void resetCheckboxes (){
          

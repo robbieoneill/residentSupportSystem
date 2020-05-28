@@ -399,6 +399,7 @@ public class AdminManageClients extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void addClientjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addClientjButtonActionPerformed
+        
         String clientAutoID=String.valueOf(client.getAutoClientID());
         clientIDjTextField.setText(clientAutoID);
         clientFirstnamejTextField.setText("");
@@ -417,7 +418,7 @@ public class AdminManageClients extends javax.swing.JFrame {
     }//GEN-LAST:event_addClientjButtonActionPerformed
 
     private void saveClientjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveClientjButtonActionPerformed
-
+        JOptionPane.showMessageDialog(rootPane,"Client Saved","Info", 2);
         String enteredClientID = clientIDjTextField.getText();
         String enteredClientFirstname = clientFirstnamejTextField.getText();
         String enteredClientMiddlename = clientMiddlenamejTextField.getText();
@@ -483,6 +484,7 @@ public class AdminManageClients extends javax.swing.JFrame {
         String clientID =  clientIDjTextField.getText();
         if(client.deleteClient(clientID)){
             System.out.println("CLIENT DELETED");
+            JOptionPane.showMessageDialog(rootPane,"Client Deleted","Info", 2);
         }else{
             System.out.println("DELETE FAILED");
         }

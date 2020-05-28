@@ -477,6 +477,8 @@ public class AdminManageUsers extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane,"Please Ensure All Required User Details are Entered","Warning", 2);
         }
         
+        
+        
         else{
             if(user.insertUser(
                 enteredUserID,
@@ -498,6 +500,7 @@ public class AdminManageUsers extends javax.swing.JFrame {
                 enteredUserNotes)){
             
             System.out.println("Database Insert Complete");
+            JOptionPane.showMessageDialog(rootPane,"User Saved","Info", 2);
             //adminManageUsersUserInstance.setUserTable(userTablejTable);
             //Using this will just concatinate the values of another query, needs to be able to differentiate new values from old...
             
@@ -531,6 +534,7 @@ public class AdminManageUsers extends javax.swing.JFrame {
         userAddr2jTextField.setText("");
         userPostcodejTextField.setText("");
         userNotesjTextArea.setText("");
+        
        
     }//GEN-LAST:event_addUserjButtonActionPerformed
 
@@ -538,6 +542,7 @@ public class AdminManageUsers extends javax.swing.JFrame {
         String userID =  userIDjTextField.getText();
         if(user.deleteUser(userID)){
             System.out.println("USER DELETED");
+            JOptionPane.showMessageDialog(rootPane,"User Deleted","Info", 2);
         }else{
             System.out.println("USER FAILED");
         }

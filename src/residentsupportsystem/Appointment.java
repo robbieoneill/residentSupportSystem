@@ -417,29 +417,7 @@ public class Appointment {
             
             while(resultSet.next()){
                 
-                //appointmentID
-                //appointmentDate
-                //apointmentStart
-                //appointmentEnd
-                //appointmentStatus
-                //appointmentRoom
-                //appointmentNotes
-                //userFirstname
-                //userLastname (JOIN)
-                //enquiryID
-                //enquiryArea
-                //enquiryStatus
-                //clientID
-                //clientFirstname
-                //clientLastname (JOIN)
-                //clientGender
-                //clientDOB
-                //clientTelNumber
-                //clientMobNumber
-                //clientEmail
-                //clientAddr1
-                //clientAddr2
-                //clientPostcode
+                
                 
                returnResultSet.add(resultSet.getString("appointmentID"));
                returnResultSet.add(resultSet.getString("appointmentDate"));
@@ -492,7 +470,29 @@ public class Appointment {
         
     }
     
+    public void cancelAppointment (String appointmentID){
+        PreparedStatement preparedStatement;
+        String cancelQuery = "UPDATE tbl_appointment SET appointmentEnquiryID = '', appointmentNotes = '', appointmentStatus = 'AVAILABLE' WHERE appointmentID =?";
+        try {
+            preparedStatement = databaseInstance.createConnection().prepareStatement (cancelQuery);
+            preparedStatement.setString(1,appointmentID);
+        }
+        catch(SQLException ex){
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
+    public void moveAppointment (String appointmentID){
+        PreparedStatement preparedStatement;
+        String moveQuery = "UPDATE tbl_appointment SET appointmentEnquiryID = '', appointmentNotes = '', appointmentStatus = 'AVAILABLE' WHERE appointmentID =?";
+        try {
+            preparedStatement = databaseInstance.createConnection().prepareStatement (moveQuery);
+            preparedStatement.setString(1,appointmentID);
+        }
+        catch(SQLException ex){
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
 
 }

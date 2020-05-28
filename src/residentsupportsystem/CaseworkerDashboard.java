@@ -179,7 +179,7 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
         appointmentCountHeaderjLabel.setText("Appointments");
 
         appointmentCountjLabel.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        appointmentCountjLabel.setText("Null");
+        appointmentCountjLabel.setText("67");
 
         javax.swing.GroupLayout appointmentCountjPanelLayout = new javax.swing.GroupLayout(appointmentCountjPanel);
         appointmentCountjPanel.setLayout(appointmentCountjPanelLayout);
@@ -189,7 +189,7 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
             .addGroup(appointmentCountjPanelLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addComponent(appointmentCountjLabel)
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
         appointmentCountjPanelLayout.setVerticalGroup(
             appointmentCountjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,7 +207,7 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
         activeCasesCountHeaderjLabel.setText("Next Appointment");
 
         activeCasesCountjLabel.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        activeCasesCountjLabel.setText("Null");
+        activeCasesCountjLabel.setText("Monday");
 
         javax.swing.GroupLayout activeCasesCountjPanelLayout = new javax.swing.GroupLayout(activeCasesCountjPanel);
         activeCasesCountjPanel.setLayout(activeCasesCountjPanelLayout);
@@ -216,8 +216,8 @@ public class CaseworkerDashboard extends javax.swing.JFrame {
             .addComponent(activeCasesCountHeaderjLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, activeCasesCountjPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(activeCasesCountjLabel)
-                .addGap(62, 62, 62))
+                .addComponent(activeCasesCountjLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
         );
         activeCasesCountjPanelLayout.setVerticalGroup(
             activeCasesCountjPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

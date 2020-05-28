@@ -26,6 +26,7 @@ public class AdminManageAppointments extends javax.swing.JFrame {
         //user.setUserTable(userTablejTable);
         int userAutoID = user.getUserAutoID();
         appointment.setInitAppointmentTable(customAppointmentjTable, "ALL", "ALL");
+        nextSlotjTextField.setText("01/06/2020");
         //userIDjTextField.setText(String.valueOf(userAutoID));
     }
 
@@ -181,6 +182,10 @@ public class AdminManageAppointments extends javax.swing.JFrame {
         jLabel7.setText("Caseworker");
 
         jLabel9.setText("Enquiry");
+
+        enquiryIDjTextField.setBackground(new java.awt.Color(220, 221, 225));
+
+        appointmentCaseworkerjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -531,9 +536,23 @@ public class AdminManageAppointments extends javax.swing.JFrame {
 
         queryTypejComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Search By:", "Status", "Caseworker ID", "Client ID", "Enquiry ID", "Enquiry Type", "Date", "Start", "End" }));
 
+        queryConditionjTextField.setBackground(new java.awt.Color(220, 221, 225));
+
         canceljButton.setText("Cancel Appointment");
+        canceljButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                canceljButtonActionPerformed(evt);
+            }
+        });
 
         reschedulejButton.setText("Reschedule to Next Avaiable Slot");
+        reschedulejButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                reschedulejButtonActionPerformed(evt);
+            }
+        });
+
+        nextSlotjTextField.setBackground(new java.awt.Color(220, 221, 225));
 
         jLabel6.setText("Next Available Slot: ");
 
@@ -772,17 +791,23 @@ public class AdminManageAppointments extends javax.swing.JFrame {
             appointment.setCustomAppointmentTable(customAppointmentjTable, whereTerm, whereCondition);
         }
         
-
-
-
-
-
-        // TODO add your handling code here:
     }//GEN-LAST:event_searchjButtonActionPerformed
 
     private void searchAlljButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchAlljButtonActionPerformed
         appointment.setInitAppointmentTable(customAppointmentjTable, "ALL", "ALL");
     }//GEN-LAST:event_searchAlljButtonActionPerformed
+
+    private void canceljButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_canceljButtonActionPerformed
+        String appointmentID = appointmentIDjTextField.getText();
+        appointment.cancelAppointment(appointmentID);
+        JOptionPane.showMessageDialog(rootPane,"Appointment Cancelled","Info", 2);
+    }//GEN-LAST:event_canceljButtonActionPerformed
+
+    private void reschedulejButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reschedulejButtonActionPerformed
+        String appointmentID = appointmentIDjTextField.getText();
+        appointment.cancelAppointment(appointmentID);
+        JOptionPane.showMessageDialog(rootPane,"Appointment Rescheduled","Info", 2);
+    }//GEN-LAST:event_reschedulejButtonActionPerformed
 
     /**
      * @param args the command line arguments
