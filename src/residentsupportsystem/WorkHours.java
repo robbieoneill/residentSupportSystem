@@ -17,7 +17,7 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 /**
  *
- * @author robbieoneill
+ * @author TIT
  */
 public class WorkHours {
     DatabaseConnection databaseInstance = new DatabaseConnection();

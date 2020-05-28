@@ -11,7 +11,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author robbieoneill
+ * @author TIT
  */
 public class AdminManageClients extends javax.swing.JFrame {
     int userLoggedIn;

@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author lukerenwick
+ * @author TIT
  */
 public class Inquiry {
 	DatabaseConnection databaseInstance = new DatabaseConnection();

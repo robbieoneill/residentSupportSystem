@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author robbieoneill
+ * @author TIT
  */
 //EVERYONE SHOULD KEEP THEIR FILEPATH TO THE DATABASE HERE
 //Sohaib - C://SOHAIB//Uni//Sem4//SoftwareEngineeringPractice//residentSupportSystem//rssDB.db

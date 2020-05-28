@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.TreeMap;
 /**
  *
- * @author robbieoneill
+ * @author TIT
  */
 public class Appointment {
     DatabaseConnection databaseInstance = new DatabaseConnection();

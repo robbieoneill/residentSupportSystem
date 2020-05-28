@@ -15,7 +15,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author robbieoneill
+ * @author TIT
  */
 public class Case {
 

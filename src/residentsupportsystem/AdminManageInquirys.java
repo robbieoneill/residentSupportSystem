@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author lukerenwick
+ * @author TIT
  */
 public class AdminManageInquirys extends javax.swing.JFrame {
 

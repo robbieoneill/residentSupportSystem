@@ -15,7 +15,7 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 /**
  *
- * @author robbieoneill
+ * @author TIT
  */
 public class User {
     DatabaseConnection databaseInstance = new DatabaseConnection();

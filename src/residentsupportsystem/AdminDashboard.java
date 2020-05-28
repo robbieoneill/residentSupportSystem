@@ -21,7 +21,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
 
 /**
  *
- * @author robbieoneill
+ * @author TIT
  */
 public class AdminDashboard extends javax.swing.JFrame {
     User user = new User();
